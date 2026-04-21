@@ -34,6 +34,7 @@ Couleurs marine et crème, typographie sobre, patterns inspirés du cerf (symbol
 |----------|------|
 | [`cocobiches.md`](cocobiches.md) | Vision, périmètre et exigences du projet site |
 | [`design-cocobiches.md`](design-cocobiches.md) | Design system, tonalité, patterns pour Cocobiches |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Comment contribuer — commits orientés marque, PR, qualité |
 
 ---
 
