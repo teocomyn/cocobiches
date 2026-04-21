@@ -15,9 +15,9 @@
 
 ## Vérifications
 
-- [ ] `npm run lint` — OK
-- [ ] `npm run test` — OK
-- [ ] `npm run build` — OK
+- [ ] `npm run lint` · OK
+- [ ] `npm run test` · OK
+- [ ] `npm run build` · OK
 - [ ] Aperçu visuel vérifié (si changement UI)
 
 ## Captures (si pertinent)

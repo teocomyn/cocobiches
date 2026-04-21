@@ -9,7 +9,7 @@ type Props = {
   variant?: "default" | "home";
 };
 
-/** Barre réservation éditoriale — placeholders jusqu’à branchement moteur (D-EDGE / PMS). */
+/** Barre réservation éditoriale · placeholders jusqu’à branchement moteur (D-EDGE / PMS). */
 export function BookingBar({ dict, variant = "default" }: Props) {
   const h = dict.hotels;
   const isHome = variant === "home";
@@ -33,7 +33,7 @@ export function BookingBar({ dict, variant = "default" }: Props) {
             <input
               type="text"
               readOnly
-              placeholder="—"
+              placeholder="…"
               className="mt-2 w-full border-0 border-b border-cocobiches-marine/20 bg-transparent pb-2 text-sm font-medium text-cocobiches-marine placeholder:text-cocobiches-marine/40 focus:border-cocobiches-marine/40 focus:outline-none"
               aria-describedby="booking-note-mobile"
             />
@@ -45,7 +45,7 @@ export function BookingBar({ dict, variant = "default" }: Props) {
             <input
               type="text"
               readOnly
-              placeholder="—"
+              placeholder="…"
               className="mt-2 w-full border-0 border-b border-cocobiches-marine/20 bg-transparent pb-2 text-sm font-medium text-cocobiches-marine placeholder:text-cocobiches-marine/40 focus:border-cocobiches-marine/40 focus:outline-none"
             />
           </div>

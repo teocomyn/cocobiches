@@ -25,6 +25,7 @@ coverage/
 # OS & editors
 .DS_Store
 *.pem
+.claude/
 
 # Debug
 npm-debug.log*

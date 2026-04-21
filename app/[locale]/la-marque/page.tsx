@@ -1,9 +1,12 @@
-import { PageIntro } from "@/components/pages/page-intro";
-import { FadeIn } from "@/components/motion/fade-in";
-import { getDictionary } from "@/lib/get-dictionary";
+import { LaMarquePage } from "@/components/brand/la-marque-page";
 import { getLocaleFromParams } from "@/lib/locale-params";
+import { laMarqueMeta } from "@/lib/i18n/la-marque";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
+
+const siteBase =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.cocobiches.fr";
 
 export async function generateMetadata({
   params,
@@ -12,49 +15,129 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const locale = await getLocaleFromParams(params);
   if (!locale) return {};
-  const dict = await getDictionary(locale);
+  const m = laMarqueMeta[locale];
+  const path = href(locale, "/la-marque");
+  const ogUrl = `${siteBase}${path}`;
   return {
-    title: dict.meta.brand.title,
-    description: dict.meta.brand.description,
+    title: m.title,
+    description: m.description,
     alternates: {
-      canonical: href(locale, "/la-marque"),
+      canonical: path,
       languages: { fr: "/fr/la-marque", en: "/en/la-marque" },
+    },
+    openGraph: {
+      title: m.ogTitle,
+      description: m.ogDescription,
+      url: ogUrl,
+      locale: locale === "fr" ? "fr_FR" : "en_GB",
+      type: "website",
+      siteName: "Cocobiches",
+      images: [
+        {
+          url: `${siteBase}/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: m.ogTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.ogTitle,
+      description: m.ogDescription,
     },
   };
 }
 
-export default async function BrandPage({
+function jsonLdBrand(locale: "fr" | "en") {
+  const isFr = locale === "fr";
+  const b = siteBase;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${b}/#organization`,
+        name: "Cocobiches",
+        url: b,
+        description: laMarqueMeta[locale].description,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Versailles",
+          postalCode: "78000",
+          addressCountry: "FR",
+        },
+        founder: [
+          { "@type": "Person", name: "François Comyn", jobTitle: isFr ? "Propriétaire et fondateur" : "Owner & founder" },
+          { "@type": "Person", name: "Elise Comyn (Ranjard)", jobTitle: isFr ? "Gérante" : "Managing director" },
+        ],
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": `${b}/#localbusiness`,
+        name: "Cocobiches",
+        image: `${b}/brand/cocobiches-logo.png`,
+        url: b,
+        telephone: "+33139000000",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Versailles",
+          addressLocality: "Versailles",
+          postalCode: "78000",
+          addressCountry: "FR",
+        },
+        parentOrganization: { "@id": `${b}/#organization` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: isFr ? "Accueil" : "Home",
+            item: `${b}/${locale}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: isFr ? "La marque" : "The brand",
+            item: `${b}${href(locale, "/la-marque")}`,
+          },
+        ],
+      },
+      {
+        "@type": "Person",
+        name: "Elise Comyn (Ranjard)",
+        jobTitle: isFr ? "Gérante du groupe Cocobiches" : "Managing director, Cocobiches group",
+        worksFor: { "@id": `${b}/#organization` },
+      },
+      {
+        "@type": "Person",
+        name: "François Comyn",
+        jobTitle: isFr ? "Propriétaire et fondateur" : "Owner & founder",
+        worksFor: { "@id": `${b}/#organization` },
+      },
+    ],
+  };
+}
+
+export default async function BrandPageRoute({
   params,
 }: {
   params: Promise<{ locale: string }> | undefined;
 }) {
   const locale = await getLocaleFromParams(params);
   if (!locale) return null;
-  const dict = await getDictionary(locale);
-  const b = dict.brand;
-  const values = [b.v1, b.v2, b.v3, b.v4];
 
   return (
     <>
-      <PageIntro title={b.title} lead={b.lead} />
-      <div className="mx-auto max-w-3xl px-4 py-16 md:px-6 md:py-20">
-        <FadeIn>
-          <h2 className="text-2xl font-bold text-cocobiches-marine">{b.valuesTitle}</h2>
-        </FadeIn>
-        <ul className="mt-8 space-y-4">
-          {values.map((v, i) => (
-            <FadeIn key={v} delay={i * 0.05}>
-              <li className="rounded-2xl border border-cocobiches-border bg-white p-5 text-cocobiches-muted shadow-sm">
-                {v}
-              </li>
-            </FadeIn>
-          ))}
-        </ul>
-        <FadeIn className="mt-12 space-y-3">
-          <h2 className="text-2xl font-bold text-cocobiches-marine">{b.teamTitle}</h2>
-          <p className="leading-relaxed text-cocobiches-muted">{b.teamBody}</p>
-        </FadeIn>
-      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdBrand(locale)),
+        }}
+      />
+      <LaMarquePage locale={locale} />
     </>
   );
 }

@@ -50,7 +50,7 @@ export default async function PressPage({
                   type="button"
                   className="w-full rounded-2xl border border-dashed border-cocobiches-marine/35 bg-cocobiches-creme-50 px-5 py-4 text-left text-sm font-semibold text-cocobiches-marine transition hover:border-cocobiches-marine hover:bg-white"
                 >
-                  {label} — PDF / ZIP (à connecter au média)
+                  {label} · PDF / ZIP (à connecter au média)
                 </button>
               </li>
             </FadeIn>

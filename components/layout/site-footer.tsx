@@ -18,7 +18,7 @@ export function SiteFooter({
   const exploreLinks = [
     { href: href(locale, "/la-marque"), label: dict.nav.brand },
     { href: href(locale, "/engagements"), label: dict.nav.commitments },
-    { href: href(locale, "/blog"), label: dict.nav.blog },
+    { href: href(locale, "/journal"), label: dict.nav.blog },
     { href: href(locale, "/presse"), label: dict.nav.press },
     { href: href(locale, "/partenaires"), label: dict.nav.partners },
   ];
@@ -73,7 +73,7 @@ export function SiteFooter({
             <li>
               <a
                 className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
-                href="https://www.hotel-angleterre.com/"
+                href="https://www.hotel-angleterre-versailles.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -95,7 +95,7 @@ export function SiteFooter({
             <li>
               <a
                 className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
-                href="https://www.apparts-oncle-louis.fr/"
+                href="https://www.apparts-onclelouis-versailles.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -168,7 +168,7 @@ export function SiteFooter({
 
       <div className="relative border-t border-white/[0.08]">
         <div className="mx-auto flex max-w-[1240px] flex-col items-start justify-between gap-3 px-5 py-6 text-[0.72rem] tracking-wide text-cocobiches-creme-200/75 md:flex-row md:items-center md:px-10">
-          <span>© {year} Cocobiches — {f.rights}</span>
+          <span>© {year} Cocobiches · {f.rights}</span>
           <span className="text-cocobiches-creme-200/55">
             Versailles · France · 🤍
           </span>

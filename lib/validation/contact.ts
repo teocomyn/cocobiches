@@ -5,7 +5,7 @@ export const contactFormSchema = z.object({
   name: z.string().trim().min(1, "name").max(200),
   email: z.string().trim().email(),
   message: z.string().trim().min(10).max(10000),
-  /** Champ anti-robot — doit être vide */
+  /** Champ anti-robot · doit être vide */
   website: z
     .string()
     .optional()

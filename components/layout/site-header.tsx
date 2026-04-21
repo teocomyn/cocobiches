@@ -26,7 +26,7 @@ export function SiteHeader({
     { href: href(locale, "/"), label: n.home },
     { href: href(locale, "/la-marque"), label: n.brand },
     { href: href(locale, "/engagements"), label: n.commitments },
-    { href: href(locale, "/blog"), label: n.blog },
+    { href: href(locale, "/journal"), label: n.blog },
     { href: href(locale, "/presse"), label: n.press },
     { href: href(locale, "/partenaires"), label: n.partners },
     { href: href(locale, "/contact"), label: n.contact },
@@ -68,7 +68,7 @@ export function SiteHeader({
           href={href(locale)}
           className="flex shrink-0 items-center gap-2 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cocobiches-creme"
         >
-          <CocobichesMark variant="creme" className="h-7 md:h-8" priority />
+          <CocobichesMark variant="creme" className="h-9 md:h-10" priority />
         </Link>
 
         <nav

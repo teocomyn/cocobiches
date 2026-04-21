@@ -34,7 +34,7 @@ On utilise **[Conventional Commits](https://www.conventionalcommits.org/)** en f
 ```
 type(scope): sujet court au présent
 
-[corps optionnel — contexte, pages touchées, intention marque]
+[corps optionnel · contexte, pages touchées, intention marque]
 ```
 
 **Types courants**
@@ -59,10 +59,10 @@ Privilégier l’effet **visiteur / marque** :
 
 | Moins parlant | Mieux pour Cocobiches |
 |---------------|------------------------|
-| `feat: add hero component` | `feat(accueil): héros marque — accroche FR/EN` |
-| `fix: button color` | `fix(marque): CTA réservation — contraste WCAG` |
-| `chore: bump next` | `chore: mise à jour Next — sécurité & build` |
-| `docs: readme` | `docs: README — groupe, trois maisons, site ombrelle` |
+| `feat: add hero component` | `feat(accueil): héros marque · accroche FR/EN` |
+| `fix: button color` | `fix(marque): CTA réservation · contraste WCAG` |
+| `chore: bump next` | `chore: mise à jour Next · sécurité & build` |
+| `docs: readme` | `docs: README · groupe, trois maisons, site ombrelle` |
 
 ### Corps du message (recommandé pour les grosses PR)
 

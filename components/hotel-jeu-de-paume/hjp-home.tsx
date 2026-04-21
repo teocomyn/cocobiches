@@ -11,7 +11,7 @@ export function HjpHome({ locale }: { locale: Locale }) {
 
   return (
     <>
-      {/* Hero — salon */}
+      {/* Hero · salon */}
       <section className="relative overflow-hidden bg-cocobiches-marine-900">
         <div className="absolute inset-0">
           <Image

@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/:locale/blog", destination: "/:locale/journal", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

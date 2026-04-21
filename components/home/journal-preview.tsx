@@ -2,13 +2,9 @@ import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
+import { getJournalPosts } from "@/lib/journal/posts";
+import { categoryLabel, sortByDateDesc } from "@/lib/journal/utils";
 import { href } from "@/lib/paths";
-
-const CARD_META = [
-  { cat: "Guide · Versailles", read: "7 min" },
-  { cat: "Séminaires", read: "5 min" },
-  { cat: "Adresses", read: "4 min" },
-];
 
 export function JournalPreview({
   dict,
@@ -18,12 +14,8 @@ export function JournalPreview({
   locale: Locale;
 }) {
   const h = dict.home;
-  const posts = dict.blog.posts;
-  const items = [
-    { ...posts["1"], ...CARD_META[0] },
-    { ...posts["2"], ...CARD_META[1] },
-    { ...posts["3"], ...CARD_META[2] },
-  ];
+  const j = dict.journalPage;
+  const items = sortByDateDesc(getJournalPosts()).slice(0, 3);
 
   return (
     <section className="relative overflow-hidden bg-cocobiches-creme-50 py-24 md:py-32">
@@ -46,35 +38,44 @@ export function JournalPreview({
         </FadeIn>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3 md:gap-7">
-          {items.map((p, i) => (
-            <FadeIn key={p.title} delay={i * 0.08}>
-              <article className="cb-card group flex h-full flex-col rounded-sm border border-cocobiches-marine/10 bg-white p-7 shadow-card transition hover:border-cocobiches-marine/25 hover:shadow-lift md:p-8">
-                <div className="flex items-center justify-between">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-or-muted">
-                    {p.cat}
+          {items.map((p, i) => {
+            const title = locale === "fr" ? p.titleFr : p.titleEn;
+            const excerpt = locale === "fr" ? p.excerptFr : p.excerptEn;
+            return (
+              <FadeIn key={p.slug} delay={i * 0.08}>
+                <Link
+                  href={href(locale, `/journal/${p.slug}`)}
+                  className="cb-card group flex h-full flex-col rounded-sm border border-cocobiches-marine/10 bg-white p-7 shadow-card transition hover:border-cocobiches-marine/25 hover:shadow-lift md:p-8"
+                >
+                  <div className="flex items-center justify-between">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-or-muted">
+                      {categoryLabel(p.category, j)}
+                    </p>
+                    <p className="text-[0.72rem] text-cocobiches-muted">
+                      · {p.readingMinutes} {j.minRead}
+                    </p>
+                  </div>
+                  <h3 className="font-display mt-5 text-[1.35rem] font-semibold leading-[1.2] tracking-[-0.018em] text-cocobiches-marine md:text-[1.45rem]">
+                    {title}
+                  </h3>
+                  <p className="mt-4 flex-1 text-[0.93rem] leading-[1.65] text-cocobiches-muted">
+                    {excerpt}
                   </p>
-                  <p className="text-[0.72rem] text-cocobiches-muted">· {p.read}</p>
-                </div>
-                <h3 className="font-display mt-5 text-[1.35rem] font-semibold leading-[1.2] tracking-[-0.018em] text-cocobiches-marine md:text-[1.45rem]">
-                  {p.title}
-                </h3>
-                <p className="mt-4 flex-1 text-[0.93rem] leading-[1.65] text-cocobiches-muted">
-                  {p.excerpt}
-                </p>
-                <span className="mt-7 inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cocobiches-marine">
-                  <span className="underline-offset-4 group-hover:underline">
-                    {dict.blog.read}
+                  <span className="mt-7 inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cocobiches-marine">
+                    <span className="underline-offset-4 group-hover:underline">
+                      {j.readArticle}
+                    </span>
+                    <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
-                  <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-                </span>
-              </article>
-            </FadeIn>
-          ))}
+                </Link>
+              </FadeIn>
+            );
+          })}
         </div>
 
         <FadeIn className="mt-10 flex justify-center md:mt-14">
           <Link
-            href={href(locale, "/blog")}
+            href={href(locale, "/journal")}
             className="inline-flex items-center gap-3 rounded-full border border-cocobiches-marine/25 px-7 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:border-cocobiches-marine hover:bg-cocobiches-marine hover:text-white"
           >
             <span>{h.journalCta}</span>

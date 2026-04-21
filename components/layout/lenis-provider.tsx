@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-/** Smooth scroll — brief : duration 1.2, easing cubic easeOut. Désactivé si prefers-reduced-motion. */
+/** Smooth scroll · brief : duration 1.2, easing cubic easeOut. Désactivé si prefers-reduced-motion. */
 export function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const reduce =

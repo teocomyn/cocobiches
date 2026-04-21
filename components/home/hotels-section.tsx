@@ -9,7 +9,7 @@ import { href as localeHref } from "@/lib/paths";
 const HOTELS = [
   {
     key: "angleterre" as const,
-    url: "https://www.hotel-angleterre.com/",
+    url: "https://www.hotel-angleterre-versailles.fr/",
     image: "/hotel-jeu-de-paume/chateau-versailles.png",
     imagePosition: "object-[center_45%]",
     accent: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",
@@ -25,7 +25,7 @@ const HOTELS = [
   },
   {
     key: "onclelouis" as const,
-    url: "https://www.apparts-oncle-louis.fr/",
+    url: "https://www.apparts-onclelouis-versailles.fr/",
     image: "/hotel-jeu-de-paume/carte-versailles.png",
     imagePosition: "object-[center_40%]",
     accent: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",

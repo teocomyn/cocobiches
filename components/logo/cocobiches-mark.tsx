@@ -12,7 +12,7 @@ export function CocobichesMark({
 }: {
   className?: string;
   variant?: "marine" | "creme";
-  /** Réservé au header (LCP) — éviter sur le footer. */
+  /** Réservé au header (LCP) · éviter sur le footer. */
   priority?: boolean;
 }) {
   if (variant === "creme") {
@@ -23,8 +23,8 @@ export function CocobichesMark({
           alt="Cocobiches"
           width={1024}
           height={1024}
-          className="h-full w-auto max-w-[min(180px,55vw)] object-contain object-left"
-          sizes="(max-width: 768px) 140px, 160px"
+          className="h-full w-auto max-w-[min(200px,58vw)] object-contain object-left"
+          sizes="(max-width: 768px) 160px, 180px"
           priority={priority}
           unoptimized
         />

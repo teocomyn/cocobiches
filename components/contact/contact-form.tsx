@@ -57,7 +57,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           {error}
         </p>
       ) : null}
-      {/* Honeypot — visible pour les bots, pas pour les humains */}
+      {/* Honeypot · visible pour les bots, pas pour les humains */}
       <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden>
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />

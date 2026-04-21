@@ -1,6 +1,6 @@
-# COCOBICHES — Design System
+# COCOBICHES · Design System
 
-**Version 1.0 — Avril 2026**
+**Version 1.0 · Avril 2026**
 
 Ce document est la référence unique pour toute production visuelle aux couleurs Cocobiches : print, digital, signalétique, réseaux sociaux, merchandising. Il s'applique aux trois établissements du groupe (Hôtel d'Angleterre, Hôtel du Jeu de Paume, Apparts de l'Oncle Louis) sous la marque ombrelle Cocobiches.
 
@@ -47,9 +47,9 @@ Le symbole (quatre cercles + rectangle) peut être utilisé seul lorsque la marq
 
 Chaque établissement dispose d'un verrouillage logo + nom d'hôtel, dans la typographie Montecatini Pro :
 
-- **COCOBICHES — Hôtel d'Angleterre**
-- **COCOBICHES — Hôtel du Jeu de Paume**
-- **COCOBICHES — Apparts de l'Oncle Louis**
+- **COCOBICHES · Hôtel d'Angleterre**
+- **COCOBICHES · Hôtel du Jeu de Paume**
+- **COCOBICHES · Apparts de l'Oncle Louis**
 
 Ces lock-ups sont utilisés pour toutes les communications propres à un établissement (site web, carte de visite, signalétique intérieure, papier à en-tête, facturation).
 
@@ -153,7 +153,7 @@ Sur un visuel type, la répartition idéale est :
 
 ### 4.1 Typographie principale : Montserrat
 
-**Usage** : tous les supports courants — site web, affichages, infos pratiques, communications digitales, documents internes, réseaux sociaux, signalétique générale, contenus éditoriaux.
+**Usage** : tous les supports courants · site web, affichages, infos pratiques, communications digitales, documents internes, réseaux sociaux, signalétique générale, contenus éditoriaux.
 
 Famille : Montserrat (Google Fonts, open source)
 Poids disponibles : Light, Regular, Medium, SemiBold, Bold, Black
@@ -162,14 +162,14 @@ Langues supportées : alphabet latin étendu (français, anglais, allemand, port
 **Hiérarchie recommandée :**
 
 ```
-H1 — Montserrat Bold    — 48 / 56 px   (web) ou 36 pt (print)
-H2 — Montserrat Bold    — 36 / 44 px   (web) ou 28 pt (print)
-H3 — Montserrat SemiBold — 24 / 32 px  (web) ou 20 pt (print)
-H4 — Montserrat SemiBold — 20 / 28 px  (web) ou 16 pt (print)
-Body Large — Montserrat Regular — 18 / 28 px
-Body — Montserrat Regular — 16 / 24 px
-Caption — Montserrat Medium — 14 / 20 px
-Footnote — Montserrat Regular — 12 / 16 px
+H1 · Montserrat Bold    · 48 / 56 px   (web) ou 36 pt (print)
+H2 · Montserrat Bold    · 36 / 44 px   (web) ou 28 pt (print)
+H3 · Montserrat SemiBold · 24 / 32 px  (web) ou 20 pt (print)
+H4 · Montserrat SemiBold · 20 / 28 px  (web) ou 16 pt (print)
+Body Large · Montserrat Regular · 18 / 28 px
+Body · Montserrat Regular · 16 / 24 px
+Caption · Montserrat Medium · 14 / 20 px
+Footnote · Montserrat Regular · 12 / 16 px
 ```
 
 ### 4.2 Typographie de marque : Montecatini Pro
@@ -285,7 +285,7 @@ Quatre déclinaisons, chacune dans une couleur dédiée :
 | ROOM CHECKED (chambre prête) | Vert | Montserrat Bold, crème |
 | MAKE UP YOUR ROOM (nettoyage en cours) | Crème | Montserrat Bold, bleu marine |
 
-### 6.4 Keycards (cartes électroniques — Jeu de Paume)
+### 6.4 Keycards (cartes électroniques · Jeu de Paume)
 
 Trois variantes de couleur pour différencier les types de chambres ou simplement l'expérience :
 - Crème avec numéro bleu marine (chambres standards)
@@ -354,8 +354,8 @@ Palette mobilier recommandée :
 Le groupe dispose d'un site ombrelle et d'un site par établissement :
 - cocobiches.fr (site ombrelle)
 - hotel-jeudepaume.fr
-- cocobiches/hoteldangleterre.fr (à venir)
-- cocobiches/... apparts-oncle-louis (à venir)
+- hotel-angleterre-versailles.fr
+- apparts-onclelouis-versailles.fr
 
 **Header standard :**
 - Logo Cocobiches crème sur fond bleu marine

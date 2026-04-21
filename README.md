@@ -1,6 +1,6 @@
 # Cocobiches
 
-**Cocobiches**, c’est un groupe hôtelier indépendant à **Versailles**, à deux pas du Château : trois maisons, trois personnalités, une même idée de **hospitalité lifestyle** — chaleureuse, authentique, à taille humaine.
+**Cocobiches**, c’est un groupe hôtelier indépendant à **Versailles**, à deux pas du Château : trois maisons, trois personnalités, une même idée de **hospitalité lifestyle** · chaleureuse, authentique, à taille humaine.
 
 ---
 
@@ -8,11 +8,11 @@
 
 | Maison | Liens |
 |--------|--------|
-| **Hôtel d’Angleterre** | [hotel-angleterre.com](https://www.hotel-angleterre.com/) |
+| **Hôtel d’Angleterre** | [hotel-angleterre-versailles.fr](https://www.hotel-angleterre-versailles.fr/) |
 | **Hôtel du Jeu de Paume** | [hotel-jeudepaume.fr](https://www.hotel-jeudepaume.fr/) |
-| **Apparts de l’Oncle Louis** | [apparts-oncle-louis.fr](https://www.apparts-oncle-louis.fr/) |
+| **Apparts de l’Oncle Louis** | [apparts-onclelouis-versailles.fr](https://www.apparts-onclelouis-versailles.fr/) |
 
-Le site **cocobiches.fr** en est le **fil conducteur** : il présente la marque, raconte l’esprit du groupe, oriente vers chaque établissement et accueille les demandes (contact, newsletter). Une partie du parcours est dédiée à l’**Hôtel du Jeu de Paume** — notamment l’offre séminaires et le séjour à Versailles — avec le même soin éditorial et visuel que le reste de l’identité Cocobiches.
+Le site **cocobiches.fr** en est le **fil conducteur** : il présente la marque, raconte l’esprit du groupe, oriente vers chaque établissement et accueille les demandes (contact, newsletter). Une partie du parcours est dédiée à l’**Hôtel du Jeu de Paume** · notamment l’offre séminaires et le séjour à Versailles · avec le même soin éditorial et visuel que le reste de l’identité Cocobiches.
 
 ---
 
@@ -24,7 +24,7 @@ Le site est pensé pour un public **francophone et international** : contenus en
 
 ## Identité visuelle & contenu
 
-Couleurs marine et crème, typographie sobre, patterns inspirés du cerf (symbole de la marque), ton **premium sans ostentation** — aligné avec les guides internes Cocobiches. Le détail des fondations créatives et des textes est rassemblé dans [`design-cocobiches.md`](design-cocobiches.md).
+Couleurs marine et crème, typographie sobre, patterns inspirés du cerf (symbole de la marque), ton **premium sans ostentation** · aligné avec les guides internes Cocobiches. Le détail des fondations créatives et des textes est rassemblé dans [`design-cocobiches.md`](design-cocobiches.md).
 
 ---
 
@@ -34,7 +34,7 @@ Couleurs marine et crème, typographie sobre, patterns inspirés du cerf (symbol
 |----------|------|
 | [`cocobiches.md`](cocobiches.md) | Vision, périmètre et exigences du projet site |
 | [`design-cocobiches.md`](design-cocobiches.md) | Design system, tonalité, patterns pour Cocobiches |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Comment contribuer — commits orientés marque, PR, qualité |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Comment contribuer · commits orientés marque, PR, qualité |
 
 ---
 
@@ -44,4 +44,4 @@ Ce dépôt contient le code source du site public Cocobiches. Après clonage, à
 
 ---
 
-*Cocobiches — hospitalité lifestyle à Versailles.*
+*Cocobiches · hospitalité lifestyle à Versailles.*

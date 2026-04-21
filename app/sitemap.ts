@@ -1,10 +1,13 @@
 import type { MetadataRoute } from "next";
+import { getJournalPosts } from "@/lib/journal/posts";
 import { locales } from "@/lib/i18n-config";
 import { href } from "@/lib/paths";
 
 const base =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
   "https://www.cocobiches.fr";
+
+const journalSlugs = getJournalPosts().map((p) => `/journal/${p.slug}`);
 
 const paths = [
   "/",
@@ -13,7 +16,8 @@ const paths = [
   "/presse",
   "/contact",
   "/partenaires",
-  "/blog",
+  "/journal",
+  ...journalSlugs,
   "/mentions-legales",
   "/politique-confidentialite",
   "/hotel-jeu-de-paume",
@@ -36,7 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ? 1
             : path.startsWith("/hotel-jeu-de-paume")
               ? 0.85
-              : 0.7,
+              : path.startsWith("/journal")
+                ? 0.75
+                : 0.7,
       });
     }
   }

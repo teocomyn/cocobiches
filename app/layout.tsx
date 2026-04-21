@@ -32,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${montserrat.variable} font-sans antialiased`}>
+      <body
+        className={`${montserrat.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
         <PlausibleAnalytics />
         <LenisProvider>{children}</LenisProvider>
       </body>

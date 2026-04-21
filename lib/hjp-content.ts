@@ -111,32 +111,32 @@ export type HjpContent = {
 const fr: HjpContent = {
   meta: {
     home: {
-      title: "Hôtel du Jeu de Paume — Versailles",
+      title: "Hôtel du Jeu de Paume · Versailles",
       description:
         "À deux pas du château de Versailles : hôtel de charme, équipe engagée, idéal pour découvrir la ville à pied.",
     },
     hotel: {
-      title: "L'hôtel — Chambres & confort",
+      title: "L'hôtel · Chambres & confort",
       description:
         "Chambres lumineuses, déco N. Stadler, petit-déjeuner et services pour un séjour fluide à Versailles.",
     },
     vivre: {
-      title: "Vivre Versailles — Itinéraires",
+      title: "Vivre Versailles · Itinéraires",
       description:
         "Conseils et parcours pour visiter le château, les jardins et Versailles selon votre temps sur place.",
     },
     offres: {
-      title: "Nos offres exclusives — Hôtel du Jeu de Paume",
+      title: "Nos offres exclusives · Hôtel du Jeu de Paume",
       description:
         "Séjour royal, early booking, long séjour, séjour romantique : avantages en réservant directement sur le site officiel.",
     },
     seminaires: {
-      title: "Séminaires & événements — Hôtel du Jeu de Paume",
+      title: "Séminaires & événements · Hôtel du Jeu de Paume",
       description:
         "Salle modulable à Versailles, à deux pas du Château et du Palais des Congrès : journées d'étude, comités, formations, team building.",
     },
     prepare: {
-      title: "Préparer votre séjour — Hôtel du Jeu de Paume",
+      title: "Préparer votre séjour · Hôtel du Jeu de Paume",
       description:
         "Accès, stationnement, FAQ et conseils pour arriver sereinement à Versailles.",
     },
@@ -218,9 +218,9 @@ const fr: HjpContent = {
     },
     taxi: {
       title: "Transferts indicatifs",
-      paris: "Paris centre — à partir de 30 €",
-      orly: "Aéroport Orly — à partir de 35 €",
-      cdg: "Aéroport Roissy CDG — à partir de 68 €",
+      paris: "Paris centre · à partir de 30 €",
+      orly: "Aéroport Orly · à partir de 35 €",
+      cdg: "Aéroport Roissy CDG · à partir de 68 €",
     },
   },
   hotelPage: {
@@ -325,7 +325,7 @@ const fr: HjpContent = {
       three: "3 jours",
     },
     coming:
-      "Itinéraires détaillés 1, 2 et 3 jours : demandez la conciergerie ou revenez bientôt — nous enrichissons cette section.",
+      "Itinéraires détaillés 1, 2 et 3 jours : demandez la conciergerie ou revenez bientôt · nous enrichissons cette section.",
   },
   seminarsPage: {
     hero: {
@@ -422,7 +422,7 @@ const fr: HjpContent = {
     parkingExtra: {
       title: "Stationnement à proximité",
       items: [
-        "Parking de la Cathédrale Saint-Louis (3 min à pied) — 20 % de remise sur votre stationnement si vous séjournez chez nous.",
+        "Parking de la Cathédrale Saint-Louis (3 min à pied) · 20 % de remise sur votre stationnement si vous séjournez chez nous.",
         "Parking Place d'Armes",
         "Parking Avenue de Sceaux",
         "Stationnement possible dans la rue (gratuit 19h–9h & dimanche via PayByPhone).",
@@ -486,7 +486,7 @@ const fr: HjpContent = {
       "Notre équipe reste disponible pour vous guider dans l'organisation de votre venue. N'hésitez pas à nous écrire : nous serons ravis de vous orienter.",
   },
   footer: {
-    address: "5 bis rue de Fontenay — 78000 Versailles",
+    address: "5 bis rue de Fontenay, 78000 Versailles",
     phone: "01 30 84 14 00",
     email: "contact@hotel-jeudepaume.fr",
     legal: "Mentions légales",
@@ -501,32 +501,32 @@ const fr: HjpContent = {
 const en: HjpContent = {
   meta: {
     home: {
-      title: "Hôtel du Jeu de Paume — Versailles",
+      title: "Hôtel du Jeu de Paume · Versailles",
       description:
         "Steps from the Palace of Versailles: a charming hotel, an attentive team, and the city on foot.",
     },
     hotel: {
-      title: "The hotel — Rooms & comfort",
+      title: "The hotel · Rooms & comfort",
       description:
         "Bright rooms, designer touches, breakfast and services for a smooth stay in Versailles.",
     },
     vivre: {
-      title: "Experience Versailles — Itineraries",
+      title: "Experience Versailles · Itineraries",
       description:
         "Ideas to visit the Palace, gardens and the city at your own pace.",
     },
     offres: {
-      title: "Exclusive offers — Hôtel du Jeu de Paume",
+      title: "Exclusive offers · Hôtel du Jeu de Paume",
       description:
         "Royal stay, advance booking, long stay, romantic package: perks when you book direct on the official website.",
     },
     seminaires: {
-      title: "Seminars & events — Hôtel du Jeu de Paume",
+      title: "Seminars & events · Hôtel du Jeu de Paume",
       description:
         "Modular meeting space in Versailles, near the Palace and convention centre: study days, board meetings, training, team building.",
     },
     prepare: {
-      title: "Plan your stay — Hôtel du Jeu de Paume",
+      title: "Plan your stay · Hôtel du Jeu de Paume",
       description:
         "Access, parking, FAQ and tips for a smooth arrival in Versailles.",
     },
@@ -577,10 +577,10 @@ const en: HjpContent = {
     },
     charm: {
       title: "A charming hotel run by an engaged, available team.",
-      body: "At Jeu de Paume, the mood is simple, elegant and welcoming. You come for calm, light and discreet comfort. Every space is designed to help you feel at ease — every gesture aims to make your stay as natural as possible.",
+      body: "At Jeu de Paume, the mood is simple, elegant and welcoming. You come for calm, light and discreet comfort. Every space is designed to help you feel at ease · every gesture aims to make your stay as natural as possible.",
     },
     access: {
-      title: "Getting here easily — from Paris or beyond.",
+      title: "Getting here easily · from Paris or beyond.",
     },
     transport: {
       rer: {
@@ -609,9 +609,9 @@ const en: HjpContent = {
     },
     taxi: {
       title: "Indicative transfers",
-      paris: "Central Paris — from €30",
-      orly: "Orly Airport — from €35",
-      cdg: "Roissy CDG — from €68",
+      paris: "Central Paris · from €30",
+      orly: "Orly Airport · from €35",
+      cdg: "Roissy CDG · from €68",
     },
   },
   hotelPage: {
@@ -624,7 +624,7 @@ const en: HjpContent = {
       {
         id: "petite",
         name: "Compact double rooms",
-        desc: "A cosy nest for a short stay — ideal solo or for two, warm and efficient.",
+        desc: "A cosy nest for a short stay · ideal solo or for two, warm and efficient.",
         specs: ["12–16 m²", "1–2 guests", "Queen bed"],
         amenities: [
           "Shower",
@@ -637,7 +637,7 @@ const en: HjpContent = {
       {
         id: "double",
         name: "Double rooms",
-        desc: "Spacious and bright — comfort and elegance for two, a romantic weekend or a cultural break.",
+        desc: "Spacious and bright · comfort and elegance for two, a romantic weekend or a cultural break.",
         specs: ["15–20 m²", "1–2 guests", "King bed"],
         amenities: [
           "Bath or shower",
@@ -650,7 +650,7 @@ const en: HjpContent = {
       {
         id: "twin",
         name: "Twin rooms",
-        desc: "Two single beds — friends, colleagues or business trips with independence and calm.",
+        desc: "Two single beds · friends, colleagues or business trips with independence and calm.",
         specs: ["15 m²", "1–2 guests", "Twin beds"],
         amenities: [
           "Bathtub",
@@ -663,7 +663,7 @@ const en: HjpContent = {
       {
         id: "family",
         name: "Family rooms",
-        desc: "Serene space for up to four — room to gather, rest and return in peace after Versailles.",
+        desc: "Serene space for up to four · room to gather, rest and return in peace after Versailles.",
         specs: ["20 m²", "Up to 4 guests", "King + sofa bed or futon"],
         amenities: [
           "Shower",
@@ -693,7 +693,7 @@ const en: HjpContent = {
       body: "In the heart of Versailles, Hôtel du Jeu de Paume is the ideal base to explore the city. Discover our ideas and routes for the time you have.",
     },
     contactCta:
-      "Our team can help you plan your visit — write to us, we will be glad to guide you.",
+      "Our team can help you plan your visit · write to us, we will be glad to guide you.",
     halfDay: {
       title: "Half-day visit",
       chateau: {
@@ -716,7 +716,7 @@ const en: HjpContent = {
       three: "3 days",
     },
     coming:
-      "Detailed 1-, 2- and 3-day routes: ask concierge or check back soon — we are expanding this section.",
+      "Detailed 1-, 2- and 3-day routes: ask concierge or check back soon · we are expanding this section.",
   },
   seminarsPage: {
     hero: {
@@ -726,7 +726,7 @@ const en: HjpContent = {
     intro1:
       "Steps from the Palace of Versailles and the convention centre, the Maison at Hôtel du Jeu de Paume offers a warm, inspiring workspace. Natural light, generous volumes and a family-house feel welcome your meetings, seminars and corporate events with ease. Flexible and comfortable, the space adapts to every format for productive, convivial moments.",
     intro2:
-      "At Jeu de Paume, plan your Versailles seminar in a professional yet welcoming setting. Our modular meeting room hosts study days, board meetings, training or team building, with full equipment and tailored breaks. Close to the Palace and easy to reach from Paris, the venue can be privatised for a bespoke corporate event — and you can extend the experience with an on-site residential seminar thanks to our rooms.",
+      "At Jeu de Paume, plan your Versailles seminar in a professional yet welcoming setting. Our modular meeting room hosts study days, board meetings, training or team building, with full equipment and tailored breaks. Close to the Palace and easy to reach from Paris, the venue can be privatised for a bespoke corporate event · and you can extend the experience with an on-site residential seminar thanks to our rooms.",
     atmosphere: {
       title: "An atmosphere that supports focus and creativity.",
       layouts: [
@@ -770,7 +770,7 @@ const en: HjpContent = {
       title: "Exclusive offers for a tailored stay.",
     },
     intro:
-      "Whether you like to plan ahead, extend your stay or share special moments as a couple, our offers are designed to give you more than a night at the hotel. Book directly on our website for exclusive benefits — and a welcome that always feels personal.",
+      "Whether you like to plan ahead, extend your stay or share special moments as a couple, our offers are designed to give you more than a night at the hotel. Book directly on our website for exclusive benefits · and a welcome that always feels personal.",
     items: [
       {
         id: "royal",
@@ -808,12 +808,12 @@ const en: HjpContent = {
   preparePage: {
     location: {
       title: "A prime location in the heart of Versailles.",
-      body: "On a quiet street in Saint-Louis, steps from shops, restaurants and the Palace, Hôtel du Jeu de Paume is the ideal base to explore Versailles on foot — whether you come for leisure, a seminar or a relaxing weekend.",
+      body: "On a quiet street in Saint-Louis, steps from shops, restaurants and the Palace, Hôtel du Jeu de Paume is the ideal base to explore Versailles on foot · whether you come for leisure, a seminar or a relaxing weekend.",
     },
     parkingExtra: {
       title: "Parking nearby",
       items: [
-        "Saint-Louis Cathedral car park (3 minutes on foot) — 20% off when you stay with us.",
+        "Saint-Louis Cathedral car park (3 minutes on foot) · 20% off when you stay with us.",
         "Place d'Armes car park",
         "Avenue de Sceaux car park",
         "On-street parking (free 7pm–9am & Sundays via PayByPhone).",
@@ -858,7 +858,7 @@ const en: HjpContent = {
       },
       {
         q: "Early check-in or late check-out?",
-        a: "Subject to availability on the day — ask reception and we will do our best.",
+        a: "Subject to availability on the day · ask reception and we will do our best.",
       },
       {
         q: "Is reception open 24/7?",
@@ -874,10 +874,10 @@ const en: HjpContent = {
       },
     ],
     contactCta:
-      "Our team is here to help you plan your visit — get in touch, we will be glad to assist.",
+      "Our team is here to help you plan your visit · get in touch, we will be glad to assist.",
   },
   footer: {
-    address: "5 bis rue de Fontenay — 78000 Versailles",
+    address: "5 bis rue de Fontenay, 78000 Versailles",
     phone: "+33 1 30 84 14 00",
     email: "contact@hotel-jeudepaume.fr",
     legal: "Legal notice",

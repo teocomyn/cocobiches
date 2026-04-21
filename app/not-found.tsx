@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-/** Routes sans locale (rare) — liens explicites FR / EN. */
+/** Routes sans locale (rare) · liens explicites FR / EN. */
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center bg-cocobiches-creme-50 px-6 py-24 text-center text-cocobiches-marine">

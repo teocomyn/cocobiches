@@ -1,4 +1,4 @@
-# 🦌 PROMPT CURSOR — Construction du site COCOBICHES
+# 🦌 PROMPT CURSOR · Construction du site COCOBICHES
 
 **À coller tel quel dans Cursor pour démarrer le projet. Ce prompt est conçu pour être exhaustif : il couvre la mission, la stack, le design system, les pages, les fonctionnalités, les performances, l'accessibilité et les livrables.**
 
@@ -32,9 +32,9 @@ Le site doit incarner le positionnement Cocobiches : **hospitalité lifestyle, c
 cocobiches/
 ├── apps/
 │   ├── umbrella/          # cocobiches.fr (site ombrelle)
-│   ├── angleterre/        # hotel-angleterre.com
+│   ├── angleterre/        # hotel-angleterre-versailles.fr
 │   ├── jeudepaume/        # hotel-jeudepaume.fr (existe déjà)
-│   └── oncle-louis/       # apparts-oncle-louis.fr
+│   └── oncle-louis/       # apparts-onclelouis-versailles.fr
 ├── packages/
 │   ├── ui/                # composants partagés (Button, Card, Modal...)
 │   ├── design-system/     # tokens, couleurs, typos, patterns
@@ -96,7 +96,7 @@ Utiliser **Turborepo** + **pnpm workspaces** pour la gestion du monorepo.
 // tailwind.config.ts
 colors: {
   cocobiches: {
-    // Primary — Bleu Marine signature
+    // Primary · Bleu Marine signature
     marine: {
       DEFAULT: '#2D3077',
       50: '#F0F1F9',
@@ -110,7 +110,7 @@ colors: {
       800: '#1C1D4B',
       900: '#131335',
     },
-    // Secondary — Crème
+    // Secondary · Crème
     creme: {
       DEFAULT: '#F4E7DB',
       50: '#FDFAF7',
@@ -120,7 +120,7 @@ colors: {
       400: '#D09C69',
       500: '#C48343',
     },
-    // Accent — Vert
+    // Accent · Vert
     vert: {
       DEFAULT: '#54A16B',
       50: '#EEF7F1',
@@ -191,7 +191,7 @@ Appliquer la règle **60% bleu marine / 30% crème / 10% vert** sur tous les vis
 /politique-confidentialite
 ```
 
-### Site `hotel-angleterre.com`
+### Site `hotel-angleterre-versailles.fr`
 
 ```
 /                          → Homepage HA
@@ -224,7 +224,7 @@ Appliquer la règle **60% bleu marine / 30% crème / 10% vert** sur tous les vis
 /contact
 ```
 
-### Site `apparts-oncle-louis.fr`
+### Site `apparts-onclelouis-versailles.fr`
 
 ```
 /                          → Homepage LAOL
@@ -706,7 +706,7 @@ pnpm sanity
 Avant d'écrire la moindre ligne de code, demande-moi :
 
 1. Quel moteur de réservation est actuellement utilisé et peut-on accéder à son API ?
-2. Les domaines finaux sont-ils arrêtés (hotel-angleterre.com ou autre) ?
+2. Les domaines finaux sont-ils arrêtés (hotel-angleterre-versailles.fr ou autre) ?
 3. Y a-t-il une volonté de PWA / app mobile dans un second temps ?
 4. Budget cloud / hébergement (Vercel Pro, OVH, etc.) ?
 5. Les équipes Cocobiches auront-elles une formation Sanity Studio ?

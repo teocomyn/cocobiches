@@ -5,7 +5,7 @@ type LocaleParams = { locale: string };
 
 /**
  * Résout le segment `[locale]` depuis les props Next.js.
- * Certains passages de prérendu peuvent omettre `params` — ne jamais destructurer sans garde.
+ * Certains passages de prérendu peuvent omettre `params` · ne jamais destructurer sans garde.
  */
 export async function getLocaleFromParams(
   params: Promise<LocaleParams> | LocaleParams | undefined,

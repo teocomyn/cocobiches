@@ -2,7 +2,7 @@
 @import "lenis/dist/lenis.css";
 
 :root {
-  /* Charte stricte (brief) — alias cb-* */
+  /* Charte stricte (brief) · alias cb-* */
   --cb-marine: #2d3077;
   --cb-cream: #f4e7db;
   --cb-green: #54a16b;
@@ -36,7 +36,7 @@
   --color-cocobiches-vert: #54a16b;
   --color-cocobiches-vert-600: #2f633f;
 
-  /* Accent or — filets, détails (usage parcimonieux) */
+  /* Accent or · filets, détails (usage parcimonieux) */
   --color-cocobiches-or: #c4a574;
   --color-cocobiches-or-muted: #a88652;
 
@@ -46,7 +46,7 @@
   --color-cocobiches-error: #d64545;
 
   --font-sans: var(--font-montserrat), system-ui, sans-serif;
-  /* Titres éditoriaux : Montserrat (Bold/Black), pas de serif — aligné brief */
+  /* Titres éditoriaux : Montserrat (Bold/Black), pas de serif · aligné brief */
   --font-display: var(--font-montserrat), system-ui, sans-serif;
 
   --shadow-soft: 0 28px 80px rgb(19 19 53 / 0.14);
@@ -54,7 +54,7 @@
   --shadow-lift: 0 32px 64px rgb(19 19 53 / 0.12);
   --shadow-inner-soft: inset 0 1px 0 rgb(255 255 255 / 0.45);
 
-  /* Hôtel du Jeu de Paume — accents intérieurs (salon) */
+  /* Hôtel du Jeu de Paume · accents intérieurs (salon) */
   --color-hjp-teal: #2a9d8f;
   --color-hjp-teal-dark: #1f7a70;
   --color-hjp-mint: #b8e0d2;
@@ -83,7 +83,7 @@ body {
   z-index: 0;
 }
 
-/* Grain papier — très léger */
+/* Grain papier · très léger */
 body::before {
   content: "";
   pointer-events: none;
@@ -158,4 +158,24 @@ body::before {
       transparent 100%
     );
   height: 1px;
+}
+
+@keyframes cb-scroll-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+.cb-scroll-hint {
+  animation: cb-scroll-hint 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-scroll-hint {
+    animation: none;
+  }
 }

@@ -7,7 +7,7 @@ import { NewsletterSection } from "@/components/home/newsletter-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { PressStrip } from "@/components/home/press-strip";
 import { JournalPreview } from "@/components/home/journal-preview";
-import { WhySection } from "@/components/home/why-section";
+import { ValuesSection } from "@/components/blocks/values-section";
 import { getDictionary } from "@/lib/get-dictionary";
 import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
@@ -71,7 +71,7 @@ export default async function HomePage({
       {
         "@type": "Hotel",
         name: "Hôtel d'Angleterre",
-        url: "https://www.hotel-angleterre.com/",
+        url: "https://www.hotel-angleterre-versailles.fr/",
       },
       {
         "@type": "Hotel",
@@ -81,7 +81,7 @@ export default async function HomePage({
       {
         "@type": "LodgingBusiness",
         name: "Apparts de l'Oncle Louis",
-        url: "https://www.apparts-oncle-louis.fr/",
+        url: "https://www.apparts-onclelouis-versailles.fr/",
       },
     ],
   };
@@ -98,8 +98,8 @@ export default async function HomePage({
       </div>
       <HotelsSection dict={dict} locale={locale} />
       <ManifestoSection dict={dict} locale={locale} />
+      <ValuesSection dict={dict} />
       <NumbersSection dict={dict} />
-      <WhySection dict={dict} />
       <TestimonialsSection dict={dict} />
       <JournalPreview dict={dict} locale={locale} />
       <PressStrip dict={dict} locale={locale} />
