@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "siteName": "Cocobiches",
+    "home": {
+      "title": "Cocobiches — Hôtels indépendants à Versailles",
+      "description": "Trois adresses à deux minutes du Château : Hôtel d'Angleterre, Hôtel du Jeu de Paume, Apparts de l'Oncle Louis. Hospitalité lifestyle, à taille humaine."
+    },
+    "brand": {
+      "title": "La marque — Cocobiches",
+      "description": "Notre histoire, nos valeurs et les équipes qui font vivre Versailles au quotidien."
+    },
+    "commitments": {
+      "title": "Nos engagements — Cocobiches",
+      "description": "RSE, écologie et responsabilité : ce que nous mesurons et améliorons chaque saison."
+    },
+    "press": {
+      "title": "Espace presse — Cocobiches",
+      "description": "Dossier de presse, logos et visuels officiels."
+    },
+    "contact": {
+      "title": "Contact — Cocobiches",
+      "description": "Écrivez-nous : nous vous répondons avec attention."
+    },
+    "partners": {
+      "title": "Partenaires & agences — Cocobiches",
+      "description": "Codes GDS, commissions et contact commercial pour le travel trade."
+    },
+    "blog": {
+      "title": "Le journal — Cocobiches",
+      "description": "Versailles, séjours, séminaires et coulisses de nos maisons."
+    },
+    "legal": {
+      "title": "Mentions légales — Cocobiches",
+      "description": "Informations légales et éditeur du site."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Cocobiches",
+      "description": "Données personnelles, cookies et vos droits."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "brand": "La marque",
+    "commitments": "Engagements",
+    "press": "Presse",
+    "contact": "Contact",
+    "partners": "Partenaires",
+    "blog": "Journal",
+    "book": "Réserver une chambre",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "skip": "Aller au contenu"
+  },
+  "footer": {
+    "tagline": "Trois maisons à Versailles, une même hospitalité.",
+    "group": "Groupe",
+    "legal": "Légal",
+    "mentions": "Mentions légales",
+    "privacyLink": "Politique de confidentialité",
+    "follow": "Suivez-nous",
+    "rights": "Tous droits réservés."
+  },
+  "cookie": {
+    "title": "Cookies",
+    "body": "Nous utilisons des cookies pour mesurer l’audience et améliorer votre navigation. Vous pouvez accepter ou refuser les cookies non essentiels.",
+    "accept": "Tout accepter",
+    "reject": "Refuser",
+    "learn": "En savoir plus"
+  },
+  "home": {
+    "welcome": "Bienvenue",
+    "welcomeLine": "BIENVENUE · WELCOME · BEM-VINDO · WILLKOMMEN",
+    "kicker": "Trois adresses à deux minutes du Château",
+    "title": "Nous vous accueillons comme à la maison, à Versailles.",
+    "subtitle": "Trois établissements indépendants, une promesse commune : une hospitalité lifestyle, chaleureuse et authentique.",
+    "ctaDiscover": "Découvrir nos maisons",
+    "ctaSeminars": "Organiser un séminaire",
+    "hotelsTitle": "Nos trois adresses",
+    "hotelsLead": "Chaque maison a son caractère. Choisissez celle qui vous ressemble.",
+    "angleterre": {
+      "name": "Hôtel d'Angleterre",
+      "tag": "3 étoiles · depuis 2010",
+      "desc": "Une adresse intime, idéale pour les séjours en famille ou en couple.",
+      "cta": "Visiter le site"
+    },
+    "jeudepaume": {
+      "name": "Hôtel du Jeu de Paume",
+      "tag": "3 étoiles · séminaires",
+      "desc": "Une maison pour les séjours comme pour les événements professionnels.",
+      "cta": "Visiter le site"
+    },
+    "onclelouis": {
+      "name": "Apparts de l'Oncle Louis",
+      "tag": "Apparthôtel · depuis 2018",
+      "desc": "Des appartements pour vous poser plus longtemps, à votre rythme.",
+      "cta": "Visiter le site"
+    },
+    "whyTitle": "Pourquoi nous choisir",
+    "why1": "Propriétaires-exploitants : un groupe familial sans actionnaire extérieur.",
+    "why2": "Cuisine maison, équipes présentes, détail à chaque étape.",
+    "why3": "Un ancrage local fort : partenaires de Versailles et du Grand Parc.",
+    "mapTitle": "Au cœur de Versailles",
+    "mapBody": "Chaque maison est à quelques minutes du Château et des jardins — à pied, en vélo ou en transport.",
+    "newsletterTitle": "Restons en contact",
+    "newsletterPlaceholder": "Votre adresse e-mail",
+    "newsletterCta": "S’inscrire",
+    "newsletterHint": "Double opt-in — vous pouvez vous désinscrire à tout moment."
+  },
+  "brand": {
+    "title": "Une marque familiale",
+    "lead": "Cocobiches, c’est un groupe indépendant porté par des propriétaires-exploitants. Nous croyons à une hospitalité à taille humaine : visible, sincère, exigeante.",
+    "valuesTitle": "Ce qui nous guide",
+    "v1": "Famille : des décisions prises ici, pour nos maisons et nos équipes.",
+    "v2": "Authenticité : des visages réels, une cuisine sincère, des lieux qui ont une âme.",
+    "v3": "Lifestyle : un séjour qui dépasse la simple nuitée — le temps d’un café, d’une promenade, d’un détail.",
+    "v4": "Responsabilité : une RSE mesurée, des choix concrets saison après saison.",
+    "teamTitle": "Les équipes",
+    "teamBody": "Réception, cuisine, housekeeping, événements : nous formons une équipe soudée. Chaque contact compte — nous préférons le « nous » au « je »."
+  },
+  "commitments": {
+    "title": "Nos engagements",
+    "lead": "Nous avançons avec des objectifs clairs : réduire notre impact, soutenir les producteurs locaux, et offrir un cadre de travail digne.",
+    "stats": {
+      "local": "Produits locaux en cuisine",
+      "waste": "Déchets évités (objectif trimestriel)",
+      "team": "Collaborateurs en CDI",
+      "transport": "Clients favorisant les mobilités douces"
+    },
+    "note": "Les chiffres sont mis à jour chaque trimestre et publiés ici."
+  },
+  "press": {
+    "title": "Espace presse",
+    "lead": "Retrouvez nos ressources officielles pour vos articles et reportages.",
+    "downloadPressKit": "Télécharger le dossier de presse (PDF)",
+    "downloadLogos": "Logos haute définition",
+    "downloadPhotos": "Banque d’images presse",
+    "contact": "Contact presse : presse@cocobiches.com"
+  },
+  "contact": {
+    "title": "Écrivez-nous",
+    "lead": "Une question sur le groupe, une idée de partenariat ? Nous nous engageons à vous répondre rapidement.",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Envoyer",
+    "success": "Merci — nous revenons vers vous très vite."
+  },
+  "partners": {
+    "title": "Agences & travel trade",
+    "lead": "Commission jusqu’à 15 %, surclassement selon disponibilité, contact commercial dédié.",
+    "gdsTitle": "Codes GDS",
+    "chain": "Chain Code AC",
+    "amadeus": "Amadeus XVEN71",
+    "galileo": "Galileo H3695",
+    "sabre": "Sabre 285367",
+    "worldspan": "Worldspan 0N71",
+    "commercial": "commercial@cocobiches.com"
+  },
+  "blog": {
+    "title": "Le journal",
+    "lead": "Idées de séjours, guides Versailles, coulisses et saisonnalité.",
+    "read": "Lire l’article",
+    "soon": "Bientôt : articles en ligne et newsletter.",
+    "posts": {
+      "1": {
+        "title": "Dix idées pour visiter Versailles autrement",
+        "excerpt": "Jardins, petites tables, balades — nos équipes partagent leurs adresses."
+      },
+      "2": {
+        "title": "Organiser un séminaire près du Château",
+        "excerpt": "Jeu de Paume : espaces, restauration et logistique, sans stress."
+      },
+      "3": {
+        "title": "Où déjeuner à deux pas du Château",
+        "excerpt": "Une sélection courte, testée par nos équipes."
+      }
+    }
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "body": "Éditeur : Cocobiches — Versailles, France. Hébergement : à préciser selon environnement de production. Directrice de publication : Élise Comyn."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "body": "Nous traitons vos données pour répondre à vos demandes et mesurer l’audience de ce site. Vous disposez d’un droit d’accès, de rectification et d’effacement. Contact : dpo@cocobiches.com (à adapter selon votre désignation)."
+  },
+  "hotels": {
+    "bookingNote": "Le moteur de réservation sera connecté à votre outil (D-EDGE / équivalent).",
+    "placeholderCta": "Réserver sur le site de l’établissement"
+  }
+}

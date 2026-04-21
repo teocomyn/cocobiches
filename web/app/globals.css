@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --cocobiches-ink: #141414;
+  --cocobiches-muted: #5c5c5c;
+  --site-header-height: 4.5rem;
+}
+
+@theme inline {
+  --color-cocobiches-marine: #2d3077;
+  --color-cocobiches-marine-50: #f0f1f9;
+  --color-cocobiches-marine-100: #daddf0;
+  --color-cocobiches-marine-200: #b5bbe1;
+  --color-cocobiches-marine-600: #2d3077;
+  --color-cocobiches-marine-700: #242661;
+  --color-cocobiches-marine-800: #1c1d4b;
+  --color-cocobiches-marine-900: #131335;
+
+  --color-cocobiches-creme: #f4e7db;
+  --color-cocobiches-creme-50: #fdfaf7;
+  --color-cocobiches-creme-100: #efe8dd;
+  --color-cocobiches-creme-200: #e8ceb5;
+
+  --color-cocobiches-vert: #54a16b;
+  --color-cocobiches-vert-600: #2f633f;
+
+  /* Accent or — filets, détails (usage parcimonieux) */
+  --color-cocobiches-or: #c4a574;
+  --color-cocobiches-or-muted: #a88652;
+
+  --color-cocobiches-ink: var(--cocobiches-ink);
+  --color-cocobiches-muted: var(--cocobiches-muted);
+  --color-cocobiches-border: #e8e4df;
+  --color-cocobiches-error: #d64545;
+
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+
+  --shadow-soft: 0 28px 80px rgb(19 19 53 / 0.14);
+  --shadow-card: 0 20px 50px rgb(45 48 119 / 0.09);
+  --shadow-lift: 0 32px 64px rgb(19 19 53 / 0.12);
+  --shadow-inner-soft: inset 0 1px 0 rgb(255 255 255 / 0.45);
+
+  /* Hôtel du Jeu de Paume — accents intérieurs (salon) */
+  --color-hjp-teal: #2a9d8f;
+  --color-hjp-teal-dark: #1f7a70;
+  --color-hjp-mint: #b8e0d2;
+  --color-hjp-slate: #98a7ba;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-cocobiches-creme-50);
+  background-image:
+    radial-gradient(1200px 800px at 10% -10%, rgb(240 241 249 / 0.65), transparent 55%),
+    radial-gradient(900px 600px at 100% 0%, rgb(244 231 219 / 0.5), transparent 50%);
+  color: var(--cocobiches-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 0;
+}
+
+/* Grain papier — très léger */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-cocobiches-marine) 16%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cocobiches-marine);
+  outline-offset: 3px;
+}
