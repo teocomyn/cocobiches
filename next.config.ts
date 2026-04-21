@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
-  // Réduit les avertissements quand un autre lockfile existe au-dessus du dossier web
+  // Réduit les avertissements si un autre lockfile existe au-dessus du projet
   outputFileTracingRoot: path.join(__dirname),
   images: {
     remotePatterns: [
