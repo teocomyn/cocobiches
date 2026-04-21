@@ -1,3 +1,5 @@
+import { FadeIn } from "@/components/motion/fade-in";
+import { DotsPattern } from "@/components/patterns/dots-pattern";
 import type { Dictionary } from "@/lib/get-dictionary";
 import { NewsletterForm } from "@/components/home/newsletter-form";
 
@@ -5,23 +7,41 @@ export function NewsletterSection({ dict }: { dict: Dictionary }) {
   const h = dict.home;
 
   return (
-    <section className="border-t border-cocobiches-border/80 bg-cocobiches-creme-50 py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="relative mx-auto max-w-xl overflow-hidden rounded-md bg-white p-px shadow-lift">
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cocobiches-or/20 via-transparent to-cocobiches-marine/10"
-            aria-hidden
-          />
-          <div className="relative rounded-[calc(0.375rem-1px)] bg-cocobiches-creme-50/90 p-9 backdrop-blur-sm md:p-11">
-            <h2 className="font-display text-center text-3xl font-semibold tracking-[-0.02em] text-cocobiches-marine md:text-[2rem]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-cocobiches-marine-800 via-cocobiches-marine to-cocobiches-marine-900 py-24 text-cocobiches-creme md:py-32">
+      <DotsPattern variant="creme-on-marine" className="opacity-[0.17]" />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgb(196_165_116/0.15),transparent_60%)]"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto grid max-w-[1240px] gap-12 px-5 md:grid-cols-[1fr_1.1fr] md:items-center md:gap-20 md:px-10">
+        <FadeIn>
+          <div>
+            <div className="flex items-center gap-3 text-cocobiches-or/90">
+              <span className="h-px w-10 bg-current opacity-80" aria-hidden />
+              <p className="cb-eyebrow">{h.newsletterEyebrow}</p>
+            </div>
+            <h2 className="font-display mt-5 text-[2rem] font-semibold leading-[1.08] tracking-[-0.025em] md:text-[2.85rem]">
               {h.newsletterTitle}
             </h2>
+            <p className="mt-6 max-w-md text-[1rem] leading-[1.75] text-cocobiches-creme-100/90 md:text-[1.05rem]">
+              {h.newsletterLead}
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.08}>
+          <div className="relative overflow-hidden rounded-sm border border-white/[0.1] bg-white/[0.04] p-8 shadow-[inset_0_1px_0_rgb(255_255_255/0.07)] backdrop-blur-md md:p-10">
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cocobiches-or/60 to-transparent"
+              aria-hidden
+            />
             <NewsletterForm dict={dict} />
-            <p className="mt-4 text-center text-xs leading-relaxed text-cocobiches-muted">
+            <p className="mt-6 text-[0.78rem] leading-[1.6] text-cocobiches-creme-200/75">
               {h.newsletterHint}
             </p>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

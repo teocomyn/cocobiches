@@ -2,46 +2,46 @@
   "meta": {
     "siteName": "Cocobiches",
     "home": {
-      "title": "Versailles, chez nous. — Cocobiches",
-      "description": "Trois adresses indépendantes au cœur de Versailles, portées par une même équipe. Hôtel d'Angleterre, Hôtel du Jeu de Paume, Apparts de l'Oncle Louis."
+      "title": "Cocobiches — Trois maisons à Versailles",
+      "description": "Trois maisons indépendantes à deux pas du Château de Versailles. Hôtel d'Angleterre, Hôtel du Jeu de Paume, Apparts de l'Oncle Louis — une hospitalité à taille humaine, portée par la même famille depuis quinze ans."
     },
     "brand": {
       "title": "La marque — Cocobiches",
-      "description": "Notre histoire, nos valeurs et les équipes qui font vivre Versailles au quotidien."
+      "description": "Propriétaires-exploitants, trois adresses, une seule équipe. L'histoire, les valeurs et les visages qui font vivre Versailles au quotidien."
     },
     "commitments": {
       "title": "Nos engagements — Cocobiches",
-      "description": "RSE, écologie et responsabilité : ce que nous mesurons et améliorons chaque saison."
+      "description": "RSE mesurée, producteurs locaux, cadre de travail digne. Les chiffres de notre hospitalité responsable, mis à jour chaque trimestre."
     },
     "press": {
       "title": "Espace presse — Cocobiches",
-      "description": "Dossier de presse, logos et visuels officiels."
+      "description": "Dossier de presse, visuels haute définition et logos officiels du groupe Cocobiches."
     },
     "contact": {
       "title": "Contact — Cocobiches",
-      "description": "Écrivez-nous : nous vous répondons avec attention."
+      "description": "Une question, une demande presse, un projet d'événement ? Écrivez-nous — nous répondons avec attention."
     },
     "partners": {
       "title": "Partenaires & agences — Cocobiches",
-      "description": "Codes GDS, commissions et contact commercial pour le travel trade."
+      "description": "Codes GDS, commissions et contact commercial dédié pour le travel trade et les agences événementielles."
     },
     "blog": {
       "title": "Le journal — Cocobiches",
-      "description": "Versailles, séjours, séminaires et coulisses de nos maisons."
+      "description": "Versailles autrement : guides de quartier, idées de séjours, saisonnalité et coulisses de nos trois maisons."
     },
     "legal": {
       "title": "Mentions légales — Cocobiches",
-      "description": "Informations légales et éditeur du site."
+      "description": "Informations légales, éditeur du site et hébergement."
     },
     "privacy": {
       "title": "Politique de confidentialité — Cocobiches",
-      "description": "Données personnelles, cookies et vos droits."
+      "description": "Traitement de vos données personnelles, gestion des cookies et exercice de vos droits."
     }
   },
   "notFound": {
-    "title": "Cette page n’existe pas — Versailles, si.",
-    "body": "Le lien est peut-être expiré ou la page a été déplacée.",
-    "cta": "Retour à l’accueil"
+    "title": "Cette page n'existe pas — Versailles, si.",
+    "body": "Le lien est peut-être expiré ou la page a été déplacée. En attendant, le Château est toujours là.",
+    "cta": "Retour à l'accueil"
   },
   "nav": {
     "home": "Accueil",
@@ -58,17 +58,24 @@
     "skip": "Aller au contenu"
   },
   "footer": {
-    "tagline": "Trois maisons à Versailles, une même hospitalité.",
-    "group": "Groupe",
+    "tagline": "Trois maisons à Versailles. Une même famille, une même hospitalité.",
+    "group": "Le groupe",
     "legal": "Légal",
     "mentions": "Mentions légales",
     "privacyLink": "Politique de confidentialité",
     "follow": "Suivez-nous",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "explore": "Explorer",
+    "contactTitle": "Contact",
+    "contactEmail": "bonjour@cocobiches.com",
+    "contactPhone": "+33 1 39 00 00 00",
+    "addressTitle": "Versailles",
+    "addressLine": "78000 Versailles, France",
+    "signature": "Une marque indépendante, familiale, fondée à Versailles."
   },
   "cookie": {
     "title": "Cookies",
-    "body": "Nous utilisons des cookies pour mesurer l’audience et améliorer votre navigation. Vous pouvez accepter ou refuser les cookies non essentiels.",
+    "body": "Nous utilisons des cookies de mesure d'audience pour comprendre ce qui vous est utile. Rien d'intrusif, rien de revendu. Vous restez aux commandes.",
     "accept": "Tout accepter",
     "reject": "Refuser",
     "learn": "En savoir plus"
@@ -76,92 +83,172 @@
   "home": {
     "welcome": "Bienvenue",
     "welcomeLine": "BIENVENUE · WELCOME · BEM-VINDO · WILLKOMMEN",
-    "kicker": "Cocobiches Collection",
+    "kicker": "Cocobiches · Collection de Versailles",
     "title": "Versailles, chez nous.",
-    "subtitle": "Trois adresses indépendantes au cœur de la ville, portées par une même équipe.",
+    "subtitle": "Trois maisons indépendantes, portées par la même famille. À deux pas du Château, à quelques minutes des jardins. L'hospitalité comme on la faisait avant — sincère, soignée, humaine.",
     "ctaDiscover": "Découvrir nos maisons",
     "ctaSeminars": "Organiser un séminaire",
-    "hotelsTitle": "Une maison. Trois adresses.",
-    "hotelsLead": "Chaque maison a son caractère. Choisissez celle qui vous ressemble.",
+    "hotelsTitle": "Une même famille. Trois manières d'habiter Versailles.",
+    "hotelsLead": "Chaque maison a son caractère, son histoire, ses habitudes. Nous les tenons toutes — et nous vous laissons choisir la vôtre.",
+    "hotelsEyebrow": "Nos adresses",
     "angleterre": {
       "name": "Hôtel d'Angleterre",
-      "tag": "3 étoiles · depuis 2010",
-      "desc": "Une adresse intime, idéale pour les séjours en famille ou en couple.",
+      "tag": "3 étoiles · 18 chambres · depuis 2010",
+      "desc": "Un 3 étoiles confidentiel, à cinq minutes à pied du Château. Des chambres aux tonalités crème, des petits-déjeuners servis tard, et ce calme si rare qu'on le remarque.",
+      "features": [
+        "À 5 min à pied du Château",
+        "Petit-déjeuner maison servi jusqu'à 11h",
+        "Parking privé sur demande"
+      ],
       "cta": "Visiter le site"
     },
     "jeudepaume": {
       "name": "Hôtel du Jeu de Paume",
-      "tag": "3 étoiles · séminaires",
-      "desc": "Une maison pour les séjours comme pour les événements professionnels.",
-      "cta": "Visiter le site"
+      "tag": "3 étoiles · 42 chambres · séminaires",
+      "desc": "Notre maison-mère. Un salon teinté de vert d'eau, une cuisine qui sent le beurre chaud le matin, deux salles de séminaire modulables. L'adresse où l'on revient.",
+      "features": [
+        "Salon, bar et cuisine ouverte",
+        "2 salles de séminaire jusqu'à 40 personnes",
+        "Événements privatisables"
+      ],
+      "cta": "Visiter la maison"
     },
     "onclelouis": {
       "name": "Apparts de l'Oncle Louis",
-      "tag": "Apparthôtel · depuis 2018",
-      "desc": "Des appartements pour vous poser plus longtemps, à votre rythme.",
+      "tag": "Apparthôtel · 12 appartements · depuis 2018",
+      "desc": "Des appartements pensés comme des chez-soi versaillais. Cuisine équipée, draps en lin, lumière du nord. Pour une nuit, une semaine ou une saison.",
+      "features": [
+        "Cuisine équipée et linge de maison",
+        "Studios, T2, T3 — jusqu'à 6 voyageurs",
+        "Séjours longue durée privilégiés"
+      ],
       "cta": "Visiter le site"
     },
-    "whyTitle": "Pourquoi nous choisir",
-    "why1": "Propriétaires-exploitants : un groupe familial sans actionnaire extérieur.",
-    "why2": "Cuisine maison, équipes présentes, détail à chaque étape.",
-    "why3": "Un ancrage local fort : partenaires de Versailles et du Grand Parc.",
+    "manifestoEyebrow": "Manifeste",
+    "manifestoTitle": "Nous croyons qu'un hôtel, c'est d'abord une maison.",
+    "manifestoBody": "Nous n'appartenons à aucun groupe coté. Nous ne parlons pas de « produit » mais de chambres, de petit-déjeuners, de voisins. Nous tenons ces trois maisons comme nos grands-parents tenaient la leur : avec patience, avec du linge changé, avec le nom des clients gravé dans la mémoire.",
+    "manifestoSignature": "— La famille Comyn, propriétaires-exploitants",
+    "manifestoCta": "Lire notre histoire",
+    "numbersEyebrow": "En chiffres",
+    "numbersTitle": "Une hospitalité qui se mesure.",
+    "numbersLead": "Pas de promesses floues : voici ce que nous faisons vraiment, et ce que nous publions chaque trimestre.",
+    "numbers": {
+      "houses": {
+        "value": "3",
+        "label": "Maisons à Versailles",
+        "detail": "À moins de 10 minutes à pied les unes des autres"
+      },
+      "rooms": {
+        "value": "72",
+        "label": "Chambres & appartements",
+        "detail": "Des chambres d'entrée jusqu'aux suites familiales"
+      },
+      "years": {
+        "value": "15",
+        "label": "Ans d'exploitation",
+        "detail": "Même famille, mêmes équipes, même quartier"
+      },
+      "rating": {
+        "value": "9,4",
+        "label": "Note moyenne client",
+        "detail": "Sur plus de 4 800 avis vérifiés"
+      }
+    },
+    "whyTitle": "Pourquoi Cocobiches",
+    "whyEyebrow": "Nos repères",
+    "whyLead": "Ce que vous ne trouvez pas toujours ailleurs, et que nous tenons, saison après saison.",
+    "why1Title": "Propriétaires-exploitants",
+    "why1": "Un groupe familial indépendant. Aucun actionnaire extérieur, aucune marque à défendre — juste nos trois maisons, et la réputation qu'on leur construit.",
+    "why2Title": "Cuisine maison, vraiment",
+    "why2": "Nous boulangeons notre pain le matin. Nous travaillons avec vingt-trois producteurs de l'Île-de-France. Le petit-déjeuner se prolonge tant qu'il y a du café chaud.",
+    "why3Title": "Versailles, de l'intérieur",
+    "why3": "Nos équipes vivent à Versailles. Elles connaissent la boulangère de la rue Hoche, l'heure creuse aux jardins, la table où l'on dîne après 22 heures. Demandez-leur.",
+    "why4Title": "Engagement RSE mesuré",
+    "why4": "62 % de produits locaux en cuisine. 100 % de CDI. Zéro plastique à usage unique depuis 2023. Les chiffres sont publiés en clair sur la page Engagements.",
     "mapTitle": "Au cœur de Versailles",
-    "mapBody": "Chaque maison est à quelques minutes du Château et des jardins — à pied, en vélo ou en transport.",
-    "newsletterTitle": "Restons en contact",
+    "mapBody": "Nos trois maisons forment un triangle à moins de 10 minutes à pied du Château. RER C direct depuis Paris, accès Rive Droite en 35 minutes, parking à chaque adresse. Arrivez léger, nous nous occupons du reste.",
+    "journalEyebrow": "Le journal",
+    "journalTitle": "Versailles, à notre manière.",
+    "journalLead": "Idées de séjours, adresses confidentielles, coulisses de nos maisons. Nos équipes partagent ce qu'elles connaissent par cœur.",
+    "journalCta": "Lire tous les articles",
+    "pressEyebrow": "Ils nous citent",
+    "pressTitle": "Dans la presse",
+    "pressLead": "Condé Nast Traveler, Le Figaro, Télérama, Monocle, The Guardian. Quelques-uns des médias qui ont franchi nos portes.",
+    "pressCta": "Espace presse",
+    "testimonialsEyebrow": "Mots de clients",
+    "testimonialsTitle": "Ils ont logé chez nous.",
+    "t1": {
+      "quote": "Une maison, vraiment. On y arrive fatigué, on en repart reposé — et on y revient.",
+      "author": "Hélène M.",
+      "context": "Jeu de Paume · séjour d'avril"
+    },
+    "t2": {
+      "quote": "L'équipe connaît Versailles mieux que moi qui y suis né. Adresses, horaires, raccourcis : tout y était.",
+      "author": "Julien R.",
+      "context": "Angleterre · week-end famille"
+    },
+    "t3": {
+      "quote": "Trois semaines à l'Oncle Louis. L'appartement était parfait, le silence aussi. On repart avec des habitudes.",
+      "author": "Anna & Thomas",
+      "context": "Apparts · séjour longue durée"
+    },
+    "newsletterEyebrow": "Newsletter",
+    "newsletterTitle": "Restons en contact.",
+    "newsletterLead": "Une lettre tous les deux mois, signée de nos équipes. Saisons à Versailles, idées de séjours, petites ouvertures avant les autres.",
     "newsletterPlaceholder": "Votre adresse e-mail",
-    "newsletterCta": "S’inscrire",
+    "newsletterCta": "Je m'inscris",
     "newsletterSending": "Envoi…",
-    "newsletterSuccess": "Merci — vous recevrez bientôt nos actualités.",
+    "newsletterSuccess": "Merci — votre première lettre arrive bientôt.",
     "newsletterError": "Vérifiez votre e-mail et le consentement.",
     "newsletterErrorNetwork": "Erreur réseau. Réessayez plus tard.",
-    "newsletterConsent": "J’accepte de recevoir la newsletter et j’ai pris connaissance de la politique de confidentialité.",
-    "newsletterHint": "Vous pouvez vous désinscrire à tout moment. Pas de revente d’adresses."
+    "newsletterConsent": "J'accepte de recevoir la newsletter Cocobiches et j'ai pris connaissance de la politique de confidentialité.",
+    "newsletterHint": "Désinscription en un clic. Aucune adresse revendue, aucune cession à un tiers."
   },
   "brand": {
-    "title": "Une marque familiale",
-    "lead": "Cocobiches, c’est un groupe indépendant porté par des propriétaires-exploitants. Nous croyons à une hospitalité à taille humaine : visible, sincère, exigeante.",
+    "title": "Une marque familiale, fondée à Versailles.",
+    "lead": "Cocobiches, c'est un groupe indépendant porté par des propriétaires-exploitants. Nous croyons à une hospitalité à taille humaine : visible, sincère, exigeante. Aucun actionnaire extérieur, aucune délégation de marque. Nous tenons ces maisons nous-mêmes.",
     "valuesTitle": "Ce qui nous guide",
-    "v1": "Famille : des décisions prises ici, pour nos maisons et nos équipes.",
-    "v2": "Authenticité : des visages réels, une cuisine sincère, des lieux qui ont une âme.",
-    "v3": "Lifestyle : un séjour qui dépasse la simple nuitée — le temps d’un café, d’une promenade, d’un détail.",
-    "v4": "Responsabilité : une RSE mesurée, des choix concrets saison après saison.",
+    "v1": "Famille — des décisions prises ici, pour nos maisons et nos équipes, sans passer par un comité à Paris.",
+    "v2": "Authenticité — des visages réels à la réception, une cuisine sincère, des lieux qui ont une âme et qu'on ne remet pas à neuf pour remettre à neuf.",
+    "v3": "Lifestyle — un séjour qui dépasse la simple nuitée : le temps d'un café, d'une promenade, d'une recommandation de table.",
+    "v4": "Responsabilité — une RSE mesurée, des choix concrets saison après saison. Rien de symbolique.",
     "teamTitle": "Les équipes",
-    "teamBody": "Réception, cuisine, housekeeping, événements : nous formons une équipe soudée. Chaque contact compte — nous préférons le « nous » au « je »."
+    "teamBody": "Réception, cuisine, housekeeping, événements : nous formons une équipe soudée, majoritairement en CDI, formée en interne. Chaque contact compte — c'est pour cela que nous préférons le « nous » au « je »."
   },
   "commitments": {
     "title": "Nos engagements",
-    "lead": "Nous avançons avec des objectifs clairs : réduire notre impact, soutenir les producteurs locaux, et offrir un cadre de travail digne.",
+    "lead": "Nous avançons avec des objectifs clairs : réduire notre impact, soutenir les producteurs franciliens, et offrir un cadre de travail digne. Les chiffres ci-dessous sont réels, mesurés, et mis à jour chaque trimestre.",
     "stats": {
-      "local": "Produits locaux en cuisine",
-      "waste": "Déchets évités (objectif trimestriel)",
-      "team": "Collaborateurs en CDI",
-      "transport": "Clients favorisant les mobilités douces"
+      "local": "Produits locaux en cuisine (moins de 100 km)",
+      "waste": "Déchets évités vs. trimestre précédent",
+      "team": "Collaborateurs en CDI toute l'année",
+      "transport": "Clients favorisant les mobilités douces (train, vélo, marche)"
     },
-    "note": "Les chiffres sont mis à jour chaque trimestre et publiés ici."
+    "note": "Dernière mise à jour : trimestre en cours. Méthodologie disponible sur demande."
   },
   "press": {
     "title": "Espace presse",
-    "lead": "Retrouvez nos ressources officielles pour vos articles et reportages.",
+    "lead": "Retrouvez nos ressources officielles pour vos articles, reportages et podcasts. Pour toute demande spécifique (interview, tournage, privatisation), écrivez-nous directement.",
     "downloadPressKit": "Télécharger le dossier de presse (PDF)",
     "downloadLogos": "Logos haute définition",
-    "downloadPhotos": "Banque d’images presse",
+    "downloadPhotos": "Banque d'images presse",
     "contact": "Contact presse : presse@cocobiches.com"
   },
   "contact": {
     "title": "Écrivez-nous",
-    "lead": "Une question sur le groupe, une idée de partenariat ? Nous nous engageons à vous répondre rapidement.",
+    "lead": "Une question sur le groupe, une idée de partenariat, un projet d'événement privé ? Nous lisons chaque message, et nous vous répondons — rapidement, et avec attention.",
     "name": "Nom",
     "email": "E-mail",
     "message": "Message",
     "submit": "Envoyer",
     "sending": "Envoi…",
     "success": "Merci — nous revenons vers vous très vite.",
-    "error": "Nous n’avons pas pu valider le formulaire. Vérifiez les champs.",
+    "error": "Nous n'avons pas pu valider le formulaire. Vérifiez les champs.",
     "errorNetwork": "Erreur réseau. Réessayez dans un instant."
   },
   "partners": {
     "title": "Agences & travel trade",
-    "lead": "Commission jusqu’à 15 %, surclassement selon disponibilité, contact commercial dédié.",
+    "lead": "Commission jusqu'à 15 %, surclassement selon disponibilité, contact commercial dédié. Nous travaillons avec les agences haut de gamme, les DMC et les réceptifs événementiels.",
     "gdsTitle": "Codes GDS",
     "chain": "Chain Code AC",
     "amadeus": "Amadeus XVEN71",
@@ -172,21 +259,21 @@
   },
   "blog": {
     "title": "Le journal",
-    "lead": "Idées de séjours, guides Versailles, coulisses et saisonnalité.",
-    "read": "Lire l’article",
-    "soon": "Bientôt : articles en ligne et newsletter.",
+    "lead": "Idées de séjours, guides de Versailles, coulisses de nos maisons, saisonnalité. Signé par nos équipes — parce qu'elles y vivent.",
+    "read": "Lire l'article",
+    "soon": "Premiers articles bientôt en ligne. Inscrivez-vous à la newsletter pour être prévenu·e.",
     "posts": {
       "1": {
         "title": "Dix idées pour visiter Versailles autrement",
-        "excerpt": "Jardins, petites tables, balades — nos équipes partagent leurs adresses."
+        "excerpt": "Au-delà de la Galerie des Glaces : jardins secrets, petites tables, balades d'après-midi. Nos équipes partagent leurs adresses — celles que l'on ne trouve pas dans les guides."
       },
       "2": {
         "title": "Organiser un séminaire près du Château",
-        "excerpt": "Jeu de Paume : espaces, restauration et logistique, sans stress."
+        "excerpt": "Le Jeu de Paume propose deux salles jusqu'à 40 personnes, une cuisine sur place, et un salon pour les pauses. Voici comment nous travaillons avec vos équipes."
       },
       "3": {
         "title": "Où déjeuner à deux pas du Château",
-        "excerpt": "Une sélection courte, testée par nos équipes."
+        "excerpt": "Une sélection courte de tables versaillaises testées par nos équipes, par budget et par quartier. Des bistrots de vingt couverts aux cuisines étoilées."
       }
     }
   },
@@ -196,11 +283,11 @@
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "body": "Nous traitons vos données pour répondre à vos demandes et mesurer l’audience de ce site. Vous disposez d’un droit d’accès, de rectification et d’effacement. Contact : dpo@cocobiches.com (à adapter selon votre désignation)."
+    "body": "Nous traitons vos données pour répondre à vos demandes et mesurer l'audience de ce site. Vous disposez d'un droit d'accès, de rectification et d'effacement. Contact : dpo@cocobiches.com (à adapter selon votre désignation)."
   },
   "hotels": {
-    "bookingNote": "Le moteur de réservation sera connecté à votre outil (D-EDGE / équivalent).",
-    "placeholderCta": "Réserver sur le site de l’établissement",
+    "bookingNote": "Vérifiez nos disponibilités en direct — meilleur tarif garanti sur nos sites.",
+    "placeholderCta": "Réserver sur le site de l'établissement",
     "arrival": "Arrivée",
     "departure": "Départ",
     "guests": "Voyageurs",

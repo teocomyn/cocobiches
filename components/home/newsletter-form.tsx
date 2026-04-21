@@ -44,7 +44,7 @@ export function NewsletterForm({ dict }: { dict: Dictionary }) {
 
   if (ok) {
     return (
-      <p className="rounded-xl border border-cocobiches-vert/35 bg-white/80 px-6 py-4 text-center text-sm text-cocobiches-marine">
+      <p className="rounded-md border border-cocobiches-vert/40 bg-cocobiches-vert/15 px-6 py-5 text-center text-sm text-cocobiches-creme">
         {h.newsletterSuccess}
       </p>
     );
@@ -52,7 +52,7 @@ export function NewsletterForm({ dict }: { dict: Dictionary }) {
 
   return (
     <form
-      className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-stretch"
+      className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-stretch"
       onSubmit={onSubmit}
     >
       <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden>
@@ -70,28 +70,34 @@ export function NewsletterForm({ dict }: { dict: Dictionary }) {
         disabled={pending}
         autoComplete="email"
         placeholder={h.newsletterPlaceholder}
-        className="min-h-12 flex-1 rounded-full border border-cocobiches-border bg-white px-5 text-sm text-cocobiches-ink shadow-inner-soft outline-none ring-cocobiches-marine/30 transition placeholder:text-cocobiches-muted/80 focus:ring-2"
+        className="min-h-12 flex-1 rounded-full border border-white/15 bg-white/[0.05] px-5 text-sm text-cocobiches-creme outline-none ring-cocobiches-or/40 transition placeholder:text-cocobiches-creme-200/50 focus:ring-2"
       />
-      <label className="flex flex-1 items-center gap-2 text-left text-xs text-cocobiches-muted sm:min-w-full sm:basis-full">
+      <button
+        type="submit"
+        disabled={pending}
+        className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-cocobiches-creme px-8 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:bg-white disabled:opacity-60"
+      >
+        {pending ? h.newsletterSending : h.newsletterCta}
+        <span
+          aria-hidden
+          className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </button>
+      <label className="flex flex-1 items-start gap-2 text-left text-[0.78rem] leading-snug text-cocobiches-creme-200/80 sm:min-w-full sm:basis-full">
         <input
           name="consent"
           type="checkbox"
           required
           disabled={pending}
-          className="size-4 shrink-0 rounded border-cocobiches-marine text-cocobiches-marine focus:ring-cocobiches-marine"
+          className="mt-0.5 size-4 shrink-0 rounded border-white/40 bg-white/10 text-cocobiches-or focus:ring-cocobiches-or/40"
         />
         <span>{h.newsletterConsent}</span>
       </label>
       {error ? (
-        <p className="w-full text-center text-sm text-cocobiches-error sm:basis-full">{error}</p>
+        <p className="w-full text-left text-sm text-cocobiches-error sm:basis-full">{error}</p>
       ) : null}
-      <button
-        type="submit"
-        disabled={pending}
-        className="min-h-12 rounded-full bg-cocobiches-marine px-8 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-cocobiches-marine-800 disabled:opacity-60"
-      >
-        {pending ? h.newsletterSending : h.newsletterCta}
-      </button>
     </form>
   );
 }

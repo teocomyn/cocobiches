@@ -1,7 +1,12 @@
 import { BookingBar } from "@/components/booking/booking-bar";
 import { Hero } from "@/components/home/hero";
 import { HotelsSection } from "@/components/home/hotels-section";
+import { ManifestoSection } from "@/components/home/manifesto-section";
+import { NumbersSection } from "@/components/home/numbers-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
+import { TestimonialsSection } from "@/components/home/testimonials-section";
+import { PressStrip } from "@/components/home/press-strip";
+import { JournalPreview } from "@/components/home/journal-preview";
 import { WhySection } from "@/components/home/why-section";
 import { getDictionary } from "@/lib/get-dictionary";
 import { getLocaleFromParams } from "@/lib/locale-params";
@@ -92,7 +97,12 @@ export default async function HomePage({
         <BookingBar dict={dict} variant="home" />
       </div>
       <HotelsSection dict={dict} locale={locale} />
+      <ManifestoSection dict={dict} locale={locale} />
+      <NumbersSection dict={dict} />
       <WhySection dict={dict} />
+      <TestimonialsSection dict={dict} />
+      <JournalPreview dict={dict} locale={locale} />
+      <PressStrip dict={dict} locale={locale} />
       <NewsletterSection dict={dict} />
     </>
   );

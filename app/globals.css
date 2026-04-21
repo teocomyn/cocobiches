@@ -112,3 +112,50 @@ body::before {
   outline: 2px solid var(--color-cocobiches-marine);
   outline-offset: 3px;
 }
+
+.cb-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+.cb-card {
+  transition:
+    transform 450ms var(--ease-cb),
+    box-shadow 450ms var(--ease-cb),
+    border-color 450ms var(--ease-cb);
+}
+
+@keyframes cb-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.cb-marquee {
+  display: flex;
+  width: max-content;
+  animation: cb-marquee 48s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-marquee { animation: none; }
+}
+
+.cb-gold-line {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--color-cocobiches-or) 70%, transparent) 50%,
+    transparent 100%
+  );
+}
+
+.cb-hairline {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in srgb, var(--color-cocobiches-marine) 18%, transparent) 50%,
+      transparent 100%
+    );
+  height: 1px;
+}
