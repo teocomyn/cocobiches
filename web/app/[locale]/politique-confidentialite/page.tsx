@@ -1,22 +1,22 @@
 import { PageIntro } from "@/components/pages/page-intro";
 import { getDictionary } from "@/lib/get-dictionary";
-import { isLocale } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }): Promise<Metadata> {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return {};
+  const dict = await getDictionary(locale);
   return {
     title: dict.meta.privacy.title,
     description: dict.meta.privacy.description,
     alternates: {
-      canonical: href(raw, "/politique-confidentialite"),
+      canonical: href(locale, "/politique-confidentialite"),
       languages: {
         fr: "/fr/politique-confidentialite",
         en: "/en/politique-confidentialite",
@@ -28,11 +28,11 @@ export async function generateMetadata({
 export default async function PrivacyPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return null;
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return null;
+  const dict = await getDictionary(locale);
 
   return (
     <>

@@ -2,7 +2,9 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n-config";
 import { href } from "@/lib/paths";
 
-const base = "https://www.cocobiches.fr";
+const base =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.cocobiches.fr";
 
 const paths = [
   "/",
@@ -28,7 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const path of paths) {
       entries.push({
         url: `${base}${href(locale, path)}`,
-        lastModified: new Date(),
         changeFrequency: "weekly",
         priority:
           path === "/"

@@ -10,25 +10,22 @@ const HOTELS = [
   {
     key: "angleterre" as const,
     url: "https://www.hotel-angleterre.com/",
-    image:
-      "https://images.unsplash.com/photo-1611892440504-42a792e54d34?auto=format&fit=crop&w=1200&q=85",
-    imagePosition: "object-[center_60%]",
+    image: "/hotel-jeu-de-paume/chateau-versailles.png",
+    imagePosition: "object-[center_45%]",
     tone: "from-cocobiches-marine-900/85 via-cocobiches-marine-900/35 to-transparent",
   },
   {
     key: "jeudepaume" as const,
     url: "__INTERNAL_JDP__",
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85",
+    image: "/hotel-jeu-de-paume/facade.png",
     imagePosition: "object-center",
     tone: "from-cocobiches-marine-900/80 via-cocobiches-marine-900/30 to-transparent",
   },
   {
     key: "onclelouis" as const,
     url: "https://www.apparts-oncle-louis.fr/",
-    image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=85",
-    imagePosition: "object-[center_70%]",
+    image: "/hotel-jeu-de-paume/carte-versailles.png",
+    imagePosition: "object-[center_40%]",
     tone: "from-cocobiches-marine-900/85 via-cocobiches-marine-900/35 to-transparent",
   },
 ];
@@ -42,7 +39,7 @@ export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Loca
       className="relative overflow-hidden bg-cocobiches-creme-50 py-24 md:py-32"
     >
       <LogoPattern className="opacity-[0.035]" />
-      <div className="relative mx-auto max-w-6xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-[1440px] px-5 md:px-8">
         <FadeIn>
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
@@ -64,14 +61,14 @@ export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Loca
             const copy = h[hotel.key];
             return (
               <FadeIn key={hotel.key} delay={i * 0.08}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.35rem] bg-white shadow-lift ring-1 ring-cocobiches-border/80 transition duration-500 hover:-translate-y-1 hover:shadow-soft">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-md bg-white shadow-lift ring-1 ring-cocobiches-marine/[0.12] transition duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-soft">
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
                       src={hotel.image}
                       alt=""
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`object-cover transition duration-[1100ms] ease-out group-hover:scale-[1.04] ${hotel.imagePosition}`}
+                      className={`object-cover transition duration-[450ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] ${hotel.imagePosition}`}
                     />
                     <div
                       className={`absolute inset-0 bg-gradient-to-t ${hotel.tone}`}

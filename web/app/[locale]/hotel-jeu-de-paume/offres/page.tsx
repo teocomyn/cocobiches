@@ -1,18 +1,18 @@
 import { HjpOffresPageView } from "@/components/hotel-jeu-de-paume/hjp-offres-page";
 import { getHjpContent } from "@/lib/hjp-content";
-import { isLocale } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }): Promise<Metadata> {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return {};
-  const m = getHjpContent(raw).meta.offres;
-  const path = href(raw, "/hotel-jeu-de-paume/offres");
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return {};
+  const m = getHjpContent(locale).meta.offres;
+  const path = href(locale, "/hotel-jeu-de-paume/offres");
   return {
     title: m.title,
     description: m.description,
@@ -30,9 +30,9 @@ export async function generateMetadata({
 export default async function HotelJdpOffresPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return null;
-  return <HjpOffresPageView locale={raw} />;
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return null;
+  return <HjpOffresPageView locale={locale} />;
 }

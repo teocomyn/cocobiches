@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { PlausibleAnalytics } from "@/components/analytics/plausible";
+import { LenisProvider } from "@/components/layout/lenis-provider";
 import "./globals.css";
 
+/** Charte : Montserrat seule pour tout le texte (300–900). Montecatini réservé au logo (fichier image). */
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -35,10 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body
-        className={`${montserrat.variable} ${cormorant.variable} font-sans antialiased`}
-      >
-        {children}
+      <body className={`${montserrat.variable} font-sans antialiased`}>
+        <PlausibleAnalytics />
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );

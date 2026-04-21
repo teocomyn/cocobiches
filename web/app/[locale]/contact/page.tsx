@@ -1,23 +1,23 @@
 import { ContactForm } from "@/components/contact/contact-form";
 import { PageIntro } from "@/components/pages/page-intro";
 import { getDictionary } from "@/lib/get-dictionary";
-import { isLocale } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }): Promise<Metadata> {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return {};
+  const dict = await getDictionary(locale);
   return {
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
     alternates: {
-      canonical: href(raw, "/contact"),
+      canonical: href(locale, "/contact"),
       languages: { fr: "/fr/contact", en: "/en/contact" },
     },
   };
@@ -26,11 +26,11 @@ export async function generateMetadata({
 export default async function ContactPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return null;
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return null;
+  const dict = await getDictionary(locale);
   const c = dict.contact;
 
   return (

@@ -4,29 +4,29 @@ import { HotelsSection } from "@/components/home/hotels-section";
 import { NewsletterSection } from "@/components/home/newsletter-section";
 import { WhySection } from "@/components/home/why-section";
 import { getDictionary } from "@/lib/get-dictionary";
-import { isLocale } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }): Promise<Metadata> {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return {};
+  const dict = await getDictionary(locale);
   return {
     title: dict.meta.home.title,
     description: dict.meta.home.description,
     alternates: {
-      canonical: href(raw),
+      canonical: href(locale),
       languages: { fr: "/fr", en: "/en" },
     },
     openGraph: {
       title: dict.meta.home.title,
       description: dict.meta.home.description,
-      url: href(raw),
+      url: href(locale),
     },
   };
 }
@@ -34,11 +34,10 @@ export async function generateMetadata({
 export default async function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return null;
-  const locale = raw;
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return null;
   const dict = await getDictionary(locale);
 
   const orgJsonLd = {
@@ -47,10 +46,21 @@ export default async function HomePage({
     name: "Cocobiches",
     url: "https://www.cocobiches.fr",
     description: dict.meta.home.description,
+    areaServed: {
+      "@type": "City",
+      name: "Versailles",
+      containedInPlace: { "@type": "Country", name: "France" },
+    },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Versailles",
       addressCountry: "FR",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: "commercial@cocobiches.com",
+      availableLanguage: ["French", "English"],
     },
     subOrganization: [
       {
@@ -78,7 +88,9 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
       <Hero locale={locale} dict={dict} />
-      <BookingBar dict={dict} />
+      <div className="relative z-20 px-4 md:px-8">
+        <BookingBar dict={dict} variant="home" />
+      </div>
       <HotelsSection dict={dict} locale={locale} />
       <WhySection dict={dict} />
       <NewsletterSection dict={dict} />

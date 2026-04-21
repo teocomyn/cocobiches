@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Site **Cocobiches** (Next.js 15, App Router, Tailwind CSS v4, Framer Motion, **Lenis** smooth scroll).
+
+- **Typo** : Montserrat uniquement (`app/layout.tsx`). Le logo wordmark utilise le PNG (`public/brand/`), pas Montecatini en texte.
+- **Tokens** : variables `--cb-*` et `--color-cocobiches-*` dans `app/globals.css` ; grille éditoriale max **1440px**.
+- **Header** : hauteur **72px → 56px** au scroll ; navigation centrée ; CTA `nav.bookCta` (FR « Réserver », EN « I BOOK »).
 
 ## Getting Started
 

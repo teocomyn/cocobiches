@@ -4,7 +4,8 @@ import { ConditionalSiteFooter } from "@/components/layout/conditional-site-foot
 import { SiteHeader } from "@/components/layout/site-header";
 import { HtmlLang } from "@/components/shell/html-lang";
 import { getDictionary } from "@/lib/get-dictionary";
-import { isLocale, locales } from "@/lib/i18n-config";
+import { locales } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -15,11 +16,10 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }>) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) notFound();
-  const locale = raw;
+  const locale = await getLocaleFromParams(params);
+  if (!locale) notFound();
   const dict = await getDictionary(locale);
 
   return (

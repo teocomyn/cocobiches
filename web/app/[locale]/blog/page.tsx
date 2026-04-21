@@ -2,23 +2,23 @@ import Link from "next/link";
 import { PageIntro } from "@/components/pages/page-intro";
 import { FadeIn } from "@/components/motion/fade-in";
 import { getDictionary } from "@/lib/get-dictionary";
-import { isLocale } from "@/lib/i18n-config";
+import { getLocaleFromParams } from "@/lib/locale-params";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }): Promise<Metadata> {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return {};
+  const dict = await getDictionary(locale);
   return {
     title: dict.meta.blog.title,
     description: dict.meta.blog.description,
     alternates: {
-      canonical: href(raw, "/blog"),
+      canonical: href(locale, "/blog"),
       languages: { fr: "/fr/blog", en: "/en/blog" },
     },
   };
@@ -27,11 +27,11 @@ export async function generateMetadata({
 export default async function BlogPage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }> | undefined;
 }) {
-  const { locale: raw } = await params;
-  if (!isLocale(raw)) return null;
-  const dict = await getDictionary(raw);
+  const locale = await getLocaleFromParams(params);
+  if (!locale) return null;
+  const dict = await getDictionary(locale);
   const b = dict.blog;
   const posts = [b.posts["1"], b.posts["2"], b.posts["3"]];
 
@@ -57,7 +57,7 @@ export default async function BlogPage({
         </div>
         <FadeIn className="mt-12 text-center">
           <Link
-            href={href(raw, "/contact")}
+            href={href(locale, "/contact")}
             className="inline-flex rounded-full bg-cocobiches-marine px-6 py-3 text-sm font-semibold text-white"
           >
             {dict.nav.contact}

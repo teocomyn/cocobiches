@@ -1,9 +1,21 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 :root {
-  --cocobiches-ink: #141414;
-  --cocobiches-muted: #5c5c5c;
+  /* Charte stricte (brief) — alias cb-* */
+  --cb-marine: #2d3077;
+  --cb-cream: #f4e7db;
+  --cb-green: #54a16b;
+  --cb-noir: #1a1a1a;
+  --cb-gris-fonce: #4a4a4a;
+  --cb-gris: #9b9b9b;
+  --cb-gris-clair: #e5e5e5;
+  --cb-white: #ffffff;
+
+  --cocobiches-ink: #1a1a1a;
+  --cocobiches-muted: #4a4a4a;
   --site-header-height: 4.5rem;
+  --ease-cb: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @theme inline {
@@ -34,10 +46,11 @@
   --color-cocobiches-error: #d64545;
 
   --font-sans: var(--font-montserrat), system-ui, sans-serif;
-  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  /* Titres éditoriaux : Montserrat (Bold/Black), pas de serif — aligné brief */
+  --font-display: var(--font-montserrat), system-ui, sans-serif;
 
   --shadow-soft: 0 28px 80px rgb(19 19 53 / 0.14);
-  --shadow-card: 0 20px 50px rgb(45 48 119 / 0.09);
+  --shadow-card: 0 20px 60px rgb(45 48 119 / 0.08);
   --shadow-lift: 0 32px 64px rgb(19 19 53 / 0.12);
   --shadow-inner-soft: inset 0 1px 0 rgb(255 255 255 / 0.45);
 
@@ -84,6 +97,11 @@ body::before {
 .font-display {
   font-family: var(--font-display);
   font-feature-settings: "kern" 1, "liga" 1;
+  font-style: normal;
+}
+
+.max-w-editorial {
+  max-width: 90rem;
 }
 
 ::selection {
