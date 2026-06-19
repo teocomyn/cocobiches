@@ -35,14 +35,6 @@ const JournalPreview = dynamic(
   { loading: () => null },
 );
 
-const PressStrip = dynamic(
-  () =>
-    import("@/components/home/press-strip").then((mod) => ({
-      default: mod.PressStrip,
-    })),
-  { loading: () => null },
-);
-
 export async function generateMetadata({
   params,
 }: {
@@ -123,7 +115,6 @@ export default async function HomePage({
       <NumbersSection dict={dict} />
       <TestimonialsSection dict={dict} />
       <JournalPreview dict={dict} locale={locale} />
-      <PressStrip dict={dict} locale={locale} />
     </>
   );
 }
