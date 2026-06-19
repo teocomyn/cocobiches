@@ -49,19 +49,9 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
       <div className="relative mx-auto grid w-full max-w-[1440px] gap-10 px-5 pb-24 pt-32 md:px-10 md:pb-28 md:pt-36">
         <div className="max-w-3xl space-y-7 text-cocobiches-creme">
-          <div className="cb-hero-fade flex items-center gap-4">
-            <span
-              className="h-px w-12 shrink-0 bg-cocobiches-or/80 md:w-16"
-              aria-hidden
-            />
-            <p className="cb-eyebrow text-[0.7rem] text-cocobiches-creme-200/95 md:text-[0.75rem]">
-              {h.kicker}
-            </p>
-          </div>
-
           <p
             className={cn(
-              "cb-hero-fade cb-hero-fade-delay-1 text-xs font-bold uppercase tracking-[0.28em] text-cocobiches-creme-100/95 md:text-sm",
+              "cb-hero-fade text-xs font-bold uppercase tracking-[0.28em] text-cocobiches-creme-100/95 md:text-sm",
               "drop-shadow-[0_2px_24px_rgb(0_0_0/0.35)]",
             )}
           >
@@ -73,15 +63,15 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             ))}
           </p>
 
-          <h1 className="cb-hero-fade cb-hero-fade-delay-2 font-display text-[2.55rem] font-semibold uppercase leading-[0.98] tracking-[-0.04em] text-white drop-shadow-[0_4px_48px_rgb(0_0_0/0.45)] md:text-[4.1rem] lg:text-[4.6rem]">
+          <h1 className="cb-hero-fade cb-hero-fade-delay-1 font-display text-[2.55rem] font-semibold uppercase leading-[0.98] tracking-[-0.04em] text-white drop-shadow-[0_4px_48px_rgb(0_0_0/0.45)] md:text-[4.1rem] lg:text-[4.6rem]">
             {h.title}
           </h1>
 
-          <p className="cb-hero-fade cb-hero-fade-delay-3 max-w-xl font-sans text-[1rem] leading-[1.7] text-cocobiches-creme-100 md:text-[1.1rem] md:leading-[1.7]">
+          <p className="cb-hero-fade cb-hero-fade-delay-2 max-w-xl font-sans text-[1rem] leading-[1.7] text-cocobiches-creme-100 md:text-[1.1rem] md:leading-[1.7]">
             {h.subtitle}
           </p>
 
-          <ul className="cb-hero-fade cb-hero-fade-delay-4 flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
+          <ul className="cb-hero-fade cb-hero-fade-delay-3 flex flex-wrap items-center gap-x-4 gap-y-2 pt-1">
             {badges.map((b, i) => (
               <li
                 key={b}
@@ -95,7 +85,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             ))}
           </ul>
 
-          <div className="cb-hero-fade cb-hero-fade-delay-5 flex flex-wrap items-center gap-4 pt-3">
+          <div className="cb-hero-fade cb-hero-fade-delay-4 flex flex-wrap items-center gap-4 pt-3">
             <Link
               href={`${href(locale)}#nos-maisons`}
               className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-cocobiches-creme px-8 py-3.5 text-[0.78rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine shadow-[0_16px_45px_rgb(0_0_0/0.25)] transition hover:bg-white"
