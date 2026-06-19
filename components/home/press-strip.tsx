@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FadeIn } from "@/components/motion/fade-in";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
 import { href } from "@/lib/paths";
@@ -28,32 +27,30 @@ export function PressStrip({
   return (
     <section className="relative overflow-hidden border-y border-cocobiches-marine/10 bg-white py-14 md:py-16">
       <div className="mx-auto max-w-[1240px] px-5 md:px-10">
-        <FadeIn>
-          <div className="flex flex-col items-start gap-5 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div className="flex items-center gap-3 text-cocobiches-or-muted">
-                <span className="h-px w-10 bg-current opacity-70" aria-hidden />
-                <p className="cb-eyebrow">{h.pressEyebrow}</p>
-              </div>
-              <h2 className="font-display mt-3 text-[1.4rem] font-semibold tracking-[-0.02em] text-cocobiches-marine md:text-[1.75rem]">
-                {h.pressTitle}
-              </h2>
+        <div className="flex flex-col items-start gap-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="flex items-center gap-3 text-cocobiches-or-muted">
+              <span className="h-px w-10 bg-current opacity-70" aria-hidden />
+              <p className="cb-eyebrow">{h.pressEyebrow}</p>
             </div>
-            <Link
-              href={href(locale, "/presse")}
-              className="group inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:text-cocobiches-marine-800"
-            >
-              <span className="underline-offset-4 group-hover:underline">
-                {h.pressCta}
-              </span>
-              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
+            <h2 className="font-display mt-3 text-[1.4rem] font-semibold tracking-[-0.02em] text-cocobiches-marine md:text-[1.75rem]">
+              {h.pressTitle}
+            </h2>
           </div>
-        </FadeIn>
+          <Link
+            href={href(locale, "/presse")}
+            className="group inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:text-cocobiches-marine-800"
+          >
+            <span className="underline-offset-4 group-hover:underline">
+              {h.pressCta}
+            </span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+        </div>
       </div>
 
       <div
-        className="relative mt-10 overflow-hidden"
+        className="cb-marquee-wrap relative mt-10 overflow-hidden"
         aria-hidden
         style={{
           maskImage:

@@ -49,7 +49,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
 
         <div className="grid grid-cols-6 gap-4 md:gap-6">
           <FadeIn className="col-span-6 lg:col-span-3" delay={0.05}>
-            <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
+            <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-[box-shadow,border-color] duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
               <CardContent className="relative flex h-full min-h-[420px] flex-col justify-between p-8 md:p-12">
                 <div
                   className="pointer-events-none absolute right-6 top-4 select-none font-display text-[160px] font-black leading-none text-cocobiches-marine/4"
@@ -81,7 +81,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
           </FadeIn>
 
           <FadeIn className="col-span-6 sm:col-span-3 lg:col-span-3" delay={0.1}>
-            <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
+            <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-[box-shadow,border-color] duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
               <CardContent className="relative flex h-full min-h-[420px] flex-col justify-between p-8 md:p-12">
                 <div
                   className="pointer-events-none absolute right-6 top-4 select-none font-display text-[160px] font-black leading-none text-cocobiches-creme/6"
@@ -113,7 +113,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
           </FadeIn>
 
           <FadeIn className="col-span-6 lg:col-span-6" delay={0.12}>
-            <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
+            <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-[box-shadow,border-color] duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
               <CardContent className="grid h-full min-h-[360px] gap-8 p-8 sm:grid-cols-2 md:gap-12 md:p-12">
                 <div className="relative flex flex-col justify-between">
                   <div
@@ -157,7 +157,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
           </FadeIn>
 
           <FadeIn className="col-span-6 lg:col-span-6" delay={0.15}>
-            <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
+            <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-[box-shadow,border-color] duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
               <CardContent className="grid h-full min-h-[360px] gap-8 p-8 sm:grid-cols-2 md:gap-12 md:p-12">
                 <div className="relative flex flex-col justify-between">
                   <div

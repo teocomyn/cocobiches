@@ -35,7 +35,7 @@ export function BookingBar({ dict, locale, variant = "default" }: Props) {
     >
       <div
         className={cn(
-          "mx-auto overflow-hidden rounded-2xl bg-white/95 shadow-lift ring-1 ring-cocobiches-marine/[0.1] backdrop-blur-md",
+          "mx-auto overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-cocobiches-marine/[0.1]",
           isHome ? "max-w-[1180px]" : "max-w-[1440px]",
         )}
       >

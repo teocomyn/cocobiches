@@ -66,7 +66,7 @@ export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Loca
                       alt={hotelImageAlt(hotel, locale)}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`object-cover transition duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.045] ${POSITIONS[hotel.id]}`}
+                      className={`object-cover ${POSITIONS[hotel.id]}`}
                     />
                     <div
                       className={`absolute inset-0 bg-gradient-to-t ${ACCENTS[hotel.id]}`}

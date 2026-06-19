@@ -35,15 +35,31 @@ export function SiteHeader({
 
   useEffect(() => {
     const root = document.documentElement;
-    const onScroll = () => {
-      const y = window.scrollY > 24;
-      setScrolled(y);
-      root.style.setProperty("--site-header-height", y ? "3.5rem" : "4.5rem");
+    let frame = 0;
+    let lastScrolled = window.scrollY > 24;
+
+    const apply = (next: boolean) => {
+      if (next === lastScrolled) return;
+      lastScrolled = next;
+      setScrolled(next);
+      root.dataset.headerScrolled = next ? "true" : "false";
+      root.style.setProperty("--site-header-height", next ? "3.5rem" : "4.5rem");
     };
-    onScroll();
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        apply(window.scrollY > 24);
+      });
+    };
+
+    apply(lastScrolled);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      delete root.dataset.headerScrolled;
       root.style.removeProperty("--site-header-height");
     };
   }, []);
@@ -51,19 +67,17 @@ export function SiteHeader({
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 border-b text-cocobiches-creme transition-[height,background-color,backdrop-filter,border-color] duration-300",
+        "sticky top-0 z-40 border-b text-cocobiches-creme",
         scrolled
           ? "border-cocobiches-creme/[0.15] bg-[rgba(45,48,119,0.98)]"
           : "border-white/[0.07] bg-cocobiches-marine/95",
       )}
-      style={{ transitionTimingFunction: easeCb }}
     >
       <div
         className={cn(
-          "mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 transition-[height] duration-300 md:px-8",
+          "mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 md:px-8",
           scrolled ? "h-14" : "h-[4.5rem]",
         )}
-        style={{ transitionTimingFunction: easeCb }}
       >
         <Link
           href={href(locale)}
@@ -136,7 +150,7 @@ export function SiteHeader({
       <div
         id="mobile-nav"
         className={cn(
-          "border-t border-white/10 bg-cocobiches-marine-800/98 backdrop-blur-xl lg:hidden",
+          "border-t border-white/10 bg-cocobiches-marine-800/98 lg:hidden",
           open ? "block" : "hidden",
         )}
       >

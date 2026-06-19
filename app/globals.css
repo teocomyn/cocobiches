@@ -104,22 +104,37 @@ body {
 
 .cb-card {
   transition:
-    transform 450ms var(--ease-cb),
     box-shadow 450ms var(--ease-cb),
     border-color 450ms var(--ease-cb);
+}
+@media (hover: hover) {
+  .cb-card {
+    transition:
+      transform 450ms var(--ease-cb),
+      box-shadow 450ms var(--ease-cb),
+      border-color 450ms var(--ease-cb);
+  }
 }
 
 @keyframes cb-marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+.cb-marquee-wrap {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 4rem;
+}
 .cb-marquee {
   display: flex;
   width: max-content;
   animation: cb-marquee 48s linear infinite;
+  will-change: transform;
 }
 @media (prefers-reduced-motion: reduce) {
-  .cb-marquee { animation: none; }
+  .cb-marquee {
+    animation: none;
+    will-change: auto;
+  }
 }
 
 .cb-gold-line {
