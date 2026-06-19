@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import { DotsPattern } from "@/components/patterns/dots-pattern";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
 import { href } from "@/lib/paths";
+
+const MANIFESTO_IMAGE = "/hotel-angleterre/experience.png";
 
 export function ManifestoSection({
   dict,
@@ -26,7 +29,7 @@ export function ManifestoSection({
         aria-hidden
       />
 
-      <div className="relative mx-auto grid max-w-[1240px] gap-14 px-5 md:grid-cols-[auto_1fr] md:gap-20 md:px-10">
+      <div className="relative mx-auto grid max-w-[1240px] gap-14 px-5 md:grid-cols-[auto_1fr] md:gap-x-12 md:gap-y-14 md:px-10 lg:grid-cols-[auto_1fr_minmax(0,26rem)] lg:items-start lg:gap-x-16 xl:grid-cols-[auto_1fr_minmax(0,28rem)]">
         <FadeIn>
           <div className="flex items-start gap-4 md:sticky md:top-32">
             <span
@@ -39,7 +42,7 @@ export function ManifestoSection({
           </div>
         </FadeIn>
 
-        <div className="max-w-3xl">
+        <div className="min-w-0 lg:max-w-none">
           <FadeIn>
             <h2 className="font-display text-[2.05rem] font-semibold leading-[1.12] tracking-[-0.022em] text-cocobiches-marine md:text-[3rem] md:leading-[1.08]">
               <span className="relative">
@@ -83,6 +86,22 @@ export function ManifestoSection({
             </div>
           </FadeIn>
         </div>
+
+        <FadeIn delay={0.1} className="md:col-span-2 lg:col-span-1 lg:col-start-3 lg:row-start-1 lg:row-span-3">
+          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-sm border border-cocobiches-marine/10 shadow-card ring-1 ring-cocobiches-marine/[0.06] lg:mx-0 lg:max-w-none">
+            <Image
+              src={MANIFESTO_IMAGE}
+              alt={
+                locale === "fr"
+                  ? "Accueil chaleureux à l'Hôtel d'Angleterre, ambiance familiale Cocobiches"
+                  : "Warm welcome at Hôtel d'Angleterre, Cocobiches family atmosphere"
+              }
+              fill
+              sizes="(min-width: 1024px) 28rem, (min-width: 768px) 50vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
