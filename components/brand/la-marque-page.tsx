@@ -92,7 +92,7 @@ export function LaMarquePage({ locale }: { locale: LaMarqueLocale }) {
       {/* SECTION 1 · HERO */}
       <section className="relative min-h-[100svh] max-h-[820px] overflow-hidden">
         <Image
-          src="/hotel-jeu-de-paume/facade.png"
+          src="/hotel-jeu-de-paume/hotel-facade.jpg"
           alt={d.hero.imageAlt}
           fill
           priority
@@ -301,9 +301,6 @@ export function LaMarquePage({ locale }: { locale: LaMarqueLocale }) {
                       <span className="font-display text-5xl font-bold tracking-tight text-cocobiches-marine/25">
                         {person.initials}
                       </span>
-                    </div>
-                    <div className="absolute bottom-3 left-3 rounded bg-white/90 px-2 py-1 text-[0.65rem] text-cocobiches-muted">
-                      {d.teams.portraitPlaceholder}
                     </div>
                   </div>
                   <div className="border-t border-cocobiches-border bg-white p-6">

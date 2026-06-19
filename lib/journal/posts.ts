@@ -1,8 +1,5 @@
 import type { JournalArticleMeta } from "./types";
 
-const u = (id: string, w = 1600) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
   {
     slug: "visiter-versailles-autrement",
@@ -19,11 +16,11 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Au-delà de la Galerie des Glaces : jardins secrets, petites tables, balades d'après-midi. Nos équipes partagent leurs adresses : celles que l'on ne trouve pas dans les guides.",
     excerptEn:
       "Beyond the Hall of Mirrors: secret gardens, small tables, afternoon walks. Our teams share addresses you won't find in guidebooks.",
-    heroImage: u("photo-1564585222527-c2777a5bc6cb"),
+    heroImage: "/hotel-jeu-de-paume/jardin.jpg",
     featured: true,
     inlineImages: [
       {
-        src: u("photo-1589978006229-8b2b2e6e6c6f"),
+        src: "/hotel-angleterre/carte-versailles.png",
         altFr: "Allées et perspective dans les jardins à la française près de Versailles",
         altEn: "Formal garden alleys and perspective near Versailles",
       },
@@ -44,10 +41,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Le Jeu de Paume propose deux salles jusqu'à 40 personnes, une cuisine sur place, et un salon pour les pauses. Voici comment nous travaillons avec vos équipes.",
     excerptEn:
       "Jeu de Paume offers two rooms for up to 40 guests, on-site catering and a lounge for breaks. Here's how we work with your teams.",
-    heroImage: u("photo-1524178232363-1fb2b075b655"),
+    heroImage: "/hotel-jeu-de-paume/seminaire-1.jpg",
     inlineImages: [
       {
-        src: u("photo-1497366216548-37526070297c"),
+        src: "/hotel-jeu-de-paume/seminaire-2.jpg",
         altFr: "Espace de réunion lumineux avec grande table",
         altEn: "Bright meeting space with a large table",
       },
@@ -68,10 +65,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Une sélection courte de tables versaillaises testées par nos équipes, par budget et par quartier. Des bistrots de vingt couverts aux cuisines étoilées.",
     excerptEn:
       "A short, team-tested selection of Versailles tables, by budget and neighbourhood. From 20-seat bistros to starred kitchens.",
-    heroImage: u("photo-1414235077428-338989a2e8c0"),
+    heroImage: "/hotel-jeu-de-paume/salon.jpg",
     inlineImages: [
       {
-        src: u("photo-1559339352-11d035aa65de"),
+        src: "/hotel-jeu-de-paume/hotel-ambiance.png",
         altFr: "Table dressée, vaisselle et repas en lumière douce",
         altEn: "Set table, tableware and meal in soft light",
       },
@@ -92,10 +89,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "L'hiver est notre saison préférée à Versailles. La lumière devient plus rare, les foules disparaissent. Voici notre itinéraire pour deux jours.",
     excerptEn:
       "Winter is our favourite season in Versailles. The light grows precious, crowds thin. Here is our two-day itinerary.",
-    heroImage: u("photo-1494790369323-3d0815218e0e"),
+    heroImage: "/hotel-angleterre/ambiance-paysage.jpg",
     inlineImages: [
       {
-        src: u("photo-1519681393784-d120267933ba"),
+        src: "/hotel-jeu-de-paume/jardin.jpg",
         altFr: "Paysage d'hiver, arbres et lumière douce",
         altEn: "Winter landscape with trees and soft light",
       },
@@ -116,10 +113,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "À l'Hôtel du Jeu de Paume, la cuisine n'est pas un service annexe. C'est une signature. Voici ce que cela change pour vos séjours et vos séminaires.",
     excerptEn:
       "At Jeu de Paume, the kitchen is not an afterthought. It's a signature. Here's what that means for your stays and seminars.",
-    heroImage: u("photo-1556912172-45b7abe8b7e1"),
+    heroImage: "/hotel-jeu-de-paume/hotel-ambiance.png",
     inlineImages: [
       {
-        src: u("photo-1556910103-1c02745aae4d"),
+        src: "/hotel-jeu-de-paume/salon.jpg",
         altFr: "Dressage de plat en cuisine, mains du chef",
         altEn: "Plating in the kitchen, chef's hands",
       },
@@ -140,10 +137,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "On nous pose souvent la question : pourquoi choisir un hôtel indépendant plutôt qu'une grande chaîne ? La réponse tient en trois arguments.",
     excerptEn:
       "People often ask: why pick an independent hotel over a big chain? Our answer comes down to three points.",
-    heroImage: u("photo-1564501049412-61c2a3083791"),
+    heroImage: "/hotel-jeu-de-paume/hotel-facade.jpg",
     inlineImages: [
       {
-        src: u("photo-1505693416388-ac5ce068fe85"),
+        src: "/hotel-jeu-de-paume/salon.jpg",
         altFr: "Salon d'hôtel chaleureux, canapé et lumière naturelle",
         altEn: "Cosy hotel lounge with sofa and natural light",
       },
@@ -164,10 +161,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Au fond de notre cour-jardin, il y a notre yourte. Elle est devenue la signature la plus reconnaissable de l'Hôtel du Jeu de Paume.",
     excerptEn:
       "At the back of our courtyard-garden stands our yurt. It has become Jeu de Paume's most recognisable signature.",
-    heroImage: u("photo-1528605248644-14dd04022da1"),
+    heroImage: "/hotel-jeu-de-paume/seminaire-4.jpg",
     inlineImages: [
       {
-        src: u("photo-1517248135467-4c7edcad34c4"),
+        src: "/hotel-jeu-de-paume/seminaire-5.jpg",
         altFr: "Ambiance de dîner convivial, tables dressées",
         altEn: "Convivial dinner setting with dressed tables",
       },
@@ -188,10 +185,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Noël à Versailles a quelque chose de particulier. La ville se pare de lumières avec retenue. Voici notre guide pour vivre cette période chez nous.",
     excerptEn:
       "Christmas in Versailles has a special feel. The city lights up with restraint. Here's our guide to experiencing it with us.",
-    heroImage: u("photo-1512389142860-9c54e756aca1"),
+    heroImage: "/hotel-angleterre/hotel-facade.jpg",
     inlineImages: [
       {
-        src: u("photo-1482517967863-00e15c9b44be"),
+        src: "/hotel-angleterre/salon.jpg",
         altFr: "Lumières festives et ambiance hivernale en ville",
         altEn: "Festive lights and winter city atmosphere",
       },
@@ -212,10 +209,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Quand on dit Versailles, on pense au Château. Mais à un kilomètre, il y a un lieu que nous préférons même : le Domaine de Marie-Antoinette.",
     excerptEn:
       "When people say Versailles, they think of the Palace. But a kilometre away lies a place we love even more: Marie-Antoinette's estate.",
-    heroImage: u("photo-1591608971362-cb6b1a0a0f9a"),
+    heroImage: "/hotel-angleterre/experience.png",
     inlineImages: [
       {
-        src: u("photo-1564585222527-c2777a5bc6cb"),
+        src: "/hotel-angleterre/hotel-facade.jpg",
         altFr: "Architecture et perspective du domaine royal de Versailles",
         altEn: "Architecture and perspective of the Versailles royal estate",
       },
@@ -236,10 +233,10 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Cocobiches, c'est trois maisons à deux minutes du Château. Elles partagent notre équipe, notre hospitalité, notre vision. Mais elles sont différentes.",
     excerptEn:
       "Cocobiches is three houses minutes from the Palace. They share our team, our hospitality, our vision. But they are different.",
-    heroImage: u("photo-1505693416388-ac5ce068fe85"),
+    heroImage: "/apparts-oncle-louis/facade.jpg",
     inlineImages: [
       {
-        src: u("photo-1566073771259-6a8506099945"),
+        src: "/hotel-angleterre/hotel-facade.jpg",
         altFr: "Façade d'hôtel de caractère au crépuscule",
         altEn: "Character hotel façade at dusk",
       },

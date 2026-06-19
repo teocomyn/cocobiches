@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import type { Locale } from "@/lib/i18n-config";
 import { HJP_BOOKING_URL } from "@/lib/cocobiches-social";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage } from "@/lib/hjp-images";
 
 export function HjpOffresPageView({ locale }: { locale: Locale }) {
   const c = getHjpContent(locale);
@@ -12,8 +13,8 @@ export function HjpOffresPageView({ locale }: { locale: Locale }) {
     <>
       <section className="relative min-h-[40vh] overflow-hidden bg-cocobiches-marine-900 md:min-h-[44vh]">
         <Image
-          src="/hotel-jeu-de-paume/facade.png"
-          alt=""
+          src={hjpImage("facade").src}
+          alt={hjpAlt("facade", locale)}
           fill
           priority
           className="object-cover object-center opacity-95"
@@ -53,7 +54,7 @@ export function HjpOffresPageView({ locale }: { locale: Locale }) {
                     <>
                       <div className="relative aspect-[21/10] w-full shrink-0">
                         <Image
-                          src="/hotel-jeu-de-paume/chateau-versailles.png"
+                          src={hjpImage("carte").src}
                           alt={
                             locale === "fr"
                               ? "Château de Versailles, vue depuis les jardins"

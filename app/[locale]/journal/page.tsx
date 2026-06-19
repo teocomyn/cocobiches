@@ -1,7 +1,9 @@
 import { JournalPage } from "@/components/blocks/journal-page";
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getDictionary } from "@/lib/get-dictionary";
+import { blogSchema, breadcrumbList, jsonLdGraph } from "@/lib/json-ld";
 import { getLocaleFromParams } from "@/lib/locale-params";
-import { href } from "@/lib/paths";
+import { buildPageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,26 +15,12 @@ export async function generateMetadata({
   if (!locale) return {};
   const dict = await getDictionary(locale);
   const m = dict.meta.journal;
-  const path = href(locale, "/journal");
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/journal",
     title: m.title,
     description: m.description,
-    alternates: {
-      canonical: path,
-      languages: { fr: "/fr/journal", en: "/en/journal" },
-    },
-    openGraph: {
-      title: m.title,
-      description: m.description,
-      url: path,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: m.title,
-      description: m.description,
-    },
-  };
+  });
 }
 
 export default async function JournalIndexPage({
@@ -43,6 +31,20 @@ export default async function JournalIndexPage({
   const locale = await getLocaleFromParams(params);
   if (!locale) return null;
   const dict = await getDictionary(locale);
+  const m = dict.meta.journal;
+  const isFr = locale === "fr";
+  const jsonLd = jsonLdGraph(
+    blogSchema(locale, m.title, m.description),
+    breadcrumbList(locale, [
+      { name: isFr ? "Accueil" : "Home", path: "" },
+      { name: isFr ? "Journal" : "Journal", path: "/journal" },
+    ]),
+  );
 
-  return <JournalPage locale={locale} dict={dict} />;
+  return (
+    <>
+      <JsonLdScript data={jsonLd} />
+      <JournalPage locale={locale} dict={dict} />
+    </>
+  );
 }

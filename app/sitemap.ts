@@ -2,10 +2,9 @@ import type { MetadataRoute } from "next";
 import { getJournalPosts } from "@/lib/journal/posts";
 import { locales } from "@/lib/i18n-config";
 import { href } from "@/lib/paths";
+import { getSiteUrl } from "@/lib/site-url";
 
-const base =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://www.cocobiches.fr";
+const base = getSiteUrl();
 
 const journalSlugs = getJournalPosts().map((p) => `/journal/${p.slug}`);
 
@@ -20,11 +19,18 @@ const paths = [
   ...journalSlugs,
   "/mentions-legales",
   "/politique-confidentialite",
+  "/hotel-angleterre",
+  "/hotel-angleterre/chambres",
+  "/hotel-angleterre/galerie",
+  "/apparts-oncle-louis",
   "/hotel-jeu-de-paume",
   "/hotel-jeu-de-paume/l-hotel",
+  "/hotel-jeu-de-paume/chambres",
+  "/hotel-jeu-de-paume/galerie",
   "/hotel-jeu-de-paume/vivre-versailles",
   "/hotel-jeu-de-paume/offres",
   "/hotel-jeu-de-paume/seminaires",
+  "/hotel-jeu-de-paume/seminaires/demande-devis",
   "/hotel-jeu-de-paume/preparer-votre-sejour",
 ];
 

@@ -3,6 +3,7 @@ import { CocobichesMark } from "@/components/logo/cocobiches-mark";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
 import { COCO_INSTAGRAM_URL, COCO_LINKEDIN_URL } from "@/lib/cocobiches-social";
+import { HOTEL_LIST, hotelInternalHref, hotelName } from "@/lib/hotels-data";
 import { href } from "@/lib/paths";
 
 export function SiteFooter({
@@ -70,39 +71,17 @@ export function SiteFooter({
         <div className="md:col-span-3">
           <p className="cb-eyebrow text-cocobiches-or/90">{f.group}</p>
           <ul className="mt-6 space-y-3.5 text-sm">
-            <li>
-              <a
-                className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
-                href="https://www.hotel-angleterre-versailles.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>Hôtel d&apos;Angleterre</span>
-                <span aria-hidden className="opacity-50 group-hover:opacity-100">↗</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
-                href="https://www.hotel-jeudepaume.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>Hôtel du Jeu de Paume</span>
-                <span aria-hidden className="opacity-50 group-hover:opacity-100">↗</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
-                href="https://www.apparts-onclelouis-versailles.fr/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span>Apparts de l&apos;Oncle Louis</span>
-                <span aria-hidden className="opacity-50 group-hover:opacity-100">↗</span>
-              </a>
-            </li>
+            {HOTEL_LIST.map((hotel) => (
+              <li key={hotel.id}>
+                <Link
+                  className="group inline-flex items-center gap-2 text-cocobiches-creme-100 transition hover:text-white"
+                  href={hotelInternalHref(locale, hotel.id)}
+                >
+                  <span>{hotelName(hotel, locale)}</span>
+                  <span aria-hidden className="opacity-50 group-hover:opacity-100">→</span>
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <p className="cb-eyebrow mt-10 text-cocobiches-or/90">{f.explore}</p>

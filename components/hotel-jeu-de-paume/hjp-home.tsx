@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
+import { HjpHeroSlider } from "@/components/hotel-jeu-de-paume/hjp-hero-slider";
 import type { Locale } from "@/lib/i18n-config";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage } from "@/lib/hjp-images";
 import { href } from "@/lib/paths";
 
 export function HjpHome({ locale }: { locale: Locale }) {
@@ -13,24 +15,7 @@ export function HjpHome({ locale }: { locale: Locale }) {
     <>
       {/* Hero · salon */}
       <section className="relative overflow-hidden bg-cocobiches-marine-900">
-        <div className="absolute inset-0">
-          <Image
-            src="/hotel-jeu-de-paume/salon.png"
-            alt=""
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-cocobiches-marine-900/95 via-cocobiches-marine-900/55 to-hjp-teal/25"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgb(42_157_143/0.25),transparent_60%)]"
-            aria-hidden
-          />
-        </div>
+        <HjpHeroSlider locale={locale} />
         <div className="relative mx-auto flex min-h-[78svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24 md:pt-36">
           <p className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-hjp-mint/90">
             {h.hero.kicker}
@@ -92,8 +77,8 @@ export function HjpHome({ locale }: { locale: Locale }) {
           <div className="mt-10 overflow-hidden rounded-[1.25rem] border border-cocobiches-border/80 bg-cocobiches-creme-50 shadow-card">
             <div className="relative aspect-[21/9] min-h-[220px] w-full md:aspect-[2.4/1]">
               <Image
-                src="/hotel-jeu-de-paume/carte-versailles.png"
-                alt=""
+                src={hjpImage("carte").src}
+                alt={hjpAlt("carte", locale)}
                 fill
                 className="object-cover object-[center_35%]"
                 sizes="(min-width: 1024px) 1152px, 100vw"
@@ -158,15 +143,28 @@ export function HjpHome({ locale }: { locale: Locale }) {
 
       {/* Charme */}
       <section className="border-y border-cocobiches-border/70 bg-white py-16 md:py-24">
-        <div className="mx-auto max-w-3xl px-5 md:px-8">
-          <FadeIn>
-            <h2 className="font-display text-center text-3xl font-semibold leading-tight text-cocobiches-marine md:text-[2.15rem]">
-              {h.charm.title}
-            </h2>
-            <p className="mt-8 text-base leading-relaxed text-cocobiches-muted md:text-lg">
-              {h.charm.body}
-            </p>
-          </FadeIn>
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-14">
+            <FadeIn>
+              <h2 className="font-display text-3xl font-semibold leading-tight text-cocobiches-marine md:text-[2.15rem]">
+                {h.charm.title}
+              </h2>
+              <p className="mt-8 text-base leading-relaxed text-cocobiches-muted md:text-lg">
+                {h.charm.body}
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.08}>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] border border-cocobiches-border shadow-card">
+                <Image
+                  src={hjpImage("ambiance").src}
+                  alt={hjpAlt("ambiance", locale)}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 420px, 100vw"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 

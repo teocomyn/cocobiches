@@ -72,7 +72,7 @@
     "explore": "Explore",
     "contactTitle": "Contact",
     "contactEmail": "hello@cocobiches.com",
-    "contactPhone": "+33 1 39 00 00 00",
+    "contactPhone": "+33 1 30 84 14 00",
     "addressTitle": "Versailles",
     "addressLine": "78000 Versailles, France",
     "signature": "An independent family brand, founded in Versailles."
@@ -97,7 +97,7 @@
     "hotelsEyebrow": "Our addresses",
     "angleterre": {
       "name": "Hôtel d'Angleterre",
-      "tag": "3 stars · 18 rooms · since 2010",
+      "tag": "3 stars · 29 rooms · since 2010",
       "desc": "A confidential 3-star, a five-minute walk from the Palace. Cream-toned rooms, breakfast served late, and the kind of quiet you notice.",
       "features": [
         "5 min walk to the Palace",
@@ -108,7 +108,7 @@
     },
     "jeudepaume": {
       "name": "Hôtel du Jeu de Paume",
-      "tag": "3 stars · 42 rooms · seminars",
+      "tag": "3 stars · 38 rooms · seminars",
       "desc": "Our mother house. A living room in shades of water-green, a kitchen that smells of warm butter in the morning, two modular seminar rooms. The place you come back to.",
       "features": [
         "Lounge, bar and open kitchen",
@@ -260,15 +260,18 @@
       "team": "Employees on year-round permanent contracts",
       "transport": "Guests choosing soft mobility (train, bike, walking)"
     },
-    "note": "Last updated: current quarter. Methodology available on request."
+    "note": "Methodology available on request at bonjour@cocobiches.com.",
+    "updatedLabel": "Last updated",
+    "readMore": "Read our take on independent hospitality"
   },
   "press": {
     "title": "Press room",
     "lead": "Official resources for your articles, features and podcasts. For any specific request (interview, shoot, private event), write to us directly.",
-    "downloadPressKit": "Download press kit (PDF)",
-    "downloadLogos": "High-resolution logos",
+    "downloadPressKit": "Download press kit",
+    "downloadLogos": "Official Cocobiches logo",
     "downloadPhotos": "Press image bank",
-    "contact": "Press contact: presse@cocobiches.com"
+    "contact": "Press contact: presse@cocobiches.com",
+    "contactLink": "Request an interview or bespoke visuals"
   },
   "contact": {
     "title": "Write to us",
@@ -335,14 +338,15 @@
   },
   "legal": {
     "title": "Legal notice",
-    "body": "Publisher: Cocobiches · Versailles, France. Hosting: to be set per production environment. Publication director: Élise Comyn."
+    "body": "Site publisher: Cocobiches SAS, 78000 Versailles, France. Publication director: Élise Comyn. Contact: bonjour@cocobiches.com. Hosting: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. The cocobiches.fr website presents the Cocobiches hotel group and its three houses in Versailles. Bookings are made on each property's dedicated website."
   },
   "privacy": {
     "title": "Privacy policy",
-    "body": "We process your data to respond to requests and measure site traffic. You have rights of access, rectification and erasure. Contact: dpo@cocobiches.com (to be adapted to your DPO designation)."
+    "body": "Cocobiches processes your data (name, email, message) only to respond to contact, newsletter and seminar quote forms. Legal basis: legitimate interest and consent for the newsletter. Retention: 3 years after last contact. You may access, rectify, erase or object by writing to dpo@cocobiches.com. Audience measurement: Plausible Analytics, cookieless, if you accept analytics cookies. No sale of data to third parties."
   },
   "hotels": {
     "bookingNote": "Check our live availability · best rate guaranteed on our websites.",
+    "selectHotel": "Choose a house",
     "placeholderCta": "Book on the property website",
     "arrival": "Check-in",
     "departure": "Check-out",

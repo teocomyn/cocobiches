@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { HjpVivreTabs } from "@/components/hotel-jeu-de-paume/hjp-vivre-tabs";
 import type { Locale } from "@/lib/i18n-config";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage } from "@/lib/hjp-images";
 import { href } from "@/lib/paths";
 
 export function HjpVivrePageView({ locale }: { locale: Locale }) {
@@ -14,8 +15,8 @@ export function HjpVivrePageView({ locale }: { locale: Locale }) {
     <>
       <section className="relative min-h-[42vh] overflow-hidden bg-cocobiches-marine-900 md:min-h-[46vh]">
         <Image
-          src="/hotel-jeu-de-paume/carte-versailles.png"
-          alt=""
+          src={hjpImage("jardin").src}
+          alt={hjpAlt("jardin", locale)}
           fill
           priority
           className="object-cover object-[center_40%] opacity-90"
@@ -38,21 +39,16 @@ export function HjpVivrePageView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="bg-black py-10 md:py-16">
-        <div className="mx-auto max-w-5xl px-5 md:px-8">
+      <section className="bg-cocobiches-creme-50 py-10 md:py-16">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
           <FadeIn>
-            <div className="relative aspect-[5/2] w-full md:aspect-[12/5]">
+            <div className="relative aspect-[21/9] min-h-[220px] overflow-hidden rounded-[1.25rem] border border-cocobiches-border shadow-card">
               <Image
-                src="/hotel-jeu-de-paume/venez-vivre-versailles.png"
-                alt={
-                  locale === "fr"
-                    ? "Venez vivre au rythme de Versailles"
-                    : "Come live at the rhythm of Versailles"
-                }
+                src={hjpImage("carte").src}
+                alt={hjpAlt("carte", locale)}
                 fill
-                className="object-contain object-center"
-                sizes="(max-width: 768px) 100vw, 896px"
-                priority
+                className="object-cover object-[center_35%]"
+                sizes="(min-width: 1024px) 1152px, 100vw"
               />
             </div>
           </FadeIn>

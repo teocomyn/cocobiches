@@ -72,7 +72,7 @@
     "explore": "Explorer",
     "contactTitle": "Contact",
     "contactEmail": "bonjour@cocobiches.com",
-    "contactPhone": "+33 1 39 00 00 00",
+    "contactPhone": "01 30 84 14 00",
     "addressTitle": "Versailles",
     "addressLine": "78000 Versailles, France",
     "signature": "Une marque indépendante, familiale, fondée à Versailles."
@@ -97,7 +97,7 @@
     "hotelsEyebrow": "Nos adresses",
     "angleterre": {
       "name": "Hôtel d'Angleterre",
-      "tag": "3 étoiles · 18 chambres · depuis 2010",
+      "tag": "3 étoiles · 29 chambres · depuis 2010",
       "desc": "Un 3 étoiles confidentiel, à cinq minutes à pied du Château. Des chambres aux tonalités crème, des petits-déjeuners servis tard, et ce calme si rare qu'on le remarque.",
       "features": [
         "À 5 min à pied du Château",
@@ -108,7 +108,7 @@
     },
     "jeudepaume": {
       "name": "Hôtel du Jeu de Paume",
-      "tag": "3 étoiles · 42 chambres · séminaires",
+      "tag": "3 étoiles · 38 chambres · séminaires",
       "desc": "Notre maison-mère. Un salon teinté de vert d'eau, une cuisine qui sent le beurre chaud le matin, deux salles de séminaire modulables. L'adresse où l'on revient.",
       "features": [
         "Salon, bar et cuisine ouverte",
@@ -260,15 +260,18 @@
       "team": "Collaborateurs en CDI toute l'année",
       "transport": "Clients favorisant les mobilités douces (train, vélo, marche)"
     },
-    "note": "Dernière mise à jour : trimestre en cours. Méthodologie disponible sur demande."
+    "note": "Méthodologie disponible sur demande à bonjour@cocobiches.com.",
+    "updatedLabel": "Dernière mise à jour",
+    "readMore": "Lire notre vision de l'hôtellerie indépendante"
   },
   "press": {
     "title": "Espace presse",
     "lead": "Retrouvez nos ressources officielles pour vos articles, reportages et podcasts. Pour toute demande spécifique (interview, tournage, privatisation), écrivez-nous directement.",
-    "downloadPressKit": "Télécharger le dossier de presse (PDF)",
-    "downloadLogos": "Logos haute définition",
+    "downloadPressKit": "Télécharger le dossier de presse",
+    "downloadLogos": "Logo officiel Cocobiches",
     "downloadPhotos": "Banque d'images presse",
-    "contact": "Contact presse : presse@cocobiches.com"
+    "contact": "Contact presse : presse@cocobiches.com",
+    "contactLink": "Demander un entretien ou des visuels sur mesure"
   },
   "contact": {
     "title": "Écrivez-nous",
@@ -335,14 +338,15 @@
   },
   "legal": {
     "title": "Mentions légales",
-    "body": "Éditeur : Cocobiches · Versailles, France. Hébergement : à préciser selon environnement de production. Directrice de publication : Élise Comyn."
+    "body": "Éditeur du site : Cocobiches SAS, 78000 Versailles, France. Directrice de publication : Élise Comyn. Contact : bonjour@cocobiches.com. Hébergement : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Le site cocobiches.fr a pour objet la présentation du groupe hôtelier Cocobiches et de ses trois maisons à Versailles. Les réservations s'effectuent sur les sites dédiés de chaque établissement."
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "body": "Nous traitons vos données pour répondre à vos demandes et mesurer l'audience de ce site. Vous disposez d'un droit d'accès, de rectification et d'effacement. Contact : dpo@cocobiches.com (à adapter selon votre désignation)."
+    "body": "Cocobiches traite vos données (nom, e-mail, message) uniquement pour répondre à vos demandes via les formulaires contact, newsletter et devis séminaire. Base légale : intérêt légitime et consentement pour la newsletter. Durée de conservation : 3 ans après le dernier contact. Vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition en écrivant à dpo@cocobiches.com. Mesure d'audience : Plausible Analytics, sans cookies, si vous acceptez les cookies de mesure. Aucune revente de données à des tiers."
   },
   "hotels": {
     "bookingNote": "Vérifiez nos disponibilités en direct · meilleur tarif garanti sur nos sites.",
+    "selectHotel": "Choisir une maison",
     "placeholderCta": "Réserver sur le site de l'établissement",
     "arrival": "Arrivée",
     "departure": "Départ",

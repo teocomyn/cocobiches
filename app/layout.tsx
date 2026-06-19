@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { headers } from "next/headers";
 import { PlausibleAnalytics } from "@/components/analytics/plausible";
-import { LenisProvider } from "@/components/layout/lenis-provider";
+import { isLocale } from "@/lib/i18n-config";
+import { getMetadataBase } from "@/lib/metadata";
 import "./globals.css";
 
-/** Charte : Montserrat seule pour tout le texte (300–900). Montecatini réservé au logo (fichier image). */
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.cocobiches.fr"),
+  metadataBase: getMetadataBase(),
   title: {
     default: "Cocobiches",
     template: "%s | Cocobiches",
+  },
+  icons: {
+    icon: "/brand/cocobiches-logo.png",
+    apple: "/brand/cocobiches-logo.png",
   },
   openGraph: {
     type: "website",
@@ -25,19 +31,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const h = await headers();
+  const localeHeader = h.get("x-locale");
+  const lang = localeHeader && isLocale(localeHeader) ? localeHeader : "fr";
+
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${montserrat.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
         <PlausibleAnalytics />
-        <LenisProvider>{children}</LenisProvider>
+        {children}
       </body>
     </html>
   );

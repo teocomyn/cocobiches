@@ -1,37 +1,20 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
-import { Heart, Leaf, Sparkles, Users } from "lucide-react";
+import { FadeIn } from "@/components/motion/fade-in";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Dictionary } from "@/lib/get-dictionary";
 import { cn } from "@/lib/utils";
 
-const ease = [0.22, 1, 0.36, 1] as const;
+function ValueIcon({ name }: { name: "users" | "sparkles" | "heart" | "leaf" }) {
+  const paths = {
+    users: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75",
+    sparkles: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.964 0z",
+    heart: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
+    leaf: "M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z",
+  } as const;
 
-function Reveal({
-  children,
-  className,
-  delay = 0,
-}: {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
-}) {
-  const reduce = useReducedMotion();
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10% 0px" }}
-      transition={{ duration: 0.65, delay, ease }}
-    >
-      {children}
-    </motion.div>
+    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <path d={paths[name]} strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 
@@ -48,7 +31,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-6 md:px-8">
-        <Reveal>
+        <FadeIn>
           <div className="mb-16 max-w-3xl md:mb-24">
             <p className="mb-6 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-cocobiches-marine/60">
               {v.eyebrow}
@@ -62,11 +45,10 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
               <span className="font-light italic">{v.title2}</span>
             </h2>
           </div>
-        </Reveal>
+        </FadeIn>
 
         <div className="grid grid-cols-6 gap-4 md:gap-6">
-          {/* 01 · Famille */}
-          <Reveal className="col-span-6 lg:col-span-3" delay={0.05}>
+          <FadeIn className="col-span-6 lg:col-span-3" delay={0.05}>
             <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
               <CardContent className="relative flex h-full min-h-[420px] flex-col justify-between p-8 md:p-12">
                 <div
@@ -75,8 +57,8 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 >
                   01
                 </div>
-                <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-marine/15 before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-marine/10">
-                  <Users className="size-5 text-cocobiches-marine" strokeWidth={1.5} aria-hidden />
+                <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-marine/15 text-cocobiches-marine before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-marine/10">
+                  <ValueIcon name="users" />
                 </div>
                 <div className="relative z-10 mt-12">
                   <div className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine/50">
@@ -96,10 +78,9 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 </div>
               </CardContent>
             </Card>
-          </Reveal>
+          </FadeIn>
 
-          {/* 02 · Authenticité */}
-          <Reveal className="col-span-6 sm:col-span-3 lg:col-span-3" delay={0.1}>
+          <FadeIn className="col-span-6 sm:col-span-3 lg:col-span-3" delay={0.1}>
             <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
               <CardContent className="relative flex h-full min-h-[420px] flex-col justify-between p-8 md:p-12">
                 <div
@@ -108,8 +89,8 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 >
                   02
                 </div>
-                <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-creme/20 before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-creme/10">
-                  <Sparkles className="size-5 text-cocobiches-creme" strokeWidth={1.5} aria-hidden />
+                <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-creme/20 text-cocobiches-creme before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-creme/10">
+                  <ValueIcon name="sparkles" />
                 </div>
                 <div className="relative z-10 mt-12">
                   <div className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-creme/60">
@@ -129,10 +110,9 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 </div>
               </CardContent>
             </Card>
-          </Reveal>
+          </FadeIn>
 
-          {/* 03 · Lifestyle */}
-          <Reveal className="col-span-6 lg:col-span-6" delay={0.12}>
+          <FadeIn className="col-span-6 lg:col-span-6" delay={0.12}>
             <Card className="group relative overflow-hidden border-cocobiches-marine/10 bg-white transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.1)]">
               <CardContent className="grid h-full min-h-[360px] gap-8 p-8 sm:grid-cols-2 md:gap-12 md:p-12">
                 <div className="relative flex flex-col justify-between">
@@ -142,8 +122,8 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                   >
                     03
                   </div>
-                  <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-marine/15 before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-marine/10">
-                    <Heart className="size-5 text-cocobiches-marine" strokeWidth={1.5} aria-hidden />
+                  <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-marine/15 text-cocobiches-marine before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-marine/10">
+                    <ValueIcon name="heart" />
                   </div>
                   <div className="relative z-10 mt-12">
                     <div className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine/50">
@@ -174,10 +154,9 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 </div>
               </CardContent>
             </Card>
-          </Reveal>
+          </FadeIn>
 
-          {/* 04 · Responsabilité */}
-          <Reveal className="col-span-6 lg:col-span-6" delay={0.15}>
+          <FadeIn className="col-span-6 lg:col-span-6" delay={0.15}>
             <Card className="group relative overflow-hidden border-transparent bg-cocobiches-marine text-cocobiches-creme transition-all duration-700 hover:shadow-[0_20px_60px_rgba(45,48,119,0.2)]">
               <CardContent className="grid h-full min-h-[360px] gap-8 p-8 sm:grid-cols-2 md:gap-12 md:p-12">
                 <div className="relative flex flex-col justify-between">
@@ -187,8 +166,8 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                   >
                     04
                   </div>
-                  <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-creme/20 before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-creme/10">
-                    <Leaf className="size-5 text-cocobiches-vert" strokeWidth={1.5} aria-hidden />
+                  <div className="relative flex size-14 items-center justify-center rounded-full border border-cocobiches-creme/20 text-cocobiches-vert before:absolute before:-inset-2 before:rounded-full before:border before:border-cocobiches-creme/10">
+                    <ValueIcon name="leaf" />
                   </div>
                   <div className="relative z-10 mt-12">
                     <div className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-creme/60">
@@ -225,7 +204,7 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                 </div>
               </CardContent>
             </Card>
-          </Reveal>
+          </FadeIn>
         </div>
 
         <div className="mt-12 text-center md:mt-16">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import type { Locale } from "@/lib/i18n-config";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage } from "@/lib/hjp-images";
 import { href } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 
@@ -15,8 +16,8 @@ export function HjpPreparePageView({ locale }: { locale: Locale }) {
     <>
       <section className="relative min-h-[40vh] overflow-hidden bg-cocobiches-marine-900 md:min-h-[44vh]">
         <Image
-          src="/hotel-jeu-de-paume/facade.png"
-          alt=""
+          src={hjpImage("facade").src}
+          alt={hjpAlt("facade", locale)}
           fill
           priority
           className="object-cover object-center opacity-95"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import type { Locale } from "@/lib/i18n-config";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage } from "@/lib/hjp-images";
 import { href } from "@/lib/paths";
 
 export function HjpSeminairesPageView({ locale }: { locale: Locale }) {
@@ -13,12 +14,8 @@ export function HjpSeminairesPageView({ locale }: { locale: Locale }) {
     <>
       <section className="relative min-h-[52vh] overflow-hidden bg-cocobiches-marine-900 md:min-h-[56vh]">
         <Image
-          src="/hotel-jeu-de-paume/seminaire-salle.png"
-          alt={
-            locale === "fr"
-              ? "Salle de séminaire lumineuse à l'Hôtel du Jeu de Paume, table de conférence et vue jardin"
-              : "Bright seminar room at Hôtel du Jeu de Paume, conference table and garden view"
-          }
+          src={hjpImage("seminaire1").src}
+          alt={hjpAlt("seminaire1", locale)}
           fill
           priority
           className="object-cover object-center"
@@ -127,7 +124,7 @@ export function HjpSeminairesPageView({ locale }: { locale: Locale }) {
               {s.cta.title}
             </h2>
             <Link
-              href={href(locale, "/contact")}
+              href={href(locale, "/hotel-jeu-de-paume/seminaires/demande-devis")}
               className="mt-8 inline-flex rounded-full bg-hjp-teal px-10 py-3.5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white shadow-lg transition hover:bg-hjp-teal-dark"
             >
               {s.cta.button}

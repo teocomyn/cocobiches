@@ -3,18 +3,19 @@ import {
   ArticleRelated,
   ArticleTemplate,
 } from "@/components/blocks/article-template";
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getArticleBlocks } from "@/lib/journal/get-blocks";
 import { getArticleMeta, getJournalPosts } from "@/lib/journal/posts";
 import { getRelatedArticles } from "@/lib/journal/related";
 import { getDictionary } from "@/lib/get-dictionary";
 import { getLocaleFromParams } from "@/lib/locale-params";
 import { locales } from "@/lib/i18n-config";
+import { breadcrumbList, jsonLdGraph } from "@/lib/json-ld";
+import { buildArticleMetadata } from "@/lib/metadata";
+import { absoluteUrl } from "@/lib/site-url";
 import { href } from "@/lib/paths";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-
-const base =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://www.cocobiches.fr";
 
 export function generateStaticParams() {
   const slugs = getJournalPosts().map((p) => p.slug);
@@ -34,34 +35,16 @@ export async function generateMetadata({
   if (!post) return {};
   const title = locale === "fr" ? post.titleFr : post.titleEn;
   const description = locale === "fr" ? post.descriptionFr : post.descriptionEn;
-  const path = href(locale, `/journal/${post.slug}`);
-  const ogTitle = `${title} · Cocobiches`;
 
-  return {
-    title: ogTitle,
+  return buildArticleMetadata({
+    locale,
+    path: `/journal/${post.slug}`,
+    title,
     description,
-    alternates: {
-      canonical: path,
-      languages: {
-        fr: `/fr/journal/${post.slug}`,
-        en: `/en/journal/${post.slug}`,
-      },
-    },
-    openGraph: {
-      title: ogTitle,
-      description,
-      url: path,
-      type: "article",
-      publishedTime: post.dateISO,
-      images: [{ url: post.heroImage, width: 1600, height: 900, alt: title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: ogTitle,
-      description,
-      images: [post.heroImage],
-    },
-  };
+    publishedTime: post.dateISO,
+    image: post.heroImage,
+    imageAlt: title,
+  });
 }
 
 export default async function JournalArticlePage({
@@ -82,36 +65,40 @@ export default async function JournalArticlePage({
 
   const title = locale === "fr" ? post.titleFr : post.titleEn;
   const description = locale === "fr" ? post.descriptionFr : post.descriptionEn;
-  const url = `${base}${href(locale, `/journal/${post.slug}`)}`;
+  const url = absoluteUrl(href(locale, `/journal/${post.slug}`));
+  const isFr = locale === "fr";
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    image: [post.heroImage],
-    datePublished: post.dateISO,
-    dateModified: post.dateISO,
-    author: {
-      "@type": "Organization",
-      name: "Cocobiches",
+  const jsonLd = jsonLdGraph(
+    {
+      "@type": "Article",
+      headline: title,
+      description,
+      image: [post.heroImage],
+      datePublished: post.dateISO,
+      dateModified: post.dateISO,
+      author: {
+        "@type": "Organization",
+        name: "Cocobiches",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Cocobiches",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": url,
+      },
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Cocobiches",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
-    },
-  };
+    breadcrumbList(locale, [
+      { name: isFr ? "Accueil" : "Home", path: "" },
+      { name: "Journal", path: "/journal" },
+      { name: title, path: `/journal/${post.slug}` },
+    ]),
+  );
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLdScript data={jsonLd} />
       <ArticleTemplate locale={locale} dict={dict} post={post} blocks={blocks} />
       <ArticleRelated locale={locale} dict={dict} posts={related} />
       <ArticleCta locale={locale} dict={dict} />

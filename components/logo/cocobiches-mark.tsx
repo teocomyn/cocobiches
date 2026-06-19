@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-/** `v` force le rechargement si le fichier PNG a été régénéré (transparence). */
-const LOGO_SRC = "/brand/cocobiches-logo.png?v=5";
+const LOGO_SRC = "/brand/cocobiches-logo.png";
 
 /** Logo officiel (PNG) sur fond sombre ; SVG de secours sur fond clair (variant marine). */
 export function CocobichesMark({
@@ -21,12 +20,12 @@ export function CocobichesMark({
         <Image
           src={LOGO_SRC}
           alt="Cocobiches"
-          width={1024}
-          height={1024}
+          width={180}
+          height={48}
           className="h-full w-auto max-w-[min(200px,58vw)] object-contain object-left"
           sizes="(max-width: 768px) 160px, 180px"
           priority={priority}
-          unoptimized
+          quality={85}
         />
       </span>
     );

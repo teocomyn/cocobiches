@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
@@ -17,6 +17,7 @@ export function CookieBanner({
   locale: Locale;
 }) {
   const [visible, setVisible] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
@@ -26,6 +27,35 @@ export function CookieBanner({
       setVisible(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+    const root = dialogRef.current;
+    if (!root) return;
+
+    const focusables = root.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    );
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    first?.focus();
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Tab" || focusables.length === 0) return;
+      if (event.shiftKey) {
+        if (document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        }
+      } else if (document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    }
+
+    root.addEventListener("keydown", onKeyDown);
+    return () => root.removeEventListener("keydown", onKeyDown);
+  }, [visible]);
 
   function accept() {
     try {
@@ -51,11 +81,13 @@ export function CookieBanner({
 
   return (
     <div
+      ref={dialogRef}
       className={cn(
         "fixed inset-x-4 bottom-4 z-50 max-w-lg overflow-hidden rounded-2xl border border-cocobiches-border/90",
         "bg-white/92 p-px shadow-lift backdrop-blur-2xl md:left-auto md:right-8 md:max-w-md",
       )}
       role="dialog"
+      aria-modal="true"
       aria-labelledby="cookie-title"
       aria-describedby="cookie-desc"
     >

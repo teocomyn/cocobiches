@@ -8,15 +8,21 @@ export type HjpContent = {
     offres: { title: string; description: string };
     seminaires: { title: string; description: string };
     prepare: { title: string; description: string };
+    chambres: { title: string; description: string };
+    galerie: { title: string; description: string };
+    devis: { title: string; description: string };
   };
   nav: {
     back: string;
     brand: string;
     home: string;
     hotel: string;
+    chambres: string;
+    galerie: string;
     vivre: string;
     offers: string;
     seminars: string;
+    devis: string;
     prepare: string;
     book: string;
     call: string;
@@ -140,15 +146,33 @@ const fr: HjpContent = {
       description:
         "Accès, stationnement, FAQ et conseils pour arriver sereinement à Versailles.",
     },
+    chambres: {
+      title: "Chambres · Hôtel du Jeu de Paume",
+      description:
+        "Chambres doubles, twin et familiales à Versailles : volumes, lumière et confort moderne à deux pas du Château.",
+    },
+    galerie: {
+      title: "Galerie · Hôtel du Jeu de Paume",
+      description:
+        "Salon, façade, chambres et séminaires : découvrez l'ambiance du Jeu de Paume en images.",
+    },
+    devis: {
+      title: "Demande de devis séminaire · Jeu de Paume",
+      description:
+        "Devis personnalisé pour votre séminaire à Versailles : salle, yourte, restauration maison, hébergement.",
+    },
   },
   nav: {
     back: "Groupe Cocobiches",
     brand: "Hôtel du Jeu de Paume",
     home: "Accueil",
     hotel: "L'hôtel",
+    chambres: "Chambres",
+    galerie: "Galerie",
     vivre: "Vivre Versailles",
     offers: "Nos offres",
     seminars: "Séminaires & événements",
+    devis: "Demande de devis",
     prepare: "Préparer votre séjour",
     book: "Réserver",
     call: "Appeler",
@@ -530,15 +554,33 @@ const en: HjpContent = {
       description:
         "Access, parking, FAQ and tips for a smooth arrival in Versailles.",
     },
+    chambres: {
+      title: "Rooms · Hôtel du Jeu de Paume",
+      description:
+        "Double, twin and family rooms in Versailles: space, light and modern comfort steps from the Palace.",
+    },
+    galerie: {
+      title: "Gallery · Hôtel du Jeu de Paume",
+      description:
+        "Lounge, façade, rooms and seminars: explore the Jeu de Paume atmosphere in pictures.",
+    },
+    devis: {
+      title: "Seminar quote request · Jeu de Paume",
+      description:
+        "Tailored quote for your seminar in Versailles: meeting room, yurt, in-house catering, accommodation.",
+    },
   },
   nav: {
     back: "Cocobiches group",
     brand: "Hôtel du Jeu de Paume",
     home: "Home",
     hotel: "The hotel",
+    chambres: "Rooms",
+    galerie: "Gallery",
     vivre: "Experience Versailles",
     offers: "Our offers",
     seminars: "Seminars & events",
+    devis: "Request a quote",
     prepare: "Plan your stay",
     book: "Book",
     call: "Call",

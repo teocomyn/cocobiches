@@ -1,8 +1,10 @@
-import { ContactForm } from "@/components/contact/contact-form";
-import { PageIntro } from "@/components/pages/page-intro";
+import { ContactPageView } from "@/components/brand/contact-page";
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getDictionary } from "@/lib/get-dictionary";
+import { contactPageSchema, jsonLdGraph } from "@/lib/json-ld";
 import { getLocaleFromParams } from "@/lib/locale-params";
-import { href } from "@/lib/paths";
+import { buildPageMetadata } from "@/lib/metadata";
+import { OG_IMAGES } from "@/lib/og-images";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,14 +15,13 @@ export async function generateMetadata({
   const locale = await getLocaleFromParams(params);
   if (!locale) return {};
   const dict = await getDictionary(locale);
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/contact",
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
-    alternates: {
-      canonical: href(locale, "/contact"),
-      languages: { fr: "/fr/contact", en: "/en/contact" },
-    },
-  };
+    ogImagePath: OG_IMAGES.contact,
+  });
 }
 
 export default async function ContactPage({
@@ -31,14 +32,15 @@ export default async function ContactPage({
   const locale = await getLocaleFromParams(params);
   if (!locale) return null;
   const dict = await getDictionary(locale);
-  const c = dict.contact;
+
+  const jsonLd = jsonLdGraph(
+    contactPageSchema(locale, dict.meta.contact.title, dict.meta.contact.description),
+  );
 
   return (
     <>
-      <PageIntro title={c.title} lead={c.lead} />
-      <div className="mx-auto max-w-3xl px-4 py-16 md:px-6 md:py-20">
-        <ContactForm dict={dict} />
-      </div>
+      <JsonLdScript data={jsonLd} />
+      <ContactPageView locale={locale} dict={dict} />
     </>
   );
 }

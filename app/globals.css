@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "lenis/dist/lenis.css";
 
 :root {
   /* Charte stricte (brief) · alias cb-* */
@@ -62,13 +61,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  scroll-behavior: auto;
 }
 
 body {
@@ -81,17 +74,6 @@ body {
   letter-spacing: -0.01em;
   position: relative;
   z-index: 0;
-}
-
-/* Grain papier · très léger */
-body::before {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .font-display {
@@ -177,5 +159,86 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .cb-scroll-hint {
     animation: none;
+  }
+}
+
+@keyframes cb-hero-zoom {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.cb-hero-image {
+  animation: cb-hero-zoom 1.1s var(--ease-cb) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-hero-image {
+    animation: none;
+  }
+}
+
+@keyframes cb-hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cb-hero-fade {
+  animation: cb-hero-fade-up 0.65s var(--ease-cb) both;
+}
+.cb-hero-fade-delay-1 {
+  animation-delay: 0.12s;
+}
+.cb-hero-fade-delay-2 {
+  animation-delay: 0.2s;
+}
+.cb-hero-fade-delay-3 {
+  animation-delay: 0.28s;
+}
+.cb-hero-fade-delay-4 {
+  animation-delay: 0.36s;
+}
+.cb-hero-fade-delay-5 {
+  animation-delay: 0.44s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cb-hero-fade {
+    animation: none;
+  }
+}
+
+@keyframes hjp-hero-slide {
+  0%,
+  18% {
+    opacity: 1;
+  }
+  23%,
+  100% {
+    opacity: 0;
+  }
+}
+.hjp-hero-slide {
+  animation: hjp-hero-slide 20s ease-in-out infinite;
+  opacity: 0;
+}
+.hjp-hero-slide:first-child {
+  opacity: 1;
+}
+.hero-slideshow-paused .hjp-hero-slide {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hjp-hero-slide {
+    animation: none;
+    opacity: 0;
+  }
+  .hjp-hero-slide:first-child {
+    opacity: 1;
   }
 }

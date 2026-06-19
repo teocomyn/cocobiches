@@ -1,7 +1,8 @@
-import { PageIntro } from "@/components/pages/page-intro";
-import { getDictionary } from "@/lib/get-dictionary";
+import { LegalDocumentPageView } from "@/components/brand/legal-document-page";
+import { getLegalPageContent } from "@/lib/i18n/legal-page";
 import { getLocaleFromParams } from "@/lib/locale-params";
-import { href } from "@/lib/paths";
+import { buildPageMetadata } from "@/lib/metadata";
+import { OG_IMAGES } from "@/lib/og-images";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,18 +12,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const locale = await getLocaleFromParams(params);
   if (!locale) return {};
-  const dict = await getDictionary(locale);
-  return {
-    title: dict.meta.privacy.title,
-    description: dict.meta.privacy.description,
-    alternates: {
-      canonical: href(locale, "/politique-confidentialite"),
-      languages: {
-        fr: "/fr/politique-confidentialite",
-        en: "/en/politique-confidentialite",
-      },
-    },
-  };
+  const content = getLegalPageContent(locale, "privacy");
+  return buildPageMetadata({
+    locale,
+    path: "/politique-confidentialite",
+    title: content.heroTitle,
+    description: content.heroLead,
+    ogImagePath: OG_IMAGES.legal,
+  });
 }
 
 export default async function PrivacyPage({
@@ -32,14 +29,7 @@ export default async function PrivacyPage({
 }) {
   const locale = await getLocaleFromParams(params);
   if (!locale) return null;
-  const dict = await getDictionary(locale);
+  const content = getLegalPageContent(locale, "privacy");
 
-  return (
-    <>
-      <PageIntro title={dict.privacy.title} />
-      <div className="mx-auto max-w-3xl px-4 py-16 md:px-6 md:py-20">
-        <p className="leading-relaxed text-cocobiches-muted">{dict.privacy.body}</p>
-      </div>
-    </>
-  );
+  return <LegalDocumentPageView locale={locale} content={content} />;
 }

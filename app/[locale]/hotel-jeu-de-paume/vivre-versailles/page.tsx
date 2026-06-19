@@ -1,8 +1,10 @@
 import { HjpVivrePageView } from "@/components/hotel-jeu-de-paume/hjp-vivre-page";
 import { getHjpContent } from "@/lib/hjp-content";
 import { getLocaleFromParams } from "@/lib/locale-params";
-import { href } from "@/lib/paths";
+import { buildPageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
+
+const PATH = "/hotel-jeu-de-paume/vivre-versailles";
 
 export async function generateMetadata({
   params,
@@ -12,18 +14,12 @@ export async function generateMetadata({
   const locale = await getLocaleFromParams(params);
   if (!locale) return {};
   const m = getHjpContent(locale).meta.vivre;
-  const path = href(locale, "/hotel-jeu-de-paume/vivre-versailles");
-  return {
+  return buildPageMetadata({
+    locale,
+    path: PATH,
     title: m.title,
     description: m.description,
-    alternates: {
-      canonical: path,
-      languages: {
-        fr: "/fr/hotel-jeu-de-paume/vivre-versailles",
-        en: "/en/hotel-jeu-de-paume/vivre-versailles",
-      },
-    },
-  };
+  });
 }
 
 export default async function HotelJdpVivrePage({

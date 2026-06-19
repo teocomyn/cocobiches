@@ -4,34 +4,25 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { LogoPattern } from "@/components/patterns/logo-pattern";
 import type { Dictionary } from "@/lib/get-dictionary";
 import type { Locale } from "@/lib/i18n-config";
-import { href as localeHref } from "@/lib/paths";
+import {
+  HOTEL_LIST,
+  hotelImageAlt,
+  hotelInternalHref,
+  hotelName,
+  hotelTag,
+} from "@/lib/hotels-data";
 
-const HOTELS = [
-  {
-    key: "angleterre" as const,
-    url: "https://www.hotel-angleterre-versailles.fr/",
-    image: "/hotel-jeu-de-paume/chateau-versailles.png",
-    imagePosition: "object-[center_45%]",
-    accent: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",
-    index: "01",
-  },
-  {
-    key: "jeudepaume" as const,
-    url: "__INTERNAL_JDP__",
-    image: "/hotel-jeu-de-paume/facade.png",
-    imagePosition: "object-center",
-    accent: "from-cocobiches-marine-900/85 via-cocobiches-marine-900/30 to-transparent",
-    index: "02",
-  },
-  {
-    key: "onclelouis" as const,
-    url: "https://www.apparts-onclelouis-versailles.fr/",
-    image: "/hotel-jeu-de-paume/carte-versailles.png",
-    imagePosition: "object-[center_40%]",
-    accent: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",
-    index: "03",
-  },
-];
+const ACCENTS: Record<string, string> = {
+  angleterre: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",
+  jeudepaume: "from-cocobiches-marine-900/85 via-cocobiches-marine-900/30 to-transparent",
+  onclelouis: "from-cocobiches-marine-900/90 via-cocobiches-marine-900/35 to-transparent",
+};
+
+const POSITIONS: Record<string, string> = {
+  angleterre: "object-[center_45%]",
+  jeudepaume: "object-center",
+  onclelouis: "object-[center_40%]",
+};
 
 export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const h = dict.home;
@@ -62,53 +53,37 @@ export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Loca
         </FadeIn>
 
         <div className="mt-14 grid gap-8 md:mt-20 md:grid-cols-3 md:gap-7">
-          {HOTELS.map((hotel, i) => {
-            const copy = h[hotel.key];
+          {HOTEL_LIST.map((hotel, i) => {
+            const copy = h[hotel.id];
             const features: readonly string[] = copy.features;
-            const isInternal = hotel.url === "__INTERNAL_JDP__";
 
             return (
-              <FadeIn key={hotel.key} delay={i * 0.08}>
+              <FadeIn key={hotel.id} delay={i * 0.08}>
                 <article className="cb-card group relative flex h-full flex-col overflow-hidden rounded-sm bg-white shadow-card ring-1 ring-cocobiches-marine/[0.1] hover:shadow-lift hover:ring-cocobiches-marine/20">
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
                       src={hotel.image}
-                      alt=""
+                      alt={hotelImageAlt(hotel, locale)}
                       fill
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`object-cover transition duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.045] ${hotel.imagePosition}`}
+                      className={`object-cover transition duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.045] ${POSITIONS[hotel.id]}`}
                     />
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t ${hotel.accent}`}
+                      className={`absolute inset-0 bg-gradient-to-t ${ACCENTS[hotel.id]}`}
                       aria-hidden
                     />
-                    <div
-                      className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                      aria-hidden
-                    />
-
-                    <div className="absolute inset-x-0 top-5 flex items-center justify-between px-6 text-white/85">
-                      <span className="font-display text-[0.75rem] font-semibold tracking-[0.3em]">
-                        {hotel.index}
-                      </span>
-                      <span className="h-px w-8 bg-white/45" aria-hidden />
-                    </div>
-
                     <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-7">
                       <p className="text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-white/80">
-                        {copy.tag}
+                        {hotelTag(hotel, locale)}
                       </p>
                       <h3 className="font-display mt-2 text-[1.55rem] font-semibold leading-[1.12] tracking-[-0.022em] md:text-[1.7rem]">
-                        {copy.name}
+                        {hotelName(hotel, locale)}
                       </h3>
                     </div>
                   </div>
 
                   <div className="flex flex-1 flex-col gap-6 p-7 md:p-8">
-                    <p className="text-[0.95rem] leading-[1.65] text-cocobiches-muted">
-                      {copy.desc}
-                    </p>
-
+                    <p className="text-[0.95rem] leading-[1.65] text-cocobiches-muted">{copy.desc}</p>
                     <ul className="space-y-2.5 border-t border-cocobiches-marine/10 pt-5">
                       {features.map((f) => (
                         <li
@@ -123,36 +98,15 @@ export function HotelsSection({ dict, locale }: { dict: Dictionary; locale: Loca
                         </li>
                       ))}
                     </ul>
-
-                    {isInternal ? (
-                      <Link
-                        href={localeHref(locale, "/hotel-jeu-de-paume")}
-                        className="group/cta mt-auto inline-flex items-center justify-between gap-2 rounded-full border border-cocobiches-marine/15 bg-cocobiches-marine/[0.03] py-3.5 pl-5 pr-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:border-cocobiches-marine hover:bg-cocobiches-marine hover:text-white"
-                      >
-                        <span>{copy.cta}</span>
-                        <span
-                          aria-hidden
-                          className="inline-block text-lg leading-none transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:translate-x-1"
-                        >
-                          →
-                        </span>
-                      </Link>
-                    ) : (
-                      <Link
-                        href={hotel.url}
-                        className="group/cta mt-auto inline-flex items-center justify-between gap-2 rounded-full border border-cocobiches-marine/15 bg-cocobiches-marine/[0.03] py-3.5 pl-5 pr-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:border-cocobiches-marine hover:bg-cocobiches-marine hover:text-white"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <span>{copy.cta}</span>
-                        <span
-                          aria-hidden
-                          className="inline-block text-lg leading-none transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/cta:translate-x-1"
-                        >
-                          →
-                        </span>
-                      </Link>
-                    )}
+                    <Link
+                      href={hotelInternalHref(locale, hotel.id)}
+                      className="group/cta mt-auto inline-flex items-center justify-between gap-2 rounded-full border border-cocobiches-marine/15 bg-cocobiches-marine/[0.03] py-3.5 pl-5 pr-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-cocobiches-marine transition hover:border-cocobiches-marine hover:bg-cocobiches-marine hover:text-white"
+                    >
+                      <span>{copy.cta}</span>
+                      <span aria-hidden className="text-lg leading-none transition-transform group-hover/cta:translate-x-1">
+                        →
+                      </span>
+                    </Link>
                   </div>
                 </article>
               </FadeIn>

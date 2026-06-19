@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FadeIn } from "@/components/motion/fade-in";
 import type { Locale } from "@/lib/i18n-config";
 import { getHjpContent } from "@/lib/hjp-content";
+import { hjpAlt, hjpImage, HJP_ROOM_IMAGES } from "@/lib/hjp-images";
 
 export function HjpHotelPageView({ locale }: { locale: Locale }) {
   const c = getHjpContent(locale);
@@ -11,8 +12,8 @@ export function HjpHotelPageView({ locale }: { locale: Locale }) {
     <>
       <section className="relative min-h-[48vh] overflow-hidden bg-cocobiches-marine-900 md:min-h-[52vh]">
         <Image
-          src="/hotel-jeu-de-paume/facade.png"
-          alt=""
+          src={hjpImage("facade").src}
+          alt={hjpAlt("facade", locale)}
           fill
           priority
           className="object-cover object-center"
@@ -45,9 +46,23 @@ export function HjpHotelPageView({ locale }: { locale: Locale }) {
       <section className="bg-cocobiches-creme-50 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <div className="grid gap-8 md:grid-cols-2">
-            {p.rooms.map((room, i) => (
+            {p.rooms.map((room, i) => {
+              const imageKey = HJP_ROOM_IMAGES[room.id];
+              const roomImage = imageKey ? hjpImage(imageKey) : hjpImage("chambre");
+
+              return (
               <FadeIn key={room.id} delay={i * 0.04}>
-                <article className="flex h-full flex-col rounded-[1.25rem] border border-cocobiches-border bg-white p-7 shadow-card md:p-8">
+                <article className="flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-cocobiches-border bg-white shadow-card">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={roomImage.src}
+                      alt={imageKey ? hjpAlt(imageKey, locale) : hjpAlt("chambre", locale)}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-7 md:p-8">
                   <h2 className="font-display text-2xl font-semibold text-cocobiches-marine">
                     {room.name}
                   </h2>
@@ -74,9 +89,11 @@ export function HjpHotelPageView({ locale }: { locale: Locale }) {
                       </li>
                     ))}
                   </ul>
+                  </div>
                 </article>
               </FadeIn>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

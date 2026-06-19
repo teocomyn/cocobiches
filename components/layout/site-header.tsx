@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BookMenu } from "@/components/layout/book-menu";
 import { CocobichesMark } from "@/components/logo/cocobiches-mark";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import type { Dictionary } from "@/lib/get-dictionary";
@@ -52,8 +53,8 @@ export function SiteHeader({
       className={cn(
         "sticky top-0 z-40 border-b text-cocobiches-creme transition-[height,background-color,backdrop-filter,border-color] duration-300",
         scrolled
-          ? "border-cocobiches-creme/[0.15] bg-[rgba(45,48,119,0.98)] backdrop-blur-[20px]"
-          : "border-white/[0.07] bg-cocobiches-marine/92 backdrop-blur-xl backdrop-saturate-150",
+          ? "border-cocobiches-creme/[0.15] bg-[rgba(45,48,119,0.98)]"
+          : "border-white/[0.07] bg-cocobiches-marine/95",
       )}
       style={{ transitionTimingFunction: easeCb }}
     >
@@ -95,17 +96,14 @@ export function SiteHeader({
 
         <div className="flex shrink-0 items-center gap-3">
           <LanguageSwitcher locale={locale} />
-          <a
-            href="https://www.hotel-jeudepaume.fr/"
-            className={cn(
-              "hidden rounded-full bg-cocobiches-creme px-5 py-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-cocobiches-marine shadow-[0_8px_30px_rgb(0_0_0/0.18)] transition hover:scale-[1.02] hover:bg-white md:inline-flex",
+          <BookMenu
+            locale={locale}
+            label={n.bookCta}
+            className="hidden md:block"
+            buttonClassName={cn(
+              "rounded-full bg-cocobiches-creme px-5 py-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-cocobiches-marine shadow-[0_8px_30px_rgb(0_0_0/0.18)] transition hover:scale-[1.02] hover:bg-white",
             )}
-            style={{ transitionTimingFunction: easeCb, transitionDuration: "300ms" }}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {n.bookCta}
-          </a>
+          />
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-cocobiches-creme transition hover:bg-white/10 lg:hidden"
@@ -153,14 +151,12 @@ export function SiteHeader({
               {item.label}
             </Link>
           ))}
-          <a
-            href="https://www.hotel-jeudepaume.fr/"
-            className="mt-3 rounded-full bg-cocobiches-creme px-4 py-3.5 text-center text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-cocobiches-marine"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {n.bookCta}
-          </a>
+          <BookMenu
+            locale={locale}
+            label={n.bookCta}
+            className="mt-3 md:hidden"
+            buttonClassName="w-full rounded-full bg-cocobiches-creme px-4 py-3.5 text-center text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-cocobiches-marine"
+          />
         </nav>
       </div>
     </header>

@@ -85,7 +85,12 @@ export function HjpFooter({ locale }: { locale: Locale }) {
             >
               {f.privacy}
             </Link>
-            <span className="block text-cocobiches-muted/80">{f.cookies}</span>
+            <Link
+              href={`${href(locale, "/politique-confidentialite")}#cookies`}
+              className="block hover:text-cocobiches-marine"
+            >
+              {f.cookies}
+            </Link>
             <span className="block text-cocobiches-muted/80">{f.customize}</span>
           </div>
         </div>

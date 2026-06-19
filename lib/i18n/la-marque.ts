@@ -244,7 +244,7 @@ export const laMarqueFr = {
           "Notre première maison. Hôtel de charme historique, en face directe du Château de Versailles. 29 chambres pour les voyageurs culturels, les familles, les amoureux de patrimoine.",
         cta: "Découvrir l’Hôtel d’Angleterre",
         url: "https://www.hotel-angleterre-versailles.fr/",
-        image: "/hotel-jeu-de-paume/chateau-versailles.png",
+        image: "/hotel-angleterre/hotel-facade.jpg",
         imagePos: "object-[center_40%]",
       },
       {
@@ -255,7 +255,7 @@ export const laMarqueFr = {
           "Notre maison la plus lifestyle. 38 chambres, une salle de séminaire lumineuse et une yourte événementielle unique à Versailles. Pour les séjours et pour les séminaires d’entreprise.",
         cta: "Découvrir l’Hôtel du Jeu de Paume",
         url: "/hotel-jeu-de-paume",
-        image: "/hotel-jeu-de-paume/facade.png",
+        image: "/hotel-jeu-de-paume/hotel-facade.jpg",
         imagePos: "object-center",
         internal: true,
       },
@@ -267,7 +267,7 @@ export const laMarqueFr = {
           "12 appartements hôteliers pour les séjours longs, les missions professionnelles, les familles qui veulent respirer. L’autonomie d’un appartement, avec le service d’un hôtel.",
         cta: "Découvrir les Apparts de l’Oncle Louis",
         url: "https://www.apparts-onclelouis-versailles.fr/",
-        image: "/hotel-jeu-de-paume/carte-versailles.png",
+        image: "/hotel-jeu-de-paume/carte-versailles.jpg",
         imagePos: "object-[center_35%]",
       },
     ],
@@ -524,7 +524,7 @@ export const laMarqueEn = {
           "Our first house. Historic charm hotel, directly opposite the Palace of Versailles. 29 rooms for culture seekers, families, and heritage lovers.",
         cta: "Discover Hôtel d’Angleterre",
         url: "https://www.hotel-angleterre-versailles.fr/",
-        image: "/hotel-jeu-de-paume/chateau-versailles.png",
+        image: "/hotel-angleterre/hotel-facade.jpg",
         imagePos: "object-[center_40%]",
       },
       {
@@ -535,7 +535,7 @@ export const laMarqueEn = {
           "Our most lifestyle-led address. 38 rooms, a bright seminar room, and a unique event yurt in Versailles. For stays and corporate seminars.",
         cta: "Discover Hôtel du Jeu de Paume",
         url: "/hotel-jeu-de-paume",
-        image: "/hotel-jeu-de-paume/facade.png",
+        image: "/hotel-jeu-de-paume/hotel-facade.jpg",
         imagePos: "object-center",
         internal: true,
       },
@@ -547,7 +547,7 @@ export const laMarqueEn = {
           "Twelve serviced apartments for long stays, business trips, and families who want room to breathe. Apartment autonomy with hotel service.",
         cta: "Discover Apparts de l’Oncle Louis",
         url: "https://www.apparts-onclelouis-versailles.fr/",
-        image: "/hotel-jeu-de-paume/carte-versailles.png",
+        image: "/hotel-jeu-de-paume/carte-versailles.jpg",
         imagePos: "object-[center_35%]",
       },
     ],
@@ -587,8 +587,8 @@ export function getLaMarque(locale: LaMarqueLocale) {
 }
 
 export const historyImages = [
-  "/hotel-jeu-de-paume/chateau-versailles.png",
-  "/hotel-jeu-de-paume/facade.png",
-  "/hotel-jeu-de-paume/carte-versailles.png",
-  "/hotel-jeu-de-paume/salon.png",
+  "/hotel-angleterre/hotel-facade.jpg",
+  "/hotel-jeu-de-paume/hotel-facade.jpg",
+  "/hotel-jeu-de-paume/carte-versailles.jpg",
+  "/hotel-jeu-de-paume/salon.jpg",
 ] as const;

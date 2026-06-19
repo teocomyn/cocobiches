@@ -1,17 +1,47 @@
+import dynamic from "next/dynamic";
 import { BookingBar } from "@/components/booking/booking-bar";
 import { Hero } from "@/components/home/hero";
 import { HotelsSection } from "@/components/home/hotels-section";
 import { ManifestoSection } from "@/components/home/manifesto-section";
 import { NumbersSection } from "@/components/home/numbers-section";
-import { NewsletterSection } from "@/components/home/newsletter-section";
-import { TestimonialsSection } from "@/components/home/testimonials-section";
-import { PressStrip } from "@/components/home/press-strip";
-import { JournalPreview } from "@/components/home/journal-preview";
-import { ValuesSection } from "@/components/blocks/values-section";
+import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getDictionary } from "@/lib/get-dictionary";
+import { jsonLdGraph, webSiteSchema } from "@/lib/json-ld";
 import { getLocaleFromParams } from "@/lib/locale-params";
-import { href } from "@/lib/paths";
+import { buildPageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
+
+const ValuesSection = dynamic(
+  () =>
+    import("@/components/blocks/values-section").then((mod) => ({
+      default: mod.ValuesSection,
+    })),
+  { loading: () => null },
+);
+
+const TestimonialsSection = dynamic(
+  () =>
+    import("@/components/home/testimonials-section").then((mod) => ({
+      default: mod.TestimonialsSection,
+    })),
+  { loading: () => null },
+);
+
+const JournalPreview = dynamic(
+  () =>
+    import("@/components/home/journal-preview").then((mod) => ({
+      default: mod.JournalPreview,
+    })),
+  { loading: () => null },
+);
+
+const PressStrip = dynamic(
+  () =>
+    import("@/components/home/press-strip").then((mod) => ({
+      default: mod.PressStrip,
+    })),
+  { loading: () => null },
+);
 
 export async function generateMetadata({
   params,
@@ -21,19 +51,12 @@ export async function generateMetadata({
   const locale = await getLocaleFromParams(params);
   if (!locale) return {};
   const dict = await getDictionary(locale);
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "",
     title: dict.meta.home.title,
     description: dict.meta.home.description,
-    alternates: {
-      canonical: href(locale),
-      languages: { fr: "/fr", en: "/en" },
-    },
-    openGraph: {
-      title: dict.meta.home.title,
-      description: dict.meta.home.description,
-      url: href(locale),
-    },
-  };
+  });
 }
 
 export default async function HomePage({
@@ -46,7 +69,6 @@ export default async function HomePage({
   const dict = await getDictionary(locale);
 
   const orgJsonLd = {
-    "@context": "https://schema.org",
     "@type": "Organization",
     name: "Cocobiches",
     url: "https://www.cocobiches.fr",
@@ -86,15 +108,14 @@ export default async function HomePage({
     ],
   };
 
+  const jsonLd = jsonLdGraph(orgJsonLd, webSiteSchema(locale));
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-      />
+      <JsonLdScript data={jsonLd} />
       <Hero locale={locale} dict={dict} />
-      <div className="relative z-20 px-4 md:px-8">
-        <BookingBar dict={dict} variant="home" />
+      <div className="relative z-20 px-5 md:px-8 lg:px-10">
+        <BookingBar dict={dict} locale={locale} variant="home" />
       </div>
       <HotelsSection dict={dict} locale={locale} />
       <ManifestoSection dict={dict} locale={locale} />
@@ -103,7 +124,6 @@ export default async function HomePage({
       <TestimonialsSection dict={dict} />
       <JournalPreview dict={dict} locale={locale} />
       <PressStrip dict={dict} locale={locale} />
-      <NewsletterSection dict={dict} />
     </>
   );
 }

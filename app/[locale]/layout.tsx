@@ -1,11 +1,18 @@
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import { CookieBanner } from "@/components/layout/cookie-banner";
 import { ConditionalSiteFooter } from "@/components/layout/conditional-site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { HtmlLang } from "@/components/shell/html-lang";
 import { getDictionary } from "@/lib/get-dictionary";
 import { locales } from "@/lib/i18n-config";
 import { getLocaleFromParams } from "@/lib/locale-params";
+
+const CookieBanner = dynamic(
+  () =>
+    import("@/components/layout/cookie-banner").then((mod) => ({
+      default: mod.CookieBanner,
+    })),
+  { loading: () => null },
+);
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -24,7 +31,6 @@ export default async function LocaleLayout({
 
   return (
     <>
-      <HtmlLang locale={locale} />
       <div className="relative z-10 flex min-h-screen flex-col">
         <a
           href="#main"
