@@ -14,7 +14,7 @@ export const CONTACT_DEPARTMENTS: ContactDepartment[] = [
   { id: "general", email: GROUP_NAP.email },
   { id: "press", email: GROUP_NAP.pressEmail },
   { id: "commercial", email: GROUP_NAP.commercialEmail },
-  { id: "events", email: GROUP_NAP.commercialEmail },
+  { id: "events", email: GROUP_NAP.eventsEmail },
 ];
 
 export { HOTEL_NAP, GROUP_NAP };

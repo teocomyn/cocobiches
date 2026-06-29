@@ -19,8 +19,8 @@ export async function generateMetadata({
     path: PATH,
     title: isFr ? "Chambres · Hôtel d'Angleterre" : "Rooms · Hôtel d'Angleterre",
     description: isFr
-      ? "29 chambres cosy à l'Hôtel d'Angleterre : doubles, supérieures et familiales, à deux minutes du Château de Versailles."
-      : "29 cosy rooms at Hôtel d'Angleterre: doubles, superior and family rooms, two minutes from the Palace of Versailles.",
+      ? "20 chambres cosy à l'Hôtel d'Angleterre : doubles, supérieures et familiales, à deux minutes du Château de Versailles."
+      : "20 cosy rooms at Hôtel d'Angleterre: doubles, superior and family rooms, two minutes from the Palace of Versailles.",
     ogImagePath: OG_IMAGES.angleterre,
     ogImageAlt: "Hôtel d'Angleterre · Versailles",
   });

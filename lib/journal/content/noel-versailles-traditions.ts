@@ -19,15 +19,7 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Les restaurants proposent des menus de fête en décembre. Pour des cadeaux : pâtisserie Serveau, savonnerie rue de la Paroisse, boutique du Château. Évitez les gadgets touristiques.",
-  },
-  {
-    kind: "h2",
-    text: "Nos maisons et un conseil",
-  },
-  {
-    kind: "p",
-    text: "Sapin discret au Jeu de Paume, guirlandes à l'Angleterre, bougies aux Apparts. Deux nuits minimum en décembre. Le 24 au soir, nous laissons souvent une bûche et du champagne pour les hôtes qui rentrent : notre façon de dire merci.",
+    text: "Les restaurants proposent des menus de fête en décembre. Pour des cadeaux : FINE Pâtisseries & chocolats, La Boutique Royale, Boutique du Château, Boutique de l'Office de tourisme. Évitez les gadgets touristiques.",
   },
 ];
 
@@ -42,7 +34,7 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Christmas market on place du Marché Notre-Dame, wooden chalets, late November to late December. Palace façade projections on some evenings—check the tourist office. Midnight mass at Saint-Louis Cathedral: arrive early, organ and choir are worth it.",
+    text: "Christmas market on place du Marché Notre-Dame, wooden chalets, late November to late December. Palace façade projections on some evenings: check the tourist office. Midnight mass at Saint-Louis Cathedral: arrive early, organ and choir are worth it.",
   },
   {
     kind: "h2",
@@ -50,14 +42,6 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Restaurants offer festive menus in December. For gifts: Serveau pastry, soap shop on rue de la Paroisse, Palace boutique. Skip tourist trinkets.",
-  },
-  {
-    kind: "h2",
-    text: "Our houses and a tip",
-  },
-  {
-    kind: "p",
-    text: "Discreet tree at Jeu de Paume, garlands at Angleterre, candles at Apparts. Two nights minimum in December. On Christmas Eve we often leave a Yule log and champagne for guests returning late: our way of saying thank you.",
+    text: "Restaurants offer festive menus in December. For gifts: FINE Pâtisseries & chocolats, La Boutique Royale, Palace boutique, tourist office boutique. Skip tourist trinkets.",
   },
 ];

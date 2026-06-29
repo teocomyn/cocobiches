@@ -32,7 +32,6 @@ function ArticleBody({
   let imgIdx = 0;
   let cumulative = 0;
   let nextThreshold = 200;
-  const insertNewsletterAfterIndex = Math.max(0, Math.ceil(blocks.length / 2) - 1);
 
   const pushFigure = (nodes: React.ReactNode[]) => {
     const img = images[imgIdx];
@@ -93,21 +92,24 @@ function ArticleBody({
       );
       flushFigures(nodes);
     }
-
-    if (i === insertNewsletterAfterIndex) {
-      nodes.push(
-        <div key="nl" className="my-16 md:my-24">
-          <JournalNewsletterEncart
-            dict={dict}
-            title={j.newsletterEncartTitle}
-            lead={j.newsletterEncartLead}
-          />
-        </div>,
-      );
-    }
   });
 
-  return <div className="mt-12">{nodes}</div>;
+  while (imgIdx < images.length) {
+    pushFigure(nodes);
+  }
+
+  return (
+    <div className="mt-12">
+      {nodes}
+      <div className="my-16 md:my-24">
+        <JournalNewsletterEncart
+          dict={dict}
+          title={j.newsletterEncartTitle}
+          lead={j.newsletterEncartLead}
+        />
+      </div>
+    </div>
+  );
 }
 
 export function ArticleTemplate({

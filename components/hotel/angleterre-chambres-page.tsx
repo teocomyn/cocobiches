@@ -54,8 +54,8 @@ export function AngleterreChambresPageView({ locale }: { locale: Locale }) {
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-cocobiches-muted">
             {isFr
-              ? "29 chambres cosy et confortables, au décor parfaitement dosé entre pièces rétro et lignes actuelles."
-              : "29 cosy, comfortable rooms with decor balanced between retro pieces and contemporary lines."}
+              ? "20 chambres cosy et confortables, au décor parfaitement dosé entre pièces rétro et lignes actuelles."
+              : "20 cosy, comfortable rooms with decor balanced between retro pieces and contemporary lines."}
           </p>
         </div>
       </header>

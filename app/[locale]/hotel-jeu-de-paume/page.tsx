@@ -27,7 +27,7 @@ const hotelJsonLd = (locale: string) => ({
   "@type": "Hotel",
   name: "Hôtel du Jeu de Paume",
   url: `https://www.cocobiches.fr/${locale}/hotel-jeu-de-paume`,
-  telephone: "+33130841400",
+  telephone: "+33139514350",
   email: "contact@hotel-jeudepaume.fr",
   address: {
     "@type": "PostalAddress",

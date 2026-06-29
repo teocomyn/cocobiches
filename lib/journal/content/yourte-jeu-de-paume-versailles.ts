@@ -19,7 +19,7 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Déjeuners de séminaire, cocktails jusqu'à 40 personnes, ateliers culinaires avec nos Cheffes, yoga ou sophrologie, parfois un simple moment autour d'un feu le soir de clôture.",
+    text: "Déjeuners de séminaire, salle du petit-déjeuner, cocktails jusqu'à 40 personnes, ateliers culinaires avec nos Cheffes, yoga ou sophrologie, parfois un simple moment autour d'un feu le soir de clôture.",
   },
   {
     kind: "h2",
@@ -50,7 +50,7 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Seminar lunches, cocktails for up to 40, cooking workshops with our chefs, yoga or sophrology, sometimes a simple fireside moment on closing night.",
+    text: "Seminar lunches, breakfast room, cocktails for up to 40, cooking workshops with our chefs, yoga or sophrology, sometimes a simple fireside moment on closing night.",
   },
   {
     kind: "h2",

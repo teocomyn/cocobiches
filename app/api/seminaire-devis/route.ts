@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   const to =
     process.env.SEMINAIRE_TO_EMAIL ??
     process.env.CONTACT_TO_EMAIL ??
-    "events.hoteljdp.versailles@gmail.com";
+    "events@cocobiches.com";
 
   const html = `
     <h2>Demande de devis séminaire · Jeu de Paume</h2>

@@ -47,16 +47,14 @@ export const laMarqueFr = {
         title: "Famille",
         body:
           "Cocobiches est un groupe de famille, au sens propre comme au sens figuré. Les décisions se prennent entre propriétaires-exploitants, pour des maisons que nous connaissons chambre par chambre.",
-        proof:
-          "Nos trois hôtels appartiennent à la famille Comyn depuis leur acquisition. Aucun actionnaire extérieur. Aucun investisseur en embuscade.",
+        proof: "",
       },
       {
         n: "02",
         title: "Authenticité",
         body:
-          "Des visages réels à la réception. Une cuisine sincère, préparée dans nos murs. Des lieux qui ont une âme, qu’on respecte sans chercher à les remettre à neuf pour remettre à neuf.",
-        proof:
-          "100 % de notre cuisine est préparée maison par notre brigade, menée par Maÿlis. Aucun prestataire extérieur.",
+          "Des visages réels à la réception. Des lieux qui ont une âme, qu’on respecte sans chercher à les remettre à neuf pour remettre à neuf.",
+        proof: "",
       },
       {
         n: "03",
@@ -131,7 +129,7 @@ export const laMarqueFr = {
           "Hôtel d’Angleterre, Hôtel du Jeu de Paume, Apparts de l’Oncle Louis. Un groupe à taille humaine.",
       },
       {
-        value: "79",
+        value: "48",
         unit: "chambres et appartements",
         label: "Réparties sur nos trois adresses, à deux minutes du Château.",
       },
@@ -140,12 +138,6 @@ export const laMarqueFr = {
         unit: "indépendant",
         label:
           "Aucun actionnaire extérieur, aucune franchise. Groupe familial, porté par ses propriétaires-exploitants.",
-      },
-      {
-        value: "100%",
-        unit: "cuisine maison",
-        label:
-          "Notre brigade, menée par Maÿlis, prépare chaque plat sur place. Zéro prestataire extérieur.",
       },
       {
         value: "5",
@@ -160,7 +152,7 @@ export const laMarqueFr = {
     title: "Derrière chaque maison,",
     titleLine2: "des visages.",
     intro:
-      "Réception, cuisine, housekeeping, événementiel. Nos équipes forment un collectif fidèle, majoritairement en CDI, formé en interne. Nous ne faisons pas appel à des prestataires pour ce qui compte : l’accueil, la cuisine, le soin des chambres.\n\nC’est notre conviction la plus ancienne : un séjour réussi commence par une équipe qui aime ce qu’elle fait.",
+      "Réception, housekeeping, événementiel. Nos équipes forment un collectif fidèle, majoritairement en CDI, formé en interne. Nous ne faisons pas appel à des prestataires pour ce qui compte : l’accueil et le soin des chambres.\n\nC’est notre conviction la plus ancienne : un séjour réussi commence par une équipe qui aime ce qu’elle fait.",
     quote: "« Nous disons nous, pas je. Parce que rien ici ne repose sur une seule personne. »",
     quoteBy: "Elise Comyn (Ranjard), gérante",
     people: [
@@ -175,12 +167,6 @@ export const laMarqueFr = {
         role: "Propriétaire et fondateur",
         bio: "François a acquis notre premier hôtel en 2010. Propriétaire-exploitant, expert hôtelier, il est également structureur de clubs deals dans le secteur.",
         initials: "FC",
-      },
-      {
-        name: "Maÿlis",
-        role: "Cheffe, Hôtel du Jeu de Paume",
-        bio: "Maÿlis mène notre brigade 100 % féminine. Cuisine maison, produits de saison, cartes renouvelées quatre fois par an.",
-        initials: "M",
       },
       {
         name: "Fanny Colson",
@@ -237,11 +223,11 @@ export const laMarqueFr = {
       "Chacune de nos maisons a son caractère, son emplacement, son format. Mais toutes partagent la même équipe, la même exigence, la même envie de vous voir vous sentir chez vous.",
     houses: [
       {
-        pretitle: "Face au Château",
+        pretitle: "Rue de Fontenay",
         name: "Hôtel d’Angleterre",
         baseline: "L’écrin patrimonial.",
         desc:
-          "Notre première maison. Hôtel de charme historique, en face directe du Château de Versailles. 29 chambres pour les voyageurs culturels, les familles, les amoureux de patrimoine.",
+          "Notre première maison. Hôtel de charme historique, rue de Fontenay. 20 chambres pour les voyageurs culturels, les familles, les amoureux de patrimoine.",
         cta: "Découvrir l’Hôtel d’Angleterre",
         url: "https://www.hotel-angleterre-versailles.fr/",
         image: "/hotel-angleterre/hotel-facade.jpg",
@@ -252,7 +238,7 @@ export const laMarqueFr = {
         name: "Hôtel du Jeu de Paume",
         baseline: "La maison confidentielle.",
         desc:
-          "Notre maison la plus lifestyle. 38 chambres, une salle de séminaire lumineuse et une yourte événementielle unique à Versailles. Pour les séjours et pour les séminaires d’entreprise.",
+          "Notre maison la plus lifestyle. 16 chambres, un espace séminaire lumineux et une yourte événementielle unique à Versailles. Pour les séjours et pour les séminaires d’entreprise.",
         cta: "Découvrir l’Hôtel du Jeu de Paume",
         url: "/hotel-jeu-de-paume",
         image: "/hotel-jeu-de-paume/hotel-facade.jpg",
@@ -326,16 +312,14 @@ export const laMarqueEn = {
         title: "Family",
         body:
           "Cocobiches is a family group in every sense. Decisions are made between owner-operators, for houses we know room by room.",
-        proof:
-          "Our three hotels have belonged to the Comyn family since acquisition. No outside shareholder. No silent investor.",
+        proof: "",
       },
       {
         n: "02",
         title: "Authenticity",
         body:
           "Real faces at reception. Honest cuisine prepared on site. Places with a soul · respected, not renovated for renovation’s sake.",
-        proof:
-          "100% of our food is prepared in-house by our brigade, led by Maÿlis. No outside caterer.",
+        proof: "",
       },
       {
         n: "03",
@@ -410,7 +394,7 @@ export const laMarqueEn = {
           "Hôtel d’Angleterre, Hôtel du Jeu de Paume, Apparts de l’Oncle Louis. Human-scale group.",
       },
       {
-        value: "79",
+        value: "48",
         unit: "rooms & apartments",
         label: "Across our three addresses, two minutes from the Palace.",
       },
@@ -419,12 +403,6 @@ export const laMarqueEn = {
         unit: "independent",
         label:
           "No outside shareholder, no franchise. A family group run by its owner-operators.",
-      },
-      {
-        value: "100%",
-        unit: "in-house cuisine",
-        label:
-          "Our brigade, led by Maÿlis, cooks every dish on site. Zero outside catering.",
       },
       {
         value: "5",
@@ -439,7 +417,7 @@ export const laMarqueEn = {
     title: "Behind each house,",
     titleLine2: "people.",
     intro:
-      "Front desk, kitchen, housekeeping, events. Our teams form a loyal collective, mostly on permanent contracts, trained in-house. We do not outsource what matters: welcome, cuisine, room care.\n\nOur oldest belief: a successful stay begins with people who love what they do.",
+      "Front desk, housekeeping, events. Our teams form a loyal collective, mostly on permanent contracts, trained in-house. We do not outsource what matters: welcome and room care.\n\nOur oldest belief: a successful stay begins with people who love what they do.",
     quote:
       "“We say we, not I. Because nothing here rests on a single person.”",
     quoteBy: "Elise Comyn (Ranjard), Managing director",
@@ -455,12 +433,6 @@ export const laMarqueEn = {
         role: "Owner & founder",
         bio: "François acquired our first hotel in 2010. Owner-operator, hospitality expert, and deal club structurer in the sector.",
         initials: "FC",
-      },
-      {
-        name: "Maÿlis",
-        role: "Head chef, Hôtel du Jeu de Paume",
-        bio: "Maÿlis leads our all-female brigade. Home cooking, seasonal menus, menus renewed four times a year.",
-        initials: "M",
       },
       {
         name: "Fanny Colson",
@@ -492,7 +464,7 @@ export const laMarqueEn = {
       {
         title: "Local cuisine",
         body:
-          "Seasonal menus renewed four times a year. Identified and loyal Île-de-France suppliers. Target: 70% short-circuit produce by 2028.",
+          "Seminar menus renewed four times a year. Identified and loyal Île-de-France suppliers. Target: 70% short-circuit produce by 2028.",
       },
       {
         title: "Permanent contracts",
@@ -502,7 +474,7 @@ export const laMarqueEn = {
       {
         title: "Sustainable materials",
         body:
-          "Our event yurt is built from wood and natural materials. LED lighting throughout. Phasing out single-use plastic in rooms and dining.",
+          "Our event yurt is built from wood and natural materials. LED lighting throughout.",
       },
     ],
     footnote:
@@ -517,11 +489,11 @@ export const laMarqueEn = {
       "Each of our houses has its character, location, and format. But all share the same team, the same standards, and the same wish to make you feel at home.",
     houses: [
       {
-        pretitle: "Facing the Palace",
+        pretitle: "Rue de Fontenay",
         name: "Hôtel d’Angleterre",
         baseline: "The heritage setting.",
         desc:
-          "Our first house. Historic charm hotel, directly opposite the Palace of Versailles. 29 rooms for culture seekers, families, and heritage lovers.",
+          "Our first house. Historic charm hotel on rue de Fontenay. 20 rooms for culture seekers, families, and heritage lovers.",
         cta: "Discover Hôtel d’Angleterre",
         url: "https://www.hotel-angleterre-versailles.fr/",
         image: "/hotel-angleterre/hotel-facade.jpg",
@@ -532,7 +504,7 @@ export const laMarqueEn = {
         name: "Hôtel du Jeu de Paume",
         baseline: "The intimate house.",
         desc:
-          "Our most lifestyle-led address. 38 rooms, a bright seminar room, and a unique event yurt in Versailles. For stays and corporate seminars.",
+          "Our most lifestyle-led address. 16 rooms, a bright seminar space, and a unique event yurt in Versailles. For stays and corporate seminars.",
         cta: "Discover Hôtel du Jeu de Paume",
         url: "/hotel-jeu-de-paume",
         image: "/hotel-jeu-de-paume/hotel-facade.jpg",

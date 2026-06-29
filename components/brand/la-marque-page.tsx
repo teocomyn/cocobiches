@@ -176,9 +176,11 @@ export function LaMarquePage({ locale }: { locale: LaMarqueLocale }) {
                       <p className="mt-5 text-[1.05rem] leading-[1.7] text-cocobiches-marine/90 md:text-[1.15rem]">
                         {item.body}
                       </p>
-                      <aside className="mt-8 border-l-[3px] border-cocobiches-marine bg-cocobiches-creme/40 px-6 py-5 text-[0.95rem] italic leading-relaxed text-cocobiches-marine/90 md:text-base">
-                        {item.proof}
-                      </aside>
+                      {item.proof ? (
+                        <aside className="mt-8 border-l-[3px] border-cocobiches-marine bg-cocobiches-creme/40 px-6 py-5 text-[0.95rem] italic leading-relaxed text-cocobiches-marine/90 md:text-base">
+                          {item.proof}
+                        </aside>
+                      ) : null}
                     </div>
                   </div>
                 </FadeIn>

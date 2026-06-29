@@ -220,13 +220,19 @@ export function ContactPageView({
                   href={href(locale, item.href)}
                   className="group flex h-full flex-col rounded-sm border border-cocobiches-marine/10 bg-cocobiches-creme-50 p-7 transition duration-500 hover:-translate-y-1 hover:border-cocobiches-marine/20 hover:bg-white hover:shadow-lift"
                 >
-                  <h3 className="font-display text-lg font-bold text-cocobiches-marine">{item.title}</h3>
-                  <p className="mt-2 flex-1 text-[0.88rem] leading-relaxed text-cocobiches-muted">
-                    {item.desc}
-                  </p>
+                  {item.desc ? (
+                    <>
+                      <h3 className="font-display text-lg font-bold text-cocobiches-marine">{item.title}</h3>
+                      <p className="mt-2 flex-1 text-[0.88rem] leading-relaxed text-cocobiches-muted">
+                        {item.desc}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="flex-1 font-display text-lg font-bold text-cocobiches-marine">{item.title}</p>
+                  )}
                   <span className="mt-5 inline-flex items-center gap-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cocobiches-marine transition group-hover:gap-2">
                     {locale === "fr" ? "Accéder" : "Go"}
-                    <span aria-hidden>→</span>
+                    {item.hideArrow ? null : <span aria-hidden>→</span>}
                   </span>
                 </Link>
               </FadeIn>

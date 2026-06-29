@@ -71,8 +71,8 @@
     "rights": "Tous droits réservés.",
     "explore": "Explorer",
     "contactTitle": "Contact",
-    "contactEmail": "bonjour@cocobiches.com",
-    "contactPhone": "01 30 84 14 00",
+    "contactEmail": "welcome@cocobiches.com",
+    "contactPhone": "01 39 51 43 50",
     "addressTitle": "Versailles",
     "addressLine": "78000 Versailles, France",
     "signature": "Une marque indépendante, familiale, fondée à Versailles."
@@ -97,36 +97,35 @@
     "hotelsEyebrow": "Nos adresses",
     "angleterre": {
       "name": "Hôtel d'Angleterre",
-      "tag": "3 étoiles · 29 chambres · depuis 2010",
-      "desc": "Un 3 étoiles confidentiel, à cinq minutes à pied du Château. Des chambres aux tonalités crème, des petits-déjeuners servis tard, et ce calme si rare qu'on le remarque.",
+      "tag": "3 étoiles · 20 chambres · depuis 2010",
+      "desc": "Un 3 étoiles confidentiel, à cinq minutes à pied du Château. Des chambres aux tonalités crème, et ce calme si rare qu'on le remarque.",
       "features": [
         "À 5 min à pied du Château",
-        "Petit-déjeuner maison servi jusqu'à 11h",
-        "Parking privé sur demande"
+        "Petit-déjeuner servi jusqu'à 10h en semaine et 11h le week-end"
       ],
-      "cta": "Visiter le site"
+      "cta": "Visiter la maison"
     },
     "jeudepaume": {
       "name": "Hôtel du Jeu de Paume",
-      "tag": "3 étoiles · 38 chambres · séminaires",
-      "desc": "Notre maison-mère. Un salon teinté de vert d'eau, une cuisine qui sent le beurre chaud le matin, deux salles de séminaire modulables. L'adresse où l'on revient.",
+      "tag": "3 étoiles · 16 chambres · séminaires",
+      "desc": "Notre maison-mère. Un salon teinté de vert d'eau, une cuisine qui sent le beurre chaud le matin, un espace séminaire modulable. L'adresse où l'on revient.",
       "features": [
         "Salon, bar et cuisine ouverte",
-        "2 salles de séminaire jusqu'à 40 personnes",
-        "Événements privatisables"
+        "Un espace séminaire jusqu'à 70 personnes",
+        "Hôtel privatisable"
       ],
       "cta": "Visiter la maison"
     },
     "onclelouis": {
       "name": "Apparts de l'Oncle Louis",
       "tag": "Apparthôtel · 12 appartements · depuis 2018",
-      "desc": "Des appartements pensés comme des chez-soi versaillais. Cuisine équipée, draps en lin, lumière du nord. Pour une nuit, une semaine ou une saison.",
+      "desc": "Des appartements pensés comme des chez-soi versaillais. Cuisine équipée, lumière du nord. Pour une nuit, une semaine ou une saison.",
       "features": [
-        "Cuisine équipée et linge de maison",
-        "Studios, T2, T3 · jusqu'à 6 voyageurs",
+        "Cuisine équipée et machine à laver",
+        "Studios, T2 · jusqu'à 5 voyageurs. Little studios, studios quadruples, loft : jusqu'à 5 voyageurs",
         "Séjours longue durée privilégiés"
       ],
-      "cta": "Visiter le site"
+      "cta": "Visiter la maison"
     },
     "manifestoEyebrow": "Manifeste",
     "manifestoTitle": "Nous croyons qu'un hôtel, c'est d'abord une maison.",
@@ -142,15 +141,15 @@
         "kicker": "01 / Famille",
         "title1": "Un groupe familial,",
         "title2": "au sens propre.",
-        "body": "Les décisions se prennent entre propriétaires-exploitants, pour des maisons que nous connaissons chambre par chambre. Pas de comité à Paris, pas d'actionnaire extérieur.",
-        "proof": "Nos trois hôtels appartiennent à la famille Comyn depuis leur acquisition, sans aucune délégation de marque."
+        "body": "Les décisions se prennent entre propriétaires-exploitants, pour des maisons que nous connaissons chambre par chambre. Pas de comité à Paris.",
+        "proof": ""
       },
       "c2": {
         "kicker": "02 / Authenticité",
         "title1": "Des visages réels.",
         "title2": "Des lieux vivants.",
-        "body": "Des équipes que vous retrouvez d'un séjour à l'autre. Une cuisine préparée dans nos murs. Des maisons qui ont une âme, qu'on respecte.",
-        "proof": "100 % de notre cuisine est préparée maison par notre brigade, menée par Maÿlis."
+        "body": "Des équipes que vous retrouvez d'un séjour à l'autre. Des maisons qui ont une âme, qu'on respecte.",
+        "proof": ""
       },
       "c3": {
         "kicker": "03 / Lifestyle",
@@ -183,12 +182,12 @@
       "houses": {
         "value": "3",
         "label": "Maisons à Versailles",
-        "detail": "À moins de 10 minutes à pied les unes des autres"
+        "detail": "À moins de 5 minutes à pied les unes des autres"
       },
       "rooms": {
-        "value": "72",
+        "value": "48",
         "label": "Chambres & appartements",
-        "detail": "Des chambres d'entrée jusqu'aux suites familiales"
+        "detail": "De la petite chambre double à la chambre familiale"
       },
       "years": {
         "value": "15",
@@ -196,7 +195,7 @@
         "detail": "Même famille, mêmes équipes, même quartier"
       },
       "rating": {
-        "value": "9,4",
+        "value": "8,5",
         "label": "Note moyenne client",
         "detail": "Sur plus de 4 800 avis vérifiés"
       }
@@ -206,8 +205,8 @@
     "whyLead": "Ce que vous ne trouvez pas toujours ailleurs, et que nous tenons, saison après saison.",
     "why1Title": "Propriétaires-exploitants",
     "why1": "Un groupe familial indépendant. Aucun actionnaire extérieur, aucune marque à défendre · juste nos trois maisons, et la réputation qu'on leur construit.",
-    "why2Title": "Cuisine maison, vraiment",
-    "why2": "Nous boulangeons notre pain le matin. Nous travaillons avec vingt-trois producteurs de l'Île-de-France. Le petit-déjeuner se prolonge tant qu'il y a du café chaud.",
+    "why2Title": "Saveurs de saison",
+    "why2": "Nos cheffes Maÿlis et Priscille travaillent chacune seule, aidées par les équipes de l'hôtel. Les menus changent tous les mois.",
     "why3Title": "Versailles, de l'intérieur",
     "why3": "Nos équipes vivent à Versailles. Elles connaissent la boulangère de la rue Hoche, l'heure creuse aux jardins, la table où l'on dîne après 22 heures. Demandez-leur.",
     "why4Title": "Engagement RSE mesuré",
@@ -260,7 +259,7 @@
       "team": "Collaborateurs en CDI toute l'année",
       "transport": "Clients favorisant les mobilités douces (train, vélo, marche)"
     },
-    "note": "Méthodologie disponible sur demande à bonjour@cocobiches.com.",
+    "note": "Méthodologie disponible sur demande à welcome@cocobiches.com.",
     "updatedLabel": "Dernière mise à jour",
     "readMore": "Lire notre vision de l'hôtellerie indépendante"
   },
@@ -287,14 +286,14 @@
   },
   "partners": {
     "title": "Agences & travel trade",
-    "lead": "Commission jusqu'à 15 %, surclassement selon disponibilité, contact commercial dédié. Nous travaillons avec les agences haut de gamme, les DMC et les réceptifs événementiels.",
+    "lead": "Commission jusqu'à 15 %, surclassement selon disponibilité, contact commercial dédié. Nous travaillons avec les agences, DMC et réceptifs événementiels.",
     "gdsTitle": "Codes GDS",
     "chain": "Chain Code AC",
     "amadeus": "Amadeus XVEN71",
     "galileo": "Galileo H3695",
     "sabre": "Sabre 285367",
     "worldspan": "Worldspan 0N71",
-    "commercial": "commercial@cocobiches.com"
+    "commercial": "partenaires@cocobiches.com"
   },
   "blog": {
     "title": "Le journal",
@@ -338,7 +337,7 @@
   },
   "legal": {
     "title": "Mentions légales",
-    "body": "Éditeur du site : Cocobiches SAS, 78000 Versailles, France. Directrice de publication : Élise Comyn. Contact : bonjour@cocobiches.com. Hébergement : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Le site cocobiches.fr a pour objet la présentation du groupe hôtelier Cocobiches et de ses trois maisons à Versailles. Les réservations s'effectuent sur les sites dédiés de chaque établissement."
+    "body": "Éditeur du site : Cocobiches SAS, 78000 Versailles, France. Directrice de publication : Élise Comyn. Contact : welcome@cocobiches.com. Hébergement : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Le site cocobiches.fr a pour objet la présentation du groupe hôtelier Cocobiches et de ses trois maisons à Versailles. Les réservations s'effectuent sur les sites dédiés de chaque établissement."
   },
   "privacy": {
     "title": "Politique de confidentialité",

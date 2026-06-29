@@ -25,7 +25,7 @@ const CONTENT: Record<Locale, Record<"legal" | "privacy", LegalPageContent>> = {
           paragraphs: [
             "Cocobiches SAS · 5 bis rue de Fontenay · 78000 Versailles · France",
             "Directrice de publication : Élise Comyn",
-            "Contact : bonjour@cocobiches.com · 01 30 84 14 00",
+            "Contact : welcome@cocobiches.com · 01 39 51 43 50",
           ],
         },
         {
@@ -99,7 +99,7 @@ const CONTENT: Record<Locale, Record<"legal" | "privacy", LegalPageContent>> = {
           paragraphs: [
             "Cocobiches SAS · 5 bis rue de Fontenay · 78000 Versailles · France",
             "Publishing director: Élise Comyn",
-            "Contact: bonjour@cocobiches.com · +33 1 30 84 14 00",
+            "Contact: welcome@cocobiches.com · +33 1 30 84 14 00",
           ],
         },
         {

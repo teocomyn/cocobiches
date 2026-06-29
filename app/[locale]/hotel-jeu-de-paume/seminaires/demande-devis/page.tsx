@@ -1,4 +1,4 @@
-import { HjpDevisForm } from "@/components/hotel-jeu-de-paume/hjp-devis-form";
+import { SeminaireDevisEmbed } from "@/components/seminaire/seminaire-devis-embed";
 import { FadeIn } from "@/components/motion/fade-in";
 import { getLocaleFromParams } from "@/lib/locale-params";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -21,8 +21,8 @@ export async function generateMetadata({
       ? "Demande de devis séminaire · Hôtel du Jeu de Paume"
       : "Seminar quote request · Hôtel du Jeu de Paume",
     description: isFr
-      ? "Demandez un devis pour votre séminaire ou événement à l'Hôtel du Jeu de Paume · salle modulable, yourte, hébergement sur place."
-      : "Request a quote for your seminar or event at Hôtel du Jeu de Paume · modular room, yurt, on-site accommodation.",
+      ? "Demandez un devis pour votre séminaire ou événement à l'Hôtel du Jeu de Paume · espace modulable, yourte, hébergement sur place."
+      : "Request a quote for your seminar or event at Hôtel du Jeu de Paume · modular space, yurt, on-site accommodation.",
   });
 }
 
@@ -52,7 +52,13 @@ export default async function HotelJdpDevisPage({
           </p>
         </FadeIn>
         <FadeIn delay={0.05} className="mt-12">
-          <HjpDevisForm locale={locale} />
+          <SeminaireDevisEmbed
+            title={
+              isFr
+                ? "Formulaire de demande de devis séminaire"
+                : "Seminar quote request form"
+            }
+          />
         </FadeIn>
       </div>
     </section>

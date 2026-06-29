@@ -11,7 +11,7 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Pour les amoureux du patrimoine : notre première maison (2010), face au Château. Vingt-neuf chambres, architecture classique. Idéal couples culturels, familles, voyageurs internationaux. À partir d'environ 140 € la nuit selon saison.",
+    text: "Pour les amoureux du patrimoine : notre première maison (2010), face au Château. 20 chambres, architecture classique. Idéal couples culturels, familles, voyageurs internationaux. À partir de 80 € la nuit selon saison.",
   },
   {
     kind: "h2",
@@ -19,7 +19,7 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Pour séjours mi-loisirs mi-pro : trente-huit chambres, salle de séminaire, yourte, salon avec cheminère. Séminaires, voyageurs d'affaires, couples contemporains. Cuisine de Maÿlis au quotidien. À partir d'environ 120 € la nuit ; forfaits séminaire dès 75 € HT.",
+    text: "Pour séjours mi-loisirs mi-pro : 16 chambres, salle de séminaire, yourte, salon avec cheminère. Séminaires, voyageurs d'affaires, couples contemporains. Cuisine de Maÿlis et Priscille au quotidien. À partir de 80 € la nuit. Forfait séminaire : 95 € par personne.",
   },
   {
     kind: "h2",
@@ -50,7 +50,7 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "For heritage lovers: our first house (2010), facing the Palace. Twenty-nine rooms, classic architecture. Ideal for cultural couples, families, international guests. From around €140 per night depending on season.",
+    text: "For heritage lovers: our first house (2010), facing the Palace. 20 rooms, classic architecture. Ideal for cultural couples, families, international guests. From €80 per night depending on season.",
   },
   {
     kind: "h2",
@@ -58,7 +58,7 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "For leisure-and-work stays: thirty-eight rooms, seminar room, yurt, lounge with fireplace. Seminars, business travellers, contemporary couples. Maÿlis's kitchen daily. From around €120 per night; seminar packages from €75 ex VAT.",
+    text: "For leisure-and-work stays: 16 rooms, seminar room, yurt, lounge with fireplace. Seminars, business travellers, contemporary couples. Maÿlis and Priscille's kitchen daily. From €80 per night. Seminar package: €95 per person.",
   },
   {
     kind: "h2",
@@ -74,6 +74,6 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Hotel room enough? Angleterre or Jeu de Paume. Need a real home with a kitchen? Oncle Louis. If unsure, write to us—we'll recommend the right house. Three doors, one hospitality.",
+    text: "Hotel room enough? Angleterre or Jeu de Paume. Need a real home with a kitchen? Oncle Louis. If unsure, write to us: we'll recommend the right house. Three doors, one hospitality.",
   },
 ];

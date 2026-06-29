@@ -324,7 +324,7 @@ Formulaire `<QuoteForm />` sur `/seminaires/demande-devis` avec :
 
 Le formulaire :
 - Sauvegarde en localStorage à chaque étape (reprise possible)
-- Envoie un email à `events.hoteljdp.versailles@gmail.com` (Fanny Colson)
+- Envoie un email à `events@cocobiches.com` (Fanny Colson)
 - Crée une entrée dans Sanity pour suivi CRM
 - Envoie un email de confirmation au prospect avec SLA de réponse ("Nous revenons vers vous sous 24h ouvrées")
 
@@ -386,7 +386,7 @@ Page `/partenaires` avec :
 - Codes GDS (Chain Code AC, Amadeus XVEN71, Galileo H3695, Sabre 285367, Worldspan 0N71)
 - Commission jusqu'à 15%
 - Surclassement selon disponibilité
-- Contact commercial dédié (commercial@cocobiches.com)
+- Contact commercial dédié (partenaires@cocobiches.com)
 
 ### 10. Tracker RSE / engagements
 

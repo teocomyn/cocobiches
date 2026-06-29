@@ -97,36 +97,35 @@
     "hotelsEyebrow": "Our addresses",
     "angleterre": {
       "name": "Hôtel d'Angleterre",
-      "tag": "3 stars · 29 rooms · since 2010",
-      "desc": "A confidential 3-star, a five-minute walk from the Palace. Cream-toned rooms, breakfast served late, and the kind of quiet you notice.",
+      "tag": "3 stars · 20 rooms · since 2010",
+      "desc": "A confidential 3-star, a five-minute walk from the Palace. Cream-toned rooms and the kind of quiet you notice.",
       "features": [
         "5 min walk to the Palace",
-        "Homemade breakfast until 11am",
-        "Private parking on request"
+        "Breakfast served until 10am on weekdays and 11am at weekends"
       ],
-      "cta": "Visit website"
+      "cta": "Visit the house"
     },
     "jeudepaume": {
       "name": "Hôtel du Jeu de Paume",
-      "tag": "3 stars · 38 rooms · seminars",
-      "desc": "Our mother house. A living room in shades of water-green, a kitchen that smells of warm butter in the morning, two modular seminar rooms. The place you come back to.",
+      "tag": "3 stars · 16 rooms · seminars",
+      "desc": "Our mother house. A living room in shades of water-green, a kitchen that smells of warm butter in the morning, one modular seminar space. The place you come back to.",
       "features": [
         "Lounge, bar and open kitchen",
-        "2 seminar rooms up to 40 guests",
-        "Full private events on request"
+        "One seminar space for up to 70 guests",
+        "Full private hire on request"
       ],
       "cta": "Visit the house"
     },
     "onclelouis": {
       "name": "Apparts de l'Oncle Louis",
       "tag": "Aparthotel · 12 apartments · since 2018",
-      "desc": "Apartments conceived as Versailles homes. Equipped kitchens, linen sheets, north light. For a night, a week or a season.",
+      "desc": "Apartments conceived as Versailles homes. Equipped kitchens, north light. For a night, a week or a season.",
       "features": [
-        "Equipped kitchens and full linen",
-        "Studios, 1- and 2-beds · up to 6 guests",
+        "Equipped kitchens and washing machine",
+        "Studios, 1- and 2-beds · up to 5 guests. Little studios, quadruple studios, loft: up to 5 guests",
         "Long-stay rates available"
       ],
-      "cta": "Visit website"
+      "cta": "Visit the house"
     },
     "manifestoEyebrow": "Manifesto",
     "manifestoTitle": "We believe a hotel is, first and foremost, a home.",
@@ -143,14 +142,14 @@
         "title1": "A family group,",
         "title2": "in every sense.",
         "body": "Decisions are made between owner-operators, for houses we know room by room. No committee in Paris, no outside shareholders.",
-        "proof": "Our three hotels have belonged to the Comyn family since acquisition · with no brand delegation."
+        "proof": ""
       },
       "c2": {
         "kicker": "02 / Authenticity",
         "title1": "Real faces.",
         "title2": "Living places.",
-        "body": "Teams you meet again from one stay to the next. Food cooked in our own kitchens. Houses with soul · respected as they are.",
-        "proof": "100% of our food is made in-house by our brigade, led by Maÿlis."
+        "body": "Teams you meet again from one stay to the next. Houses with soul · respected as they are.",
+        "proof": ""
       },
       "c3": {
         "kicker": "03 / Lifestyle",
@@ -158,9 +157,18 @@
         "titleItalic": "You live it.",
         "body": "Coffee in our lounge, a walk in the Park, a restaurant we whisper in your ear. A stay that goes beyond a single night.",
         "stats": [
-          { "value": "2 min", "label": "walk to the Palace" },
-          { "value": "5 min", "label": "from Versailles Rive Gauche station" },
-          { "value": "3 houses", "label": "three formats for three ways to stay" }
+          {
+            "value": "2 min",
+            "label": "walk to the Palace"
+          },
+          {
+            "value": "5 min",
+            "label": "from Versailles Rive Gauche station"
+          },
+          {
+            "value": "3 houses",
+            "label": "three formats for three ways to stay"
+          }
         ]
       },
       "c4": {
@@ -169,10 +177,23 @@
         "titleItalic": "Not decorated.",
         "body": "Seasonal produce, short supply chains, durable materials, permanent contracts. A measured approach, tracked in numbers, improving every year.",
         "metrics": [
-          { "value": "80%", "label": "of our seminar guests arrive by public transport" },
-          { "value": "100%", "label": "of our team on stable contracts, trained in-house" },
-          { "value": "70%", "label": "short-chain produce targeted by 2028" },
-          { "value": "2027", "label": "Clef Verte certification targeted", "accent": "green" }
+          {
+            "value": "80%",
+            "label": "of our seminar guests arrive by public transport"
+          },
+          {
+            "value": "100%",
+            "label": "of our team on stable contracts, trained in-house"
+          },
+          {
+            "value": "70%",
+            "label": "short-chain produce targeted by 2028"
+          },
+          {
+            "value": "2027",
+            "label": "Clef Verte certification targeted",
+            "accent": "green"
+          }
         ]
       }
     },
@@ -183,12 +204,12 @@
       "houses": {
         "value": "3",
         "label": "Houses in Versailles",
-        "detail": "All within a 10-minute walk of each other"
+        "detail": "All within a 5-minute walk of each other"
       },
       "rooms": {
-        "value": "72",
+        "value": "48",
         "label": "Rooms & apartments",
-        "detail": "From entry-level rooms to family suites"
+        "detail": "From a small double room to the family room"
       },
       "years": {
         "value": "15",
@@ -196,7 +217,7 @@
         "detail": "Same family, same teams, same neighbourhood"
       },
       "rating": {
-        "value": "9.4",
+        "value": "8.5",
         "label": "Average guest rating",
         "detail": "Across 4,800+ verified reviews"
       }
@@ -206,8 +227,8 @@
     "whyLead": "What you don't always find elsewhere, and that we hold on to, season after season.",
     "why1Title": "Owner-operated",
     "why1": "An independent, family-owned group. No outside shareholder, no brand to defend · just our three houses and the reputation we build for them.",
-    "why2Title": "Homemade, really",
-    "why2": "We bake our bread in the morning. We work with twenty-three producers from the Île-de-France. Breakfast lasts as long as the coffee's hot.",
+    "why2Title": "Seasonal flavours",
+    "why2": "Our chefs Maÿlis and Priscille each work alone, helped by the hotel team. Menus change every month.",
     "why3Title": "Versailles, from the inside",
     "why3": "Our teams live in Versailles. They know the baker on rue Hoche, the quiet hour at the gardens, the table that still serves dinner after 10pm. Just ask.",
     "why4Title": "Measured commitments",
@@ -260,7 +281,7 @@
       "team": "Employees on year-round permanent contracts",
       "transport": "Guests choosing soft mobility (train, bike, walking)"
     },
-    "note": "Methodology available on request at bonjour@cocobiches.com.",
+    "note": "Methodology available on request at welcome@cocobiches.com.",
     "updatedLabel": "Last updated",
     "readMore": "Read our take on independent hospitality"
   },
@@ -294,7 +315,7 @@
     "galileo": "Galileo H3695",
     "sabre": "Sabre 285367",
     "worldspan": "Worldspan 0N71",
-    "commercial": "commercial@cocobiches.com"
+    "commercial": "partenaires@cocobiches.com"
   },
   "blog": {
     "title": "Journal",
@@ -338,7 +359,7 @@
   },
   "legal": {
     "title": "Legal notice",
-    "body": "Site publisher: Cocobiches SAS, 78000 Versailles, France. Publication director: Élise Comyn. Contact: bonjour@cocobiches.com. Hosting: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. The cocobiches.fr website presents the Cocobiches hotel group and its three houses in Versailles. Bookings are made on each property's dedicated website."
+    "body": "Site publisher: Cocobiches SAS, 78000 Versailles, France. Publication director: Élise Comyn. Contact: welcome@cocobiches.com. Hosting: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA. The cocobiches.fr website presents the Cocobiches hotel group and its three houses in Versailles. Bookings are made on each property's dedicated website."
   },
   "privacy": {
     "title": "Privacy policy",

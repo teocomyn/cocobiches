@@ -233,36 +233,6 @@ export function EngagementsPageView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      {/* KITCHEN SPLIT */}
-      <section className="overflow-hidden bg-cocobiches-marine text-cocobiches-creme">
-        <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-          <div className="relative min-h-[320px] lg:min-h-[520px]">
-            <Image
-              src="/hotel-jeu-de-paume/salon.jpg"
-              alt={d.kitchen.imageAlt}
-              fill
-              className="object-cover object-center"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-r from-transparent to-cocobiches-marine/40 lg:bg-gradient-to-l lg:from-cocobiches-marine lg:via-cocobiches-marine/20 lg:to-transparent"
-              aria-hidden
-            />
-          </div>
-          <div className="flex flex-col justify-center px-5 py-16 md:px-12 md:py-24 lg:px-16">
-            <FadeIn>
-              <p className="cb-eyebrow text-cocobiches-creme/60">{d.kitchen.eyebrow}</p>
-              <h2 className="font-display mt-5 text-[2rem] font-bold leading-[1.05] tracking-[-0.02em] md:text-[2.75rem]">
-                {d.kitchen.title}
-              </h2>
-              <p className="mt-6 text-[1.02rem] leading-[1.75] text-cocobiches-creme/85 md:text-lg">
-                {d.kitchen.body}
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
       {/* TARGETS + ACTIONS */}
       <section className="bg-cocobiches-creme-50 py-24 md:py-32">
         <div className="mx-auto grid max-w-[1240px] gap-16 px-5 md:grid-cols-2 md:gap-20 md:px-10">

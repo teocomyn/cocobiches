@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       source: "cocobiches.fr-newsletter",
     })) ||
     (await sendEmail({
-      to: process.env.NEWSLETTER_TO_EMAIL ?? process.env.CONTACT_TO_EMAIL ?? "bonjour@cocobiches.com",
+      to: process.env.NEWSLETTER_TO_EMAIL ?? process.env.CONTACT_TO_EMAIL ?? "welcome@cocobiches.com",
       subject: "[Cocobiches] Inscription newsletter",
       html: `<p>Nouvelle inscription : ${escapeHtml(email)}</p>`,
     }));

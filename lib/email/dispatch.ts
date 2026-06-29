@@ -8,7 +8,7 @@ type EmailPayload = {
 export async function sendEmail(payload: EmailPayload): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   const from =
-    process.env.RESEND_FROM_EMAIL ?? "Cocobiches <bonjour@cocobiches.com>";
+    process.env.RESEND_FROM_EMAIL ?? "Cocobiches <welcome@cocobiches.com>";
 
   if (!apiKey) return false;
 

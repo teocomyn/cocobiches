@@ -15,17 +15,16 @@ export type HotelLandingContent = {
 const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandingContent>> = {
   fr: {
     angleterre: {
-      metaTitle: "Hôtel d'Angleterre · Versailles, face au Château",
+      metaTitle: "Hôtel d'Angleterre · Versailles, rue de Fontenay",
       metaDescription:
-        "Hôtel de charme 3 étoiles en face du Château de Versailles. 29 chambres, petit-déjeuner maison, hospitalité Cocobiches.",
+        "Hôtel de charme 3 étoiles rue de Fontenay à Versailles. 20 chambres, petit-déjeuner, hospitalité Cocobiches.",
       eyebrow: "Cocobiches · Hôtel d'Angleterre",
-      title: "Face au Château, au calme.",
-      lead: "Notre première maison, acquise en 2010. Vingt-neuf chambres aux volumes généreux, parquets d'époque, et cette vue sur la grille du Château que l'on n'oublie pas.",
+      title: "Rue de Fontenay, au calme.",
+      lead: "Notre première maison, acquise en 2010. Vingt chambres aux volumes généreux, parquets d'époque, au calme du quartier historique.",
       highlights: [
-        "29 chambres · 3 étoiles · depuis 2010",
-        "En face directe du Château de Versailles",
-        "Petit-déjeuner maison servi jusqu'à 11h",
-        "Parking privé sur demande",
+        "20 chambres · 3 étoiles · depuis 2010",
+        "À 5 min à pied du Château",
+        "Petit-déjeuner servi jusqu'à 10h en semaine et 11h le week-end",
       ],
       ctaDiscover: "Réserver une chambre",
       ctaBook: "Voir les disponibilités",
@@ -36,7 +35,7 @@ const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandi
         "Douze appartements hôteliers à Versailles : studios, T2, cuisine équipée. Séjours longs et familles, service Cocobiches.",
       eyebrow: "Cocobiches · Apparts de l'Oncle Louis",
       title: "Comme chez soi, à Versailles.",
-      lead: "Douze appartements pensés pour les séjours longs, les familles et les missions professionnelles. Cuisine, salon, linge de maison — avec le service discret de nos équipes.",
+      lead: "Douze appartements pensés pour les séjours longs, les familles et les missions professionnelles. Cuisine, salon, machine à laver — avec le service discret de nos équipes.",
       highlights: [
         "12 appartements · studios à 2 chambres",
         "Cuisine équipée et espace de travail",
@@ -49,17 +48,16 @@ const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandi
   },
   en: {
     angleterre: {
-      metaTitle: "Hôtel d'Angleterre · Versailles, facing the Palace",
+      metaTitle: "Hôtel d'Angleterre · Versailles, rue de Fontenay",
       metaDescription:
-        "Charming 3-star hotel facing the Palace of Versailles. 29 rooms, in-house breakfast, Cocobiches hospitality.",
+        "Charming 3-star hotel on rue de Fontenay in Versailles. 20 rooms, breakfast, Cocobiches hospitality.",
       eyebrow: "Cocobiches · Hôtel d'Angleterre",
-      title: "Facing the Palace, in peace.",
-      lead: "Our first house, acquired in 2010. Twenty-nine rooms with generous volumes, period parquet, and that view of the Palace gates you never forget.",
+      title: "Rue de Fontenay, in peace.",
+      lead: "Our first house, acquired in 2010. Twenty rooms with generous volumes, period parquet, in the quiet historic quarter.",
       highlights: [
-        "29 rooms · 3 stars · since 2010",
-        "Directly facing the Palace of Versailles",
-        "In-house breakfast served until 11am",
-        "Private parking on request",
+        "20 rooms · 3 stars · since 2010",
+        "5 min walk to the Palace",
+        "Breakfast served until 10am on weekdays and 11am at weekends",
       ],
       ctaDiscover: "Book a room",
       ctaBook: "Check availability",
@@ -70,7 +68,7 @@ const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandi
         "Twelve apart-hotel units in Versailles: studios, one-bedroom, fitted kitchen. Long stays and families, Cocobiches service.",
       eyebrow: "Cocobiches · Apparts de l'Oncle Louis",
       title: "At home in Versailles.",
-      lead: "Twelve apartments for long stays, families and business trips. Kitchen, living room, house linen — with our discreet team service.",
+      lead: "Twelve apartments for long stays, families and business trips. Kitchen, living room, washing machine — with our discreet team service.",
       highlights: [
         "12 apartments · studio to two-bedroom",
         "Fitted kitchen and workspace",

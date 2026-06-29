@@ -44,7 +44,7 @@ const fr: PartenairesPageContent = {
     title: "Agences &",
     titleAccent: "partenaires.",
     lead:
-      "Commission jusqu'à 15 %, surclassement selon disponibilité, interlocuteur commercial dédié. Nous travaillons avec les agences haut de gamme, DMC et réceptifs événementiels.",
+      "Commission jusqu'à 15 %, surclassement selon disponibilité, interlocuteur commercial dédié. Nous travaillons avec les agences, DMC et réceptifs événementiels.",
     imageAlt: "Salon de l'Hôtel du Jeu de Paume, espace séminaire",
   },
   intro: {
@@ -71,7 +71,7 @@ const fr: PartenairesPageContent = {
       },
       {
         title: "Séminaires & événements",
-        body: "Deux salles modulables jusqu'à 40 personnes, yourte événementielle, restauration sur place.",
+        body: "Un espace de séminaire jusqu'à 70 personnes.",
       },
     ],
   },
@@ -85,11 +85,9 @@ const fr: PartenairesPageContent = {
     eyebrow: "Profils",
     title: "Avec qui nous travaillons",
     items: [
-      "Agences de voyage haut de gamme et luxury travel",
       "DMC et réceptifs événementiels Île-de-France",
       "Tour-operators culturels et city-break Versailles",
       "Agences MICE et organisateurs de séminaires",
-      "Conciergeries hôtelières et corporate travel",
     ],
   },
   contact: {
@@ -108,7 +106,7 @@ const en: PartenairesPageContent = {
     title: "Agencies &",
     titleAccent: "partners.",
     lead:
-      "Commission up to 15%, upgrade subject to availability, dedicated commercial contact. We work with high-end travel agencies, DMCs and event partners.",
+      "Commission up to 15%, upgrade subject to availability, dedicated commercial contact. We work with travel agencies, DMCs and event partners.",
     imageAlt: "Hôtel du Jeu de Paume lounge, seminar space",
   },
   intro: {
@@ -135,7 +133,7 @@ const en: PartenairesPageContent = {
       },
       {
         title: "Seminars & events",
-        body: "Two modular rooms for up to 40 guests, event yurt, on-site catering.",
+        body: "One seminar space for up to 70 guests.",
       },
     ],
   },
@@ -149,11 +147,10 @@ const en: PartenairesPageContent = {
     eyebrow: "Profiles",
     title: "Who we work with",
     items: [
-      "High-end and luxury travel agencies",
+      "Travel agencies",
       "DMCs and Île-de-France event partners",
       "Cultural tour operators and Versailles city breaks",
       "MICE agencies and seminar organisers",
-      "Hotel concierges and corporate travel",
     ],
   },
   contact: {

@@ -7,14 +7,18 @@ export type PostalAddress = {
   addressCountry: string;
 };
 
+/** Total affiché pour le groupe (20 + 16 + 12 appartements). Ne pas recalculer depuis HOTELS. */
+export const GROUP_TOTAL_ROOMS = 48;
+
 export const GROUP_NAP = {
   name: "Cocobiches",
-  email: "bonjour@cocobiches.com",
-  commercialEmail: "commercial@cocobiches.com",
-  pressEmail: "presse@cocobiches.com",
-  /** Ligne principale · Hôtel du Jeu de Paume (maison-mère) */
-  phone: "+33130841400",
-  phoneDisplay: "01 30 84 14 00",
+  email: "welcome@cocobiches.com",
+  commercialEmail: "partenaires@cocobiches.com",
+  eventsEmail: "events@cocobiches.com",
+  pressEmail: "partenaires@cocobiches.com",
+  /** Ligne principale groupe */
+  phone: "+33139514350",
+  phoneDisplay: "01 39 51 43 50",
   address: {
     streetAddress: "5 bis rue de Fontenay",
     addressLocality: "Versailles",
@@ -36,8 +40,8 @@ export const HOTEL_NAP = {
     } satisfies PostalAddress,
   },
   jeudepaume: {
-    phone: "+33130841400",
-    phoneDisplay: "01 30 84 14 00",
+    phone: "+33139514350",
+    phoneDisplay: "01 39 51 43 50",
     email: "contact@hotel-jeudepaume.fr",
     address: {
       streetAddress: "5 bis rue de Fontenay",
@@ -49,7 +53,7 @@ export const HOTEL_NAP = {
   onclelouis: {
     phone: "+33139514350",
     phoneDisplay: "01 39 51 43 50",
-    email: "contact@apparts-onclelouis-versailles.fr",
+    email: "contact@apparts-oncle-louis-versailles.fr",
     address: {
       streetAddress: "Rue de Satory",
       addressLocality: "Versailles",

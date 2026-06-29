@@ -30,7 +30,7 @@ export async function POST(request: Request) {
   }
 
   const { name, email, message } = parsed.data;
-  const to = process.env.CONTACT_TO_EMAIL ?? "bonjour@cocobiches.com";
+  const to = process.env.CONTACT_TO_EMAIL ?? "welcome@cocobiches.com";
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
 

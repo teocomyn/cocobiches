@@ -72,9 +72,11 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                   <p className="mb-6 text-base leading-relaxed text-cocobiches-marine/80 md:text-lg">
                     {v.c1.body}
                   </p>
-                  <div className="border-l-2 border-cocobiches-vert py-1 pl-4">
-                    <p className="text-sm italic leading-relaxed text-cocobiches-marine/70">{v.c1.proof}</p>
-                  </div>
+                  {v.c1.proof ? (
+                    <div className="border-l-2 border-cocobiches-vert py-1 pl-4">
+                      <p className="text-sm italic leading-relaxed text-cocobiches-marine/70">{v.c1.proof}</p>
+                    </div>
+                  ) : null}
                 </div>
               </CardContent>
             </Card>
@@ -104,9 +106,11 @@ export function ValuesSection({ dict }: { dict: Dictionary }) {
                   <p className="mb-6 text-base leading-relaxed text-cocobiches-creme/80 md:text-lg">
                     {v.c2.body}
                   </p>
-                  <div className="border-l-2 border-cocobiches-vert py-1 pl-4">
-                    <p className="text-sm italic leading-relaxed text-cocobiches-creme/75">{v.c2.proof}</p>
-                  </div>
+                  {v.c2.proof ? (
+                    <div className="border-l-2 border-cocobiches-vert py-1 pl-4">
+                      <p className="text-sm italic leading-relaxed text-cocobiches-creme/75">{v.c2.proof}</p>
+                    </div>
+                  ) : null}
                 </div>
               </CardContent>
             </Card>

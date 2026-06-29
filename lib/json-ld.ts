@@ -43,11 +43,11 @@ export function contactPageSchema(locale: Locale, title: string, description: st
     mainEntity: {
       "@type": "Organization",
       name: "Cocobiches",
-      email: "commercial@cocobiches.com",
+      email: "partenaires@cocobiches.com",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
-        email: "commercial@cocobiches.com",
+        email: "partenaires@cocobiches.com",
         availableLanguage: ["French", "English"],
       },
     },

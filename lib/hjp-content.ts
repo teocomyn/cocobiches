@@ -511,7 +511,7 @@ const fr: HjpContent = {
   },
   footer: {
     address: "5 bis rue de Fontenay, 78000 Versailles",
-    phone: "01 30 84 14 00",
+    phone: "01 39 51 43 50",
     email: "contact@hotel-jeudepaume.fr",
     legal: "Mentions légales",
     privacy: "Politique de protection des données personnelles",

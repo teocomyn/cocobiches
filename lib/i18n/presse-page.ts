@@ -79,7 +79,7 @@ const fr: PressePageContent = {
     title: "Le groupe en chiffres",
     items: [
       { value: "3", label: "maisons à Versailles" },
-      { value: "72", label: "chambres & appartements" },
+      { value: "48", label: "chambres & appartements" },
       { value: "2010", label: "année de fondation" },
       { value: "2 min", label: "à pied du Château" },
     ],
@@ -145,7 +145,7 @@ const en: PressePageContent = {
     title: "The group in figures",
     items: [
       { value: "3", label: "houses in Versailles" },
-      { value: "72", label: "rooms & apartments" },
+      { value: "48", label: "rooms & apartments" },
       { value: "2010", label: "year founded" },
       { value: "2 min", label: "walk from the Palace" },
     ],

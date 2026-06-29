@@ -34,8 +34,8 @@ export const ENGAGEMENTS_STATS: EngagementStat[] = [
   },
   {
     id: "team",
-    valueFr: "48",
-    valueEn: "48",
+    valueFr: "20",
+    valueEn: "20",
     labelFr: "Collaborateurs en CDI toute l'année",
     labelEn: "Year-round permanent staff",
     progress: 100,

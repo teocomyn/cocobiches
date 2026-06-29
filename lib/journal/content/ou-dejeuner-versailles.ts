@@ -11,7 +11,7 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Le Bouillon Notre-Dame pour une cuisine française classique à prix doux. Le Petit Versailles, rue Carnot, pour un cadre élégant sans rigidité. Le Ore, dans le domaine Ducasse, pour la grande cuisine française.",
+    text: "Le Limousin, Maison Satory ou l'Inspi pour une cuisine française classique à prix doux. Via Veneto pour une cuisine italienne généreuse.",
   },
   {
     kind: "h2",
@@ -19,15 +19,15 @@ export const fr: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "La Table du 17, une étoile. Le Bistrot du 11, rue de Satory, bistronomique et vins nature. La Boîte à Lunettes pour les végétariens. Le Bistroquet pour le brunch du dimanche place du Marché Notre-Dame.",
+    text: "La Table du 11, une étoile, et La Cave du 11 pour ses vins.",
   },
   {
     kind: "h2",
-    text: "Douceurs et soirées",
+    text: "Douceurs",
   },
   {
     kind: "p",
-    text: "La Pâtisserie Fine de Sébastien Serveau pour une pause gourmande. La Tête au Carré pour un dîner romantique. Il Gusto pour une pizza impeccable après une longue journée.",
+    text: "La Pâtisserie Fine de Sébastien Serveau pour une pause gourmande.",
   },
   {
     kind: "h2",
@@ -50,7 +50,7 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Bouillon Notre-Dame for classic French at gentle prices. Le Petit Versailles on rue Carnot for an elegant but relaxed setting. Le Ore in the Ducasse estate for high-end French cuisine.",
+    text: "Le Limousin, Maison Satory or Inspi for classic French at gentle prices. Via Veneto for generous Italian cooking.",
   },
   {
     kind: "h2",
@@ -58,15 +58,15 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "La Table du 17, one star. Bistrot du 11 on rue de Satory, bistronomy and natural wines. La Boîte à Lunettes for vegetarians. Le Bistroquet for Sunday brunch on place du Marché Notre-Dame.",
+    text: "La Table du 11, one star, and La Cave du 11 for its wines.",
   },
   {
     kind: "h2",
-    text: "Sweet treats and evenings",
+    text: "Sweet treats",
   },
   {
     kind: "p",
-    text: "Sébastien Serveau's pastry shop for a gourmet break. La Tête au Carré for a romantic dinner. Il Gusto for flawless pizza after a long day.",
+    text: "La Pâtisserie Fine de Sébastien Serveau for a gourmet break.",
   },
   {
     kind: "h2",
@@ -74,6 +74,6 @@ export const en: ArticleBlock[] = [
   },
   {
     kind: "p",
-    text: "Book ahead. Versailles fills up fast at weekends and in peak season. Our front desk can book for you. We also share a little black book by taste. Many restaurants close Sunday evening and Monday—check hours.",
+    text: "Book ahead. Versailles fills up fast at weekends and in peak season. Our front desk can book for you. We also share a little black book by taste. Many restaurants close Sunday evening and Monday: check hours.",
   },
 ];

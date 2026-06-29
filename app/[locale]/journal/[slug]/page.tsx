@@ -3,6 +3,7 @@ import {
   ArticleRelated,
   ArticleTemplate,
 } from "@/components/blocks/article-template";
+import { SeminaireDevisCta } from "@/components/seminaire/seminaire-devis-embed";
 import { JsonLdScript } from "@/components/seo/json-ld-script";
 import { getArticleBlocks } from "@/lib/journal/get-blocks";
 import { getArticleMeta, getJournalPosts } from "@/lib/journal/posts";
@@ -100,6 +101,13 @@ export default async function JournalArticlePage({
     <>
       <JsonLdScript data={jsonLd} />
       <ArticleTemplate locale={locale} dict={dict} post={post} blocks={blocks} />
+      {post.slug === "seminaire-versailles-jeu-de-paume" ? (
+        <div className="bg-cocobiches-creme-50 px-5 pb-8 md:px-8">
+          <div className="mx-auto flex max-w-[680px] justify-center">
+            <SeminaireDevisCta locale={locale} />
+          </div>
+        </div>
+      ) : null}
       <ArticleRelated locale={locale} dict={dict} posts={related} />
       <ArticleCta locale={locale} dict={dict} />
     </>

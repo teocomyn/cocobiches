@@ -34,13 +34,13 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
     titleFr: "Organiser un séminaire à Versailles, mode d'emploi",
     titleEn: "How to plan a seminar in Versailles",
     descriptionFr:
-      "Séminaire d'entreprise à Versailles : salle, yourte, cuisine maison, team-building. Découvrez le format Hôtel du Jeu de Paume, à deux minutes du Château.",
+      "Séminaire d'entreprise à Versailles : salle, yourte, team-building. Découvrez le format Hôtel du Jeu de Paume, à deux minutes du Château.",
     descriptionEn:
-      "Corporate seminars in Versailles: meeting room, yurt, in-house kitchen, team building. Discover the Hôtel du Jeu de Paume format, steps from the Palace.",
+      "Corporate seminars in Versailles: meeting room, yurt, team building. Discover the Hôtel du Jeu de Paume format, steps from the Palace.",
     excerptFr:
-      "Le Jeu de Paume propose deux salles jusqu'à 40 personnes, une cuisine sur place, et un salon pour les pauses. Voici comment nous travaillons avec vos équipes.",
+      "Le Jeu de Paume propose un espace séminaire jusqu'à 70 personnes, une yourte et un salon pour les pauses. Voici comment nous travaillons avec vos équipes.",
     excerptEn:
-      "Jeu de Paume offers two rooms for up to 40 guests, on-site catering and a lounge for breaks. Here's how we work with your teams.",
+      "Jeu de Paume offers one seminar space for up to 70 guests, a yurt and a lounge for breaks. Here's how we work with your teams.",
     heroImage: "/hotel-jeu-de-paume/seminaire-1.jpg",
     inlineImages: [
       {
@@ -103,16 +103,16 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
     category: "coulisses",
     dateISO: "2025-11-22",
     readingMinutes: 8,
-    titleFr: "Les Cheffes du Jeu de Paume, cuisine maison et saveurs de saison",
-    titleEn: "The Jeu de Paume chefs: in-house cuisine and seasonal flavours",
+    titleFr: "Les Cheffes du Jeu de Paume, saveurs de saison",
+    titleEn: "The Jeu de Paume chefs: seasonal flavours",
     descriptionFr:
-      "Rencontre avec Maÿlis et notre brigade 100% féminine. Cuisine maison, produits de saison, exigence du fait-maison à l'Hôtel du Jeu de Paume.",
+      "Rencontre avec Maÿlis et Priscille, nos cheffes à domicile. Produits de saison, menus renouvelés chaque mois, à l'Hôtel du Jeu de Paume.",
     descriptionEn:
-      "Meet Maÿlis and our all-women brigade. In-house cooking, seasonal produce, and our made-from-scratch ethos at Hôtel du Jeu de Paume.",
+      "Meet Maÿlis and Priscille, our in-house chefs. Seasonal produce, menus renewed every month, at Hôtel du Jeu de Paume.",
     excerptFr:
-      "À l'Hôtel du Jeu de Paume, la cuisine n'est pas un service annexe. C'est une signature. Voici ce que cela change pour vos séjours et vos séminaires.",
+      "Maÿlis et Priscille cuisinent chaque jour à l'Hôtel du Jeu de Paume. Voici ce que cela change pour vos séjours et vos séminaires.",
     excerptEn:
-      "At Jeu de Paume, the kitchen is not an afterthought. It's a signature. Here's what that means for your stays and seminars.",
+      "Maÿlis and Priscille cook every day at Jeu de Paume. Here's what that means for your stays and seminars.",
     heroImage: "/hotel-jeu-de-paume/hotel-ambiance.png",
     inlineImages: [
       {
@@ -209,12 +209,12 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Quand on dit Versailles, on pense au Château. Mais à un kilomètre, il y a un lieu que nous préférons même : le Domaine de Marie-Antoinette.",
     excerptEn:
       "When people say Versailles, they think of the Palace. But a kilometre away lies a place we love even more: Marie-Antoinette's estate.",
-    heroImage: "/hotel-angleterre/experience.png",
+    heroImage: "/journal/domaine-marie-antoinette-placeholder.jpg",
     inlineImages: [
       {
         src: "/hotel-angleterre/hotel-facade.jpg",
-        altFr: "Architecture et perspective du domaine royal de Versailles",
-        altEn: "Architecture and perspective of the Versailles royal estate",
+        altFr: "Placeholder : visuel du Domaine de Marie-Antoinette à remplacer",
+        altEn: "Placeholder: Marie-Antoinette estate image to be replaced",
       },
     ],
   },

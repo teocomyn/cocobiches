@@ -78,7 +78,7 @@ export default async function HomePage({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: "commercial@cocobiches.com",
+      email: "partenaires@cocobiches.com",
       availableLanguage: ["French", "English"],
     },
     subOrganization: [

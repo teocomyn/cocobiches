@@ -85,14 +85,14 @@ const fr: EngagementsPageContent = {
         n: "01",
         title: "Cuisine locale & de saison",
         body:
-          "Cartes renouvelées quatre fois par an. Fournisseurs franciliens identifiés, visités, fidélisés. Moins de 100 km entre le producteur et l'assiette, autant que possible.",
+          "Cartes séminaires renouvelées quatre fois par an. Fournisseurs franciliens identifiés, visités, fidélisés. Moins de 100 km entre le producteur et l'assiette, autant que possible.",
         proof: "62 % de produits locaux en cuisine aujourd'hui · objectif 70 % d'ici 2028.",
       },
       {
         n: "02",
         title: "Déchets & matériaux",
         body:
-          "Tri renforcé, compostage, suppression du plastique à usage unique en chambre et en restauration depuis 2023. Éclairage LED sur l'ensemble des espaces.",
+          "Tri renforcé, compostage, éclairage LED sur l'ensemble des espaces.",
         proof: "12 tonnes de déchets évitées vs. le trimestre précédent.",
       },
       {
@@ -100,7 +100,7 @@ const fr: EngagementsPageContent = {
         title: "Équipes en CDI",
         body:
           "100 % de nos collaborateurs en contrat durable, formés en interne, fidélisés dans la durée. Pas de précarisation des métiers de l'hôtellerie.",
-        proof: "48 collaborateurs en CDI toute l'année · turnover inférieur à la moyenne du secteur.",
+        proof: "20 collaborateurs en CDI toute l'année · turnover inférieur à la moyenne du secteur.",
       },
       {
         n: "04",
@@ -122,11 +122,10 @@ const fr: EngagementsPageContent = {
     ],
   },
   kitchen: {
-    eyebrow: "Dans nos cuisines",
-    title: "De la ferme à l'assiette, à moins de cent kilomètres.",
-    body:
-          "Maÿlis et sa brigade travaillent avec une dizaine de producteurs franciliens : légumes, fromages, viandes, pains. Les cartes changent avec les saisons — printemps, été, automne, hiver.",
-    imageAlt: "Salon et cuisine ouverte de l'Hôtel du Jeu de Paume",
+    eyebrow: "",
+    title: "",
+    body: "",
+    imageAlt: "",
   },
   actions: {
     eyebrow: "Au quotidien",
@@ -146,7 +145,7 @@ const fr: EngagementsPageContent = {
       "Nous ne greenwashons pas. Si un chiffre baisse, nous le disons. Si une action échoue, nous la reformulons. C'est la condition d'une hospitalité responsable crédible.",
     report: "Rapport RSE annuel disponible sur demande",
     methodology: "Méthodologie de calcul des indicateurs",
-    email: "bonjour@cocobiches.com",
+    email: "welcome@cocobiches.com",
   },
   cta: {
     journal: "Lire notre vision de l'hôtellerie indépendante",
@@ -182,14 +181,14 @@ const en: EngagementsPageContent = {
         n: "01",
         title: "Local, seasonal cuisine",
         body:
-          "Menus renewed four times a year. Identified, visited, loyal Île-de-France suppliers. Under 100 km from producer to plate, as far as possible.",
+          "Seminar menus renewed four times a year. Identified, visited, loyal Île-de-France suppliers. Under 100 km from producer to plate, as far as possible.",
         proof: "62% local produce in the kitchen today · 70% target by 2028.",
       },
       {
         n: "02",
         title: "Waste & materials",
         body:
-          "Enhanced sorting, composting, single-use plastic removed from rooms and dining since 2023. LED lighting throughout.",
+          "Enhanced sorting, composting, LED lighting throughout.",
         proof: "12 tonnes of waste avoided vs. the previous quarter.",
       },
       {
@@ -197,7 +196,7 @@ const en: EngagementsPageContent = {
         title: "Permanent staff",
         body:
           "100% of our team on durable contracts, trained in-house, retained over time. No precarious hospitality jobs.",
-        proof: "48 employees on year-round permanent contracts · turnover below sector average.",
+        proof: "20 employees on year-round permanent contracts · turnover below sector average.",
       },
       {
         n: "04",
@@ -219,11 +218,10 @@ const en: EngagementsPageContent = {
     ],
   },
   kitchen: {
-    eyebrow: "In our kitchens",
-    title: "From farm to plate, under a hundred kilometres.",
-    body:
-      "Maÿlis and her brigade work with a dozen Île-de-France producers: vegetables, cheeses, meats, breads. Menus follow the seasons — spring, summer, autumn, winter.",
-    imageAlt: "Hôtel du Jeu de Paume lounge and open kitchen",
+    eyebrow: "",
+    title: "",
+    body: "",
+    imageAlt: "",
   },
   actions: {
     eyebrow: "Day to day",
@@ -243,7 +241,7 @@ const en: EngagementsPageContent = {
       "We do not greenwash. If a figure drops, we say so. If an action fails, we rethink it. That is the condition for credible responsible hospitality.",
     report: "Annual CSR report available on request",
     methodology: "Indicator calculation methodology",
-    email: "bonjour@cocobiches.com",
+    email: "welcome@cocobiches.com",
   },
   cta: {
     journal: "Read our take on independent hospitality",

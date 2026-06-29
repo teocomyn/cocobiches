@@ -38,7 +38,7 @@ export type ContactPageContent = {
   shortcuts: {
     eyebrow: string;
     title: string;
-    items: Array<{ title: string; desc: string; href: string; external?: boolean }>;
+    items: Array<{ title: string; desc: string; href: string; external?: boolean; hideArrow?: boolean }>;
   };
   location: {
     title: string;
@@ -114,9 +114,10 @@ const fr: ContactPageContent = {
         href: "/partenaires",
       },
       {
-        title: "Devis séminaire",
-        desc: "Salles, yourte, restauration · Jeu de Paume",
+        title: "Espace séminaire, yourte · Jeu de Paume",
+        desc: "",
         href: "/hotel-jeu-de-paume/seminaires/demande-devis",
+        hideArrow: true,
       },
     ],
   },
@@ -194,9 +195,10 @@ const en: ContactPageContent = {
         href: "/partenaires",
       },
       {
-        title: "Seminar quote",
-        desc: "Rooms, yurt, catering · Jeu de Paume",
+        title: "Seminar space, yurt · Jeu de Paume",
+        desc: "",
         href: "/hotel-jeu-de-paume/seminaires/demande-devis",
+        hideArrow: true,
       },
     ],
   },

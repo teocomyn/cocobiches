@@ -5,13 +5,13 @@ import { HOTELS, hotelTag } from "@/lib/hotels-data";
 
 describe("hotels-data", () => {
   it("uses consistent room counts", () => {
-    expect(HOTELS.angleterre.rooms).toBe(29);
-    expect(HOTELS.jeudepaume.rooms).toBe(38);
+    expect(HOTELS.angleterre.rooms).toBe(20);
+    expect(HOTELS.jeudepaume.rooms).toBe(16);
     expect(HOTELS.onclelouis.rooms).toBe(12);
   });
 
   it("builds French tags", () => {
-    expect(hotelTag(HOTELS.jeudepaume, "fr")).toContain("38");
+    expect(hotelTag(HOTELS.jeudepaume, "fr")).toContain("16");
   });
 });
 
