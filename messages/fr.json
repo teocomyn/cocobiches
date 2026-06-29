@@ -248,7 +248,13 @@
     "newsletterError": "Vérifiez votre e-mail et le consentement.",
     "newsletterErrorNetwork": "Erreur réseau. Réessayez plus tard.",
     "newsletterConsent": "J'accepte de recevoir la newsletter Cocobiches et j'ai pris connaissance de la politique de confidentialité.",
-    "newsletterHint": "Désinscription en un clic. Aucune adresse revendue, aucune cession à un tiers."
+    "newsletterHint": "Désinscription en un clic. Aucune adresse revendue, aucune cession à un tiers.",
+    "introGate": {
+      "tagline": "trois maisons · versailles",
+      "enter": "Entrer",
+      "skip": "Passer l'intro",
+      "videoLabel": "Intro Cocobiches, vidéo d'ambiance Versailles"
+    }
   },
   "commitments": {
     "title": "Nos engagements",
