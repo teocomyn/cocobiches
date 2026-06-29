@@ -270,13 +270,7 @@
     "newsletterError": "Please check your email and consent.",
     "newsletterErrorNetwork": "Network error. Please try again later.",
     "newsletterConsent": "I agree to receive the Cocobiches newsletter and have read the privacy policy.",
-    "newsletterHint": "One-click unsubscribe. We never sell or share your address.",
-    "introGate": {
-      "tagline": "three houses · versailles",
-      "enter": "Enter",
-      "skip": "Skip intro",
-      "videoLabel": "Cocobiches intro, Versailles atmosphere video"
-    }
+    "newsletterHint": "One-click unsubscribe. We never sell or share your address."
   },
   "commitments": {
     "title": "Our commitments",

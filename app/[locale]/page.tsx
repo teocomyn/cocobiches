@@ -35,14 +35,6 @@ const JournalPreview = dynamic(
   { loading: () => null },
 );
 
-const SiteIntroGate = dynamic(
-  () =>
-    import("@/components/intro/site-intro-gate").then((mod) => ({
-      default: mod.SiteIntroGate,
-    })),
-  { loading: () => null },
-);
-
 export async function generateMetadata({
   params,
 }: {
@@ -113,7 +105,6 @@ export default async function HomePage({
   return (
     <>
       <JsonLdScript data={jsonLd} />
-      <SiteIntroGate locale={locale} dict={dict} />
       <Hero locale={locale} dict={dict} />
       <div className="relative z-20 px-5 md:px-8 lg:px-10">
         <BookingBar dict={dict} locale={locale} variant="home" />
