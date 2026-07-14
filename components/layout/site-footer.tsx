@@ -146,8 +146,28 @@ export function SiteFooter({
       </div>
 
       <div className="relative border-t border-white/[0.08]">
-        <div className="mx-auto flex max-w-[1240px] flex-col items-start justify-between gap-3 px-5 py-6 text-[0.72rem] tracking-wide text-cocobiches-creme-200/75 md:flex-row md:items-center md:px-10">
+        <div className="mx-auto flex max-w-[1240px] flex-col items-start justify-between gap-4 px-5 py-6 text-[0.72rem] tracking-wide text-cocobiches-creme-200/75 md:flex-row md:items-center md:gap-6 md:px-10">
           <span>© {year} Cocobiches · {f.rights}</span>
+          <p className="text-cocobiches-creme-200/70">
+            {f.madeBy}{" "}
+            <a
+              href="https://teocomyn.com/"
+              className="text-cocobiches-creme-100 underline decoration-white/25 underline-offset-[3px] transition hover:text-white hover:decoration-white/50"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Teo Comyn
+            </a>
+            {" - "}
+            <a
+              href="https://experaise.com/"
+              className="text-cocobiches-creme-100 underline decoration-white/25 underline-offset-[3px] transition hover:text-white hover:decoration-white/50"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Experaise
+            </a>
+          </p>
           <span className="text-cocobiches-creme-200/55">
             Versailles · France · 🤍
           </span>
