@@ -2,6 +2,50 @@ import type { JournalArticleMeta } from "./types";
 
 export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
   {
+    slug: "hotel-angleterre-versailles-renovation-classement-3-etoiles",
+    category: "actualites",
+    dateISO: "2026-07-31",
+    readingMinutes: 9,
+    titleFr: "Hôtel d'Angleterre : rénovation complète et classement 3 étoiles",
+    titleEn: "Hôtel d'Angleterre: full renovation and 3-star classification",
+    metaTitleFr: "Hôtel d'Angleterre Versailles : rénové et classé 3 étoiles",
+    metaTitleEn: "Hôtel d'Angleterre Versailles: renovated and 3-star rated",
+    ogTitleFr: "Hôtel d'Angleterre Versailles, rénové et classé 3 étoiles",
+    ogTitleEn: "Hôtel d'Angleterre Versailles, renovated and 3-star rated",
+    descriptionFr:
+      "Rénovation intégrale, 20 chambres et classement 3 étoiles obtenu en mai 2026 : l'Hôtel d'Angleterre entre dans une nouvelle ère, à 5 minutes du Château.",
+    descriptionEn:
+      "Full renovation, 20 rooms and 3-star classification awarded in May 2026: Hôtel d'Angleterre enters a new chapter, five minutes from the Palace.",
+    excerptFr:
+      "Vingt chambres entièrement repensées, trois chambres créées et une troisième étoile obtenue en mai 2026. L'Hôtel d'Angleterre, à quelques minutes du Château, respire mieux.",
+    excerptEn:
+      "Twenty fully redesigned rooms, three new rooms and a third star awarded in May 2026. Hôtel d'Angleterre, minutes from the Palace, simply breathes better.",
+    heroImage: "/hotel-angleterre/chambre-superieure.jpg",
+    featured: true,
+    inlineImages: [
+      {
+        src: "/hotel-angleterre/chambre-1.jpg",
+        altFr: "Chambre rénovée de l'Hôtel d'Angleterre, hôtel 3 étoiles à Versailles",
+        altEn: "Renovated room at Hôtel d'Angleterre, 3-star hotel in Versailles",
+      },
+      {
+        src: "/hotel-angleterre/chambre-familiale.jpg",
+        altFr: "Nouvelle chambre créée lors de la rénovation de l'Hôtel d'Angleterre Versailles",
+        altEn: "New room created during the Hôtel d'Angleterre Versailles renovation",
+      },
+      {
+        src: "/hotel-angleterre/galerie-02.png",
+        altFr: "Salle de bains entièrement rénovée, Hôtel d'Angleterre 3 étoiles Versailles",
+        altEn: "Fully renovated bathroom, 3-star Hôtel d'Angleterre Versailles",
+      },
+      {
+        src: "/hotel-angleterre/ambiance-paysage.jpg",
+        altFr: "Quartier Saint-Louis à Versailles, à quelques minutes du Château",
+        altEn: "Saint-Louis quarter in Versailles, minutes from the Palace",
+      },
+    ],
+  },
+  {
     slug: "visiter-versailles-autrement",
     category: "guide",
     dateISO: "2025-09-12",
@@ -17,7 +61,6 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
     excerptEn:
       "Beyond the Hall of Mirrors: secret gardens, small tables, afternoon walks. Our teams share addresses you won't find in guidebooks.",
     heroImage: "/hotel-jeu-de-paume/jardin.jpg",
-    featured: true,
     inlineImages: [
       {
         src: "/hotel-angleterre/carte-versailles.png",

@@ -42,6 +42,7 @@ export function JournalPage({ locale, dict }: { locale: Locale; dict: Dictionary
 
   const filters: { id: Cat; label: string }[] = [
     { id: "all", label: j.filterAll },
+    { id: "actualites", label: j.filterActualites },
     { id: "guide", label: j.filterGuide },
     { id: "coulisses", label: j.filterCoulisses },
     { id: "gastronomie", label: j.filterGastronomie },

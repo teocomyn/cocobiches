@@ -12,6 +12,33 @@ import { cn } from "@/lib/utils";
 
 const ease = "cubic-bezier(0.22, 1, 0.36, 1)";
 
+function ArticleLink({
+  block,
+  locale,
+}: {
+  block: { label: string; href: string; external?: boolean };
+  locale: Locale;
+}) {
+  const className =
+    "inline-flex items-center gap-2 text-[0.92rem] font-semibold text-cocobiches-marine underline decoration-cocobiches-or/50 underline-offset-[4px] transition hover:decoration-cocobiches-or";
+
+  if (block.external || block.href.startsWith("http")) {
+    return (
+      <a href={block.href} className={className} target="_blank" rel="noopener noreferrer">
+        {block.label}
+        <span aria-hidden>↗</span>
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href(locale, block.href)} className={className}>
+      {block.label}
+      <span aria-hidden>→</span>
+    </Link>
+  );
+}
+
 function wordCount(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length;
 }
@@ -82,6 +109,55 @@ function ArticleBody({
         >
           {block.text}
         </h2>,
+      );
+    } else if (block.kind === "emphasis") {
+      nodes.push(
+        <p
+          key={`em-${i}`}
+          className="font-display mt-10 text-[1.35rem] font-semibold italic leading-snug text-cocobiches-marine md:text-[1.5rem]"
+        >
+          {block.text}
+        </p>,
+      );
+    } else if (block.kind === "link") {
+      nodes.push(
+        <p key={`link-${i}`} className="mt-6">
+          <ArticleLink block={block} locale={locale} />
+        </p>,
+      );
+    } else if (block.kind === "links") {
+      nodes.push(
+        <div
+          key={`links-${i}`}
+          className="mt-12 rounded-2xl border border-cocobiches-marine/10 bg-white p-6 shadow-sm md:p-8"
+        >
+          <h2 className="font-display text-xl font-bold text-cocobiches-marine md:text-2xl">
+            {block.title}
+          </h2>
+          <ul className="mt-5 space-y-3">
+            {block.items.map((item) => (
+              <li key={item.label}>
+                <ArticleLink block={item} locale={locale} />
+              </li>
+            ))}
+          </ul>
+        </div>,
+      );
+    } else if (block.kind === "faq") {
+      nodes.push(
+        <section key={`faq-${i}`} className="mt-16 border-t border-cocobiches-border/80 pt-12">
+          <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-cocobiches-marine md:text-[1.65rem]">
+            {block.title}
+          </h2>
+          <dl className="mt-8 space-y-6">
+            {block.items.map((item) => (
+              <div key={item.q}>
+                <dt className="font-display text-lg font-semibold text-cocobiches-marine">{item.q}</dt>
+                <dd className="mt-2 text-[1.02rem] leading-relaxed text-cocobiches-muted">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>,
       );
     } else {
       cumulative += wordCount(block.text);

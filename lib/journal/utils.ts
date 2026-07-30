@@ -12,6 +12,7 @@ export function categoryLabel(
     gastronomie: "filterGastronomie",
     seminaires: "filterSeminaires",
     saisonnalite: "filterSaison",
+    actualites: "filterActualites",
   };
   return j[map[id]] as string;
 }

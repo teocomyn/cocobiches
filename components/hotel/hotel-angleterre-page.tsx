@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/motion/fade-in";
 import { HotelAngleterreHeroSlider } from "@/components/hotel/hotel-angleterre-hero-slider";
+import { ANGLETERRE_RENO_SLUG } from "@/lib/journal/article-json-ld";
 import type { HotelRecord } from "@/lib/hotels-data";
 import {
   ANGLETERRE_GALLERY,
@@ -53,6 +54,23 @@ export function HotelAngleterrePageView({
               {isFr ? "Nous écrire" : "Contact us"}
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-cocobiches-or/30 bg-cocobiches-or/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:justify-between md:px-8">
+          <p className="text-sm font-medium text-cocobiches-marine md:text-[0.95rem]">
+            {isFr
+              ? "Rénové et classé 3 étoiles · mai 2026"
+              : "Renovated and awarded 3 stars · May 2026"}
+          </p>
+          <Link
+            href={href(locale, `/journal/${ANGLETERRE_RENO_SLUG}`)}
+            className="inline-flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-cocobiches-marine underline decoration-cocobiches-or/60 underline-offset-[4px] transition hover:decoration-cocobiches-or"
+          >
+            {isFr ? "Lire l'actualité" : "Read the news"}
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </section>
 

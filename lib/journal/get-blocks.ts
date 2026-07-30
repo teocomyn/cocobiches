@@ -9,6 +9,7 @@ import * as a7 from "./content/yourte-jeu-de-paume-versailles";
 import * as a8 from "./content/noel-versailles-traditions";
 import * as a9 from "./content/domaine-marie-antoinette-guide";
 import * as a10 from "./content/choisir-hotel-cocobiches";
+import * as a11 from "./content/hotel-angleterre-renovation-3-etoiles";
 import type { Locale } from "@/lib/i18n-config";
 
 const registry: Record<string, { fr: ArticleBlock[]; en: ArticleBlock[] }> = {
@@ -22,6 +23,7 @@ const registry: Record<string, { fr: ArticleBlock[]; en: ArticleBlock[] }> = {
   "noel-versailles-traditions": { fr: a8.fr, en: a8.en },
   "domaine-marie-antoinette-guide": { fr: a9.fr, en: a9.en },
   "choisir-hotel-cocobiches": { fr: a10.fr, en: a10.en },
+  "hotel-angleterre-versailles-renovation-classement-3-etoiles": { fr: a11.fr, en: a11.en },
 };
 
 export function getArticleBlocks(slug: string, locale: Locale): ArticleBlock[] {

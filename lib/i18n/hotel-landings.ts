@@ -15,7 +15,7 @@ export type HotelLandingContent = {
 const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandingContent>> = {
   fr: {
     angleterre: {
-      metaTitle: "Hôtel d'Angleterre · Versailles, rue de Fontenay",
+      metaTitle: "Hôtel d'Angleterre 3 étoiles · Versailles, rue de Fontenay",
       metaDescription:
         "Hôtel de charme 3 étoiles rue de Fontenay à Versailles. 20 chambres, petit-déjeuner, hospitalité Cocobiches.",
       eyebrow: "Cocobiches · Hôtel d'Angleterre",
@@ -48,7 +48,7 @@ const LANDINGS: Record<Locale, Record<Exclude<HotelId, "jeudepaume">, HotelLandi
   },
   en: {
     angleterre: {
-      metaTitle: "Hôtel d'Angleterre · Versailles, rue de Fontenay",
+      metaTitle: "Hôtel d'Angleterre 3-star hotel · Versailles, rue de Fontenay",
       metaDescription:
         "Charming 3-star hotel on rue de Fontenay in Versailles. 20 rooms, breakfast, Cocobiches hospitality.",
       eyebrow: "Cocobiches · Hôtel d'Angleterre",

@@ -72,6 +72,9 @@ type ArticleMetaInput = {
   publishedTime: string;
   image: string;
   imageAlt: string;
+  /** Remplace le title tag (ex. SEO 60 car.) */
+  seoTitle?: string;
+  ogTitle?: string;
 };
 
 export function buildArticleMetadata({
@@ -82,9 +85,12 @@ export function buildArticleMetadata({
   publishedTime,
   image,
   imageAlt,
+  seoTitle,
+  ogTitle,
 }: ArticleMetaInput): Metadata {
   const canonical = href(locale, path);
-  const pageTitle = `${title} · Cocobiches`;
+  const pageTitle = seoTitle ?? `${title} · Cocobiches`;
+  const openGraphTitle = ogTitle ?? pageTitle;
 
   return {
     title: pageTitle,
@@ -98,20 +104,20 @@ export function buildArticleMetadata({
       },
     },
     openGraph: {
-      title: pageTitle,
+      title: openGraphTitle,
       description,
       url: absoluteUrl(canonical),
       type: "article",
       publishedTime,
       locale: locale === "fr" ? "fr_FR" : "en_GB",
       siteName: "Cocobiches",
-      images: [{ url: image, width: 1600, height: 900, alt: imageAlt }],
+      images: [{ url: absoluteUrl(image.startsWith("/") ? image : `/${image}`), width: 1200, height: 630, alt: imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title: pageTitle,
+      title: openGraphTitle,
       description,
-      images: [image],
+      images: [absoluteUrl(image.startsWith("/") ? image : `/${image}`)],
     },
   };
 }
