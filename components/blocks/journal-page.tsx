@@ -99,31 +99,61 @@ export function JournalPage({ locale, dict }: { locale: Locale; dict: Dictionary
               href={href(locale, `/journal/${featured.slug}`)}
               className="group block overflow-hidden rounded-2xl bg-white shadow-card"
             >
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cocobiches-marine/50 md:hidden">
-                {j.featuredLabel}
-              </span>
-              <div className="relative aspect-[16/9] w-full overflow-hidden md:aspect-[21/9]">
+              {/* Mobile : image + texte empilés */}
+              <div className="md:hidden">
+                <p className="px-1 pb-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cocobiches-marine/50">
+                  {j.featuredLabel}
+                </p>
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={featured.heroImage}
+                    alt={title(featured)}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    style={{ transitionTimingFunction: ease }}
+                    sizes="100vw"
+                    priority
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-cocobiches-marine/50">
+                    {categoryLabel(featured.category, j)} · {formatJournalDate(featured.dateISO, locale)}
+                  </p>
+                  <h2 className="font-display mt-3 text-[1.65rem] font-bold leading-[1.12] tracking-[-0.02em] text-cocobiches-marine">
+                    {title(featured)}
+                  </h2>
+                  <p className="mt-4 text-[15px] leading-relaxed text-cocobiches-muted">
+                    {excerpt(featured)}
+                  </p>
+                  <span className="mt-6 inline-flex text-[0.8rem] font-semibold uppercase tracking-[0.12em] text-cocobiches-marine">
+                    {j.readArticle} →
+                  </span>
+                </div>
+              </div>
+
+              {/* Desktop : overlay sur image */}
+              <div className="relative hidden aspect-[21/9] w-full overflow-hidden md:block">
                 <Image
                   src={featured.heroImage}
                   alt={title(featured)}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-[1.03]"
                   style={{ transitionTimingFunction: ease }}
-                  sizes="(max-width: 768px) 100vw, 1200px"
+                  sizes="1200px"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cocobiches-marine/85 via-cocobiches-marine/25 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-cocobiches-creme md:p-10 lg:p-12">
-                  <span className="hidden text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cocobiches-creme/75 md:inline">
+                <div className="absolute bottom-0 left-0 right-0 p-10 lg:p-12 text-cocobiches-creme">
+                  <span className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cocobiches-creme/75">
                     {j.featuredLabel} · {categoryLabel(featured.category, j)}
                   </span>
-                  <p className="mt-2 text-[0.75rem] text-cocobiches-creme/80 md:mt-3">
+                  <p className="mt-3 text-[0.75rem] text-cocobiches-creme/80">
                     {formatJournalDate(featured.dateISO, locale)}
                   </p>
-                  <h2 className="font-display mt-3 max-w-4xl text-2xl font-bold leading-[1.08] tracking-[-0.02em] md:text-4xl lg:text-5xl">
+                  <h2 className="font-display mt-3 max-w-4xl text-4xl font-bold leading-[1.08] tracking-[-0.02em] lg:text-5xl">
                     {title(featured)}
                   </h2>
-                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cocobiches-creme/90 md:text-base">
+                  <p className="mt-4 max-w-2xl text-base leading-relaxed text-cocobiches-creme/90">
                     {excerpt(featured)}
                   </p>
                   <span className="mt-6 inline-flex text-[0.8rem] font-semibold uppercase tracking-[0.12em] text-cocobiches-creme">

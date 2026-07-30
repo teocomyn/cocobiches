@@ -46,21 +46,24 @@ export function HjpSubNav({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <div className="sticky top-[var(--site-header-height)] z-30 border-b border-cocobiches-border/80 bg-cocobiches-creme-50/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-3 md:flex-row md:items-center md:justify-between md:px-8">
+    <div className="border-b border-cocobiches-border/80 bg-cocobiches-creme-50 md:sticky md:top-[var(--site-header-height)] md:z-30 md:bg-cocobiches-creme-50/95 md:backdrop-blur-xl">
+      <div className="mx-auto max-w-6xl px-5 py-3 md:px-8">
         <Link
           href={href(locale)}
-          className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cocobiches-muted transition hover:text-cocobiches-marine"
+          className="inline-block text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cocobiches-muted transition hover:text-cocobiches-marine"
         >
           ← {t.back}
         </Link>
-        <nav className="flex flex-wrap items-center gap-x-1 gap-y-2 md:justify-end" aria-label={t.brand}>
+        <nav
+          className="-mx-5 mt-3 flex items-center gap-1 overflow-x-auto px-5 pb-1 [scrollbar-width:none] md:mx-0 md:mt-0 md:flex-wrap md:justify-end md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden"
+          aria-label={t.brand}
+        >
           {navItems.map((item) => (
             <Link
               key={item.id}
               href={item.href}
               className={cn(
-                "rounded-full px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] transition",
+                "shrink-0 rounded-full px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] transition",
                 item.id === active
                   ? "bg-cocobiches-marine text-white shadow-sm"
                   : "text-cocobiches-muted hover:bg-white/80 hover:text-cocobiches-marine",

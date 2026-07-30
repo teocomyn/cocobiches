@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     default: "Cocobiches",
     template: "%s | Cocobiches",
   },
+  verification: {
+    google: "aHgivX42pSrzt3hsM6M8hiwCBCNJ6nqxVH8dPQk72hc",
+  },
   icons: {
     icon: "/brand/cocobiches-logo.png",
     apple: "/brand/cocobiches-logo.png",
