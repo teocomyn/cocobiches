@@ -252,12 +252,12 @@ export const JOURNAL_ARTICLES: JournalArticleMeta[] = [
       "Quand on dit Versailles, on pense au Château. Mais à un kilomètre, il y a un lieu que nous préférons même : le Domaine de Marie-Antoinette.",
     excerptEn:
       "When people say Versailles, they think of the Palace. But a kilometre away lies a place we love even more: Marie-Antoinette's estate.",
-    heroImage: "/journal/domaine-marie-antoinette-placeholder.jpg",
+    heroImage: "/hotel-jeu-de-paume/jardin.jpg",
     inlineImages: [
       {
-        src: "/hotel-angleterre/hotel-facade.jpg",
-        altFr: "Placeholder : visuel du Domaine de Marie-Antoinette à remplacer",
-        altEn: "Placeholder: Marie-Antoinette estate image to be replaced",
+        src: "/hotel-jeu-de-paume/carte-versailles.jpg",
+        altFr: "Vue historique des jardins et du Château de Versailles",
+        altEn: "Historic view of the Versailles palace and gardens",
       },
     ],
   },
