@@ -24,8 +24,11 @@ export const metadata: Metadata = {
     google: "aHgivX42pSrzt3hsM6M8hiwCBCNJ6nqxVH8dPQk72hc",
   },
   icons: {
-    icon: "/brand/cocobiches-logo.png",
-    apple: "/brand/cocobiches-logo.png",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "48x48" },
+    ],
+    apple: "/apple-icon.png",
   },
   openGraph: {
     type: "website",

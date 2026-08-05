@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Cocobiches">
+  <rect width="32" height="32" rx="6" fill="#2D3077"/>
+  <g fill="#f4e7db">
+    <circle cx="10.5" cy="11.5" r="2.8"/>
+    <circle cx="17.5" cy="11.5" r="2.8"/>
+    <circle cx="10.5" cy="18.5" r="2.8"/>
+    <circle cx="17.5" cy="18.5" r="2.8"/>
+    <rect x="21.5" y="10.5" width="5.5" height="9.5" rx="1.2"/>
+  </g>
+</svg>
